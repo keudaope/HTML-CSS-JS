@@ -1,0 +1,14 @@
+.luokka
+{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 5px inset SkyBlue;
+  background-color: SkyBlue;
+  border-radius: 15px;
+  Width: 600px;
+  padding: 20px;
+}
+body
+{
+  background-image: url("tausta.JPG");
+}

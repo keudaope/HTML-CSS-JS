@@ -1,0 +1,27 @@
+body
+{
+  margin: 0 auto;
+  width: 600px;
+}
+h1, h2
+{
+  padding: 10px;
+  margin: 20px;
+}
+h5, h6
+{
+  font-style: oblique;
+}
+article
+{
+  width: 240px;
+  float: left;
+}
+p
+{
+  margin: 10px;
+}
+.kappale
+{
+  padding: 10px;
+}

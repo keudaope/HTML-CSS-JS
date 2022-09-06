@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="ehtolauseita.css">
+    <script type="text/javascript" src="ehtolauseita2.js">
+
+    </script>
+  </head>
+  <body>
+    <h1>If, else, else if -harjoitustehtäviä perjantaiksi 21.8.2020</h1>
+    <h1>Löytyy myös Moodlesta viikolta 2</h1>
+    <article class='vieri' id='yksi'>
+    <h1>Tehtävä 1</h1>
+    <p>Tee ohjelma, joka tarkastaa, onko annettu luku positiivinen vai negatiivinen</p>
+    <form class="" action="index.html" method="post">
+      <p>Anna luku: <input type="text" id="aluku" value=""></p>
+      <button type="button" name="button" onclick="tarkastaEtumerkki()">Tarkasta etumerkki</button>
+    </form>
+    <p> <div id="tulosta1"></div> </p>
+  </article>
+  <article  class='vieri' id='kaksi'>
+    <h1>Tehtävä 2</h1>
+    <p>Kirjoita ohjelma, joka pyytää käyttäjältä viikonpäivän numeron ja tulostaa viikonpäivän nimen (3 --> Keskiviikko)</p>
+    <form class="" action="index.html" method="post">
+      <p>Anna viikonpäivän numero: <input type="text" id="vluku" value=""></p>
+      <button type="button" name="button" onclick="viikonpaiva()">Tulosta nimi</button>
+    </form>
+    <p> <div id="tulosta2"></div> </p>
+  </article>
+  <article  class='vieri' id='kolme'>
+    <h1>Tehtävä 3</h1>
+    <p>Kirjoita ohjelma, joka katsoo annetusta luvusta, onko se karkausvuosi (jaollinen neljällä, mutta ei sadalla, mutta kuitenkin neljällä sadalla)</p>
+    <p>Anna luku: <input type="text" id="kluku" value=""></p>
+    <button type="button" name="button" onclick="onkoKarkaus()">Tarkista karkausvuosi</button>
+        <p> <div id="tulosta3"></div> </p>
+  </article>
+  <article  class='vieri' id='nelja'>
+    <h1>Tehtävä 4</h1>
+    <p>Kirjoita ohjelma, joka pyytää käyttäjältä 5 lukua ja tulostaa niiden summan ja keskiarvon</p>
+      <form class="" action="index.html" method="post">
+        <p>Anna 1. luku: <input type="text" id="luku01" value=""><br/>
+        Anna 2. luku: <input type="text" id="luku02" value=""><br/>
+        Anna 3. luku: <input type="text" id="luku03" value=""><br/>
+        Anna 4. luku: <input type="text" id="luku04" value=""><br/>
+        Anna 5. luku: <input type="text" id="luku05" value=""></p>
+        <button type="button" name="button" onclick="summaKeskiarvo()">laske summa ja keskiarvo</button>
+      </form>
+      <p> <div id="tulosta4"></div> </p>
+    </article>
+    <article  class='vieri' id='viisi'>
+    <h1>Tehtävä 5</h1>
+      <p>Kirjoita ohjelma, joka pyytää luvun ja tulostaa sen kertotaulun (1-10)</p>
+    <p>Anna luku, josta haluat kertotaulun: <input type="text" id="kerrottava" value=""> </p>
+    <button type="button" id="button" onclick="teeKertotaulu()">Tee kertotaulu</button>
+    <p> <div id="tulosta5"></div> </p>
+  </article>
+  </body>
+</html>

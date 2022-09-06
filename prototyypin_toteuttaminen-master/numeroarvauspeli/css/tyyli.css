@@ -1,0 +1,13 @@
+body {
+  background-image: url("../tausta.png");
+}
+main{
+  margin: 0 auto;
+  width: 300px;
+  background-color: orange;
+  padding: 30px;
+  border: 10px solid white;
+}
+h1, p{
+  text-align: center;
+}

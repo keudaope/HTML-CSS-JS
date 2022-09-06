@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2021-09-26T12:18:17.282Z" agent="5.0 (Macintosh)" etag="S6SgFwOS9mfR2m1htKRl" version="15.3.3" type="github">
+  <diagram id="gMDbSwVPT-XidZTO8ksK" name="Page-1">
+    <mxGraphModel dx="1199" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-4" value="Otsikkopalkki" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-1" value="Logo" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-2" value="Navigaatiopalkki" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-3" value="Kortti" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="245" y="125" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-8" value="Kortti" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="564" y="125" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-9" value="Kortti" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="125" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-10" value="Kortti" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="125" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-14" value="Kuvagalleria" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-15" value="" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="335" width="400" height="265" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-16" value="Artikkeli" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="247" y="340" width="385" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-17" value="Artikkeli" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="247" y="424.5" width="385" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-18" value="Artikkeli" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="245" y="510" width="385" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WRPRzN0UOiitMSFfRIXx-19" value="&lt;div&gt;Alaotsikkopalkki&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="605" width="400" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

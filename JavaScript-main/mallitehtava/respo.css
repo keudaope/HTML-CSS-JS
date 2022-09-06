@@ -1,0 +1,121 @@
+@media screen and (max-width: 2000px)
+{
+  body
+  {
+    width: 1200px;
+    margin: auto;
+  }
+  .yla
+  {
+    border: 2px lightblue solid;
+  }
+  .keskelle
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  h1
+  {
+    margin-bottom: -20px;
+  }
+  aside
+  {
+    width: 350px;
+    float: right;
+    border: 4px lightblue solid;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  label
+  {
+    font-weight: bolder;
+  }
+  button
+  {
+    float: right;
+    margin-right: 85px;
+    margin-top: 15px;
+    background-color: orange;
+  }
+.pointit > h2
+{
+  display: inline;
+}
+  section
+  {
+    width: 750px;
+    padding: 0 30px;
+    margin-right: 20px;
+  }
+  .ylemmas
+  {
+    margin-top: -6px;
+  }
+  section > h2
+  {
+    display: inline-block;
+    margin-bottom: -30px;
+  }
+  .inline
+  {
+    margin-left: 15px;
+
+  }
+  .testimonial
+  {
+      margin-top: 30px;
+      display: flex;
+      align-items:center;
+  }
+  .pieni
+  {
+    height: 30px;
+    margin-left: 30px;
+
+  }
+  footer
+  {
+    text-align: center;
+  }
+}
+/* Tästä alkaa responsiivinen osuus */
+@media screen and (max-width: 800px)
+{
+  body
+  {
+    max-width: 70%;
+    margin: auto;
+  }
+  body
+  {
+    display: grid;
+  }
+
+  aside
+  {
+    margin: auto;
+    margin-bottom: 20px;
+    align-self: center;
+    justify-content: center;
+    border: 4px lightblue solid;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  article
+  {
+    margin-auto;
+  }
+
+  section
+  {
+    max-width: 90%;
+    background-color: lightgray;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,95 @@
+*
+{
+  padding: 10px;
+  background: url("nemo.jpg");
+  background-size: 300px;
+}
+body
+{
+  width: 800px;
+  margin: auto;
+}
+header, footer, h1, nav, a
+{
+  background: #FFE9B5 !important;
+}
+nav
+{
+  display: inline-block;
+  float: right;
+  margin-top: 25px;
+}
+h1
+{
+  display: inline-block;
+  margin-left: 50px;
+}
+h2
+{
+  margin: -20px 0 10px 0;
+}
+p
+{
+  margin-top: -10px;
+}
+hr
+{
+  padding: 0px;
+}
+ul
+{
+  list-style-type: none;
+}
+article, section, h2, p, ul, li, img, figure, figcaption
+{
+  background: #FFF2D5;
+}
+article
+{
+  width: 500px;
+  margin-left: -10px;
+}
+section
+{
+  margin-bottom: -30px;
+}
+aside
+{
+  width: 230px;
+  float: right;
+  background-color: #FFFAEE;
+  margin-right: -10px;
+  padding-top: 20px;
+}
+footer
+{
+  clear: both;
+  text-align: center;
+}
+li
+{
+  color: #FFFAEE;
+}
+li:nth-child(odd) { background-color: #D8BC79; }
+li:nth-child(even) { background-color: #AF8F44; }
+.oikea
+{
+  text-align: right;
+}
+.tausta
+{
+  background-color: #FFFFFF;
+}
+.scuba
+{
+  width: 350px;
+}
+img
+{
+  margin: 0 0 10px 10px;
+  width: 150px;
+}
+figcaption, figure
+{
+  margin-top: -20px;
+}

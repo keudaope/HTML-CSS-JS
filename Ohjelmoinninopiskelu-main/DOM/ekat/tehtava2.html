@@ -1,0 +1,24 @@
+<!-- Tässä tehtävässä oli tarkoitus hakea input laatikoista (rivit 18, 19) tekstit 
+ja palauttaa ne takaisin (rivi 21). Tehtävä oli tehty monella tapaa väärin
+sillä name-attribuuttia oli käytetty väärin (pitäisi olla id-attribuutti)
+ja onsubmit-pitäisi olla buttonilla eikä formilla, sillä kun se on formilla
+se samalla päivittää koko sivun, jolloin vastaus ainoastaan vilahtaa sivulla,
+jos se siihen tulostetaan, kuten minun vastauksessa. Tämän voi estää,
+kun laittaa funktion kutsun jälkeen komennon: return false. -->
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset=utf-8 />
+      <title>Return first and last name from a form - w3resource</title>
+      <script type="text/javascript" src="tehtavat.js">
+      </script>
+    </head>
+    <body>
+      <form id="form1" onsubmit="getFormvalue();return false">
+        First name: <input type="text" name="fname" value="David"><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br>
+        <input type="submit" value="Submit">
+        <p id="vastaus1"></p>
+      </form>
+    </body>
+  </html>

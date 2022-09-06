@@ -1,0 +1,51 @@
+.vasen
+{
+  float: left;
+}
+.oikea
+{
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+body
+{
+  margin: auto;
+  width: 800px;
+  background-image: url("kirja.jpg");
+}
+img{
+  margin: 5px 20px -5px 0px;
+  height: 100px;
+}
+section
+{
+  width: 750px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.eka
+{
+  clear:both;
+  background: papayawhip;
+  padding: 20px;
+}
+.toka
+{
+  clear:both;
+  background: lightyellow;
+  padding: 20px;
+}
+article
+{
+  background: #AFEEEE;
+}
+article > h1
+{
+  padding: 20px 0 0 20px;
+  text-align: center;
+}
+section > h1
+{
+  margin: 0px 0 10px 0;
+}

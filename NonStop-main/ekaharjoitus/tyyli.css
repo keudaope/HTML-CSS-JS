@@ -1,0 +1,24 @@
+body
+{
+  background-color: LightPink;
+}
+.kuva1
+{
+  clear: both;
+  float: left;
+  margin: 0 20px;
+}
+.kuva2
+{
+  clear: both;
+  float: right;
+  margin: 0 20px;
+}
+p
+{
+  font-size: 26px;
+}
+h1
+{
+  font-size: 44px;
+}
