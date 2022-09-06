@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="ehtolauseita.css">
+    <script type="text/javascript" src="silmukkalauseita.js">
+
+    </script>
+  </head>
+  <body>
+    <h1>Silmukka -harjoitustehtäviä maanantaiksi 24.8.2020</h1>
+    <h1>Löytyy myös Moodlesta viikolta 2</h1>
+    <article class='vieri' id='yksi'>
+    <h1>Tehtävä 1</h1>
+    <p>Tee ohjelma, joka pyytää käyttäjältä parillista lukua
+    ja tulostaa tämän jälkeen kaikki parilliset luvut siihen asti
+    poislukien 0:n</p>
+    <form class="" action="index.html" method="post">
+      <p>Anna parillinen luku: <input type="text" id="pluku" value=""></p>
+      <button type="button" name="button" onclick="tulostaParilliset()">Tulosta parilliset</button>
+      <div id="parilliset"></div>
+    </form>
+  </article>
+  <article  class='vieri' id='kaksi'>
+    <h1>Tehtävä 2</h1>
+    <p>Kirjoita ohjelma, joka muuntaa käyttäjän antaman sanan salasanaksi
+    siten, että laittaa joka toiseksi kirjaimeksi ison Ö-kirjaimen, eli
+    jos sana on Kaappi --> KÖaÖaÖpÖpÖiÖ </p>
+    <form class="" action="index.html" method="post">
+      <p>Anna sana: <input type="text" id="ksana" value=""></p>
+      <button type="button" name="button" onclick="muutaSalasanaksi()">Muuta salasanaksi</button>
+            <div id="salasana"></div>
+    </form>
+  </article>
+  <article  class='vieri' id='kolme'>
+    <h1>Tehtävä 3</h1>
+    <p>Kirjoita ohjelma, joka tarkastaa, onko antamassasi sanassa ö-kirjainta
+    ja kirjoittaa vastaukseksi joko: on tai ei ole</p>
+    <p>Anna sana: <input type="text" id="tsana" value=""></p>
+    <button type="button" name="button" onclick="tarkistaKirjain()">Onko ö-kirjainta</button>
+    <div id="vastaus"></div>
+  </article>
+  <article  class='vieri' id='nelja'>
+    <h1>Tehtävä 4</h1>
+    <p>Kirjoita ohjelma, joka laskee annetun luvun kertoman<br> (esim: 4 -> 4*3*2*1 = 24)</p>
+      <form class="" action="index.html" method="post">
+        <p>Anna luku, josta lasketaan kertoma: <input type="text" id="kertoma" value=""></p>
+        <button type="button" name="button" onclick="laskeKertoma()">Laske kertoma</button>
+            <div id="kertomaVastaus"></div>
+      </form>
+    </article>
+    <article  class='vieri' id='viisi'>
+    <h1>Tehtävä 5</h1>
+      <p>Kirjoita ohjelma, joka tulostaa näytölle luvut 1-100, kuitenkin
+      siten, että jos luku on 3:lla jaollinen, tulostetaan hip ja
+    viidellä jaollinen tulostetaan heijaa ja jos sekä viidellä että kolmella
+  jaollinen, tulostetaan hipheijaa </p>
+    <button type="button" id="button" onclick="hipHeijaa()">Tulosta</button>
+    <div id="lukujenTulostus"></div>
+  </article>
+  </body>
+</html>

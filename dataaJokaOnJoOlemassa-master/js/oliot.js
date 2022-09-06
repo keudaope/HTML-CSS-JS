@@ -1,18 +1,18 @@
-var Person = function(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+var Ihminen = function(etunimi, sukunimi) {
+    this.etunimi = etunimi;
+    this.sukunimi = sukunimi;
 }
 
-var person1 = new Person('Homer', 'Simpson');
-var person2 = new Person('Mickey', 'Mouse');
+var ekaIhminen = new Ihminen('Homer', 'Simpson');
+var tokaIhminen = new Ihminen('Mickey', 'Mouse');
 
-Person.prototype.getFullName = function() {
-    return this.firstName + ' ' + this.lastName;
+Ihminen.prototype.haeKokoNimi = function() {
+    return this.etunimi + ' ' + this.sukunimi;
 };
 
-Person.prototype.sayHello = function() {
-    console.log('Hello, ' + this.getFullName() + '!');
+Ihminen.prototype.sanoHei = function() {
+    console.log('Hei, ' + this.haeKokoNimi() + '!');
 };
 
-console.log(person1.getFullName());
-person2.sayHello();
+console.log(ekaIhminen.haeKokoNimi());
+tokaIhminen.sanoHei();
