@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <label for="etunimi">Etunimi:</label>
+      <input type="text" id="enimi" placeholder="Kirjoita tähän etunimesi"><br />
+      <label for="sukunimi">Sukunimi:</label>
+      <input type="text" id="snimi" placeholder="Kirjoita tähän sukunimesi"><br />
+      <h4>Kerro sukupuolesi</h4>
+      <input type="radio" id="mies" name="sukupuoli" value="mies">
+      <label for="spuoli/mies">Mies</label>
+      <input type="radio" id="nainen" name="sukupuoli" value="nainen">
+      <label for="spuoli/nainen">Nainen</label>
+      <input type="radio" id="muu" name="sukupuoli" value="muu">
+      <label for="spuoli/mies">Muu</label>
+      <input type="radio" id="ehs" name="sukupuoli" value="ei halua sanoa">
+      <label for="spuoli/mies">En halua sanoa</label><br />
+
+      <h4>Valitse, mitä ohjelmointikieliä osaat</h4>
+      <input type="checkbox" id="JavaScript" name="JavaScript" value="JavaScript">
+      <label for="JavaScript">JavaScript</label>
+      <input type="checkbox" id="Java" name="Java" value="Java">
+      <label for="Java">Java</label>
+      <input type="checkbox" id="C#" name="C#" value="C#">
+      <label for="C#">C#</label>
+      <h4>Mikä on mieluisin oppiaineesi</h4>
+      <select name="aine" id="aine">
+        <option value=""></option>
+        <option value="ohjelmointi">Ohjelmointi</option>
+        <option value="ruotsi">Ruotsi</option>
+        <option value="matematiikka">Matematiikka</option>
+      </select><p></p>
+      <label for="palaute">Anna palautetta</label><br />
+      <textarea rows="5" cols="20" name="palaute" id="palaute"></textarea><br/>
+      <input type="submit" name="" value="Lähetä">
+    </form>
+  </body>
+</html>
