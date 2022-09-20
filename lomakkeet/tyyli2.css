@@ -1,0 +1,32 @@
+body
+{
+  width: 25%;
+  margin: 20px auto;
+}
+main
+{
+  background-color: lightyellow;
+  padding: 20px 0px;
+}
+main h1
+{
+  text-align: center;
+}
+.wrapper {
+  display: grid;
+}
+label
+{
+  display: inline-block;
+  width: 120px;
+  padding-left: 20px;
+}
+.keskelle
+{
+  margin-left: 149px;
+}
+input[type=text], input[type=password]
+{
+  background-color: lightgray;
+  border-radius: 15px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="tyyli2.css">
+    <title>Mallilomake</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1>Lomake</h1>
+      <form action="Lomake.php" method="post">
+        <label for="enimi">Etunimi:</label>
+        <input type="text" name="etunimi"/><br />
+        <label for="snimi">Sukunimi:</label>
+        <input type="text" name="sukunimi"/><br />
+        <label for="ktunnus">Käyttäjätunnus:</label>
+        <input type="text" name="kayttajatunnus" /><br />
+        <label for="ssana">Salasana:</label>
+        <input type="password" name="salasana"/><br />
+        <label for="spuoli">Sukupuoli:</label>
+        <input type="radio" name="sukupuoli" value="Mies" />Mies<br/>
+        <input type="radio" name="sukupuoli" value="Nainen" class="keskelle" />Nainen<br />
+        <label for="palaute">Palaute:</label>
+        <textarea rows="5" cols="16" name="palaute"></textarea><br />
+        <label for="jasenyys">Jäsenyystaso:</label>
+        <select name="jasenyystaso">
+              <option value="">Valitse yksi</option>
+              <option value="admin">Admin</option>
+              <option value="kayttaja">Käyttäjä</option>
+              <option value="testi">Testi</option>
+            </select><br />
+        <label for="osaaminen">Valitse osaamisalueet:</label>
+        <input type="checkbox" name="osaamisalue" value="PHP"  />PHP<br />
+        <input type="checkbox" name="osaamisalue" value="HTML"  class="keskelle" />HTML<br />
+        <input type="checkbox" name="osaamisalue" value="CSS"  class="keskelle" />CSS<br />
+        <input type="submit" value="Lähetä" />
+        <input type="reset" value="Tyhjennä" />
+      </form>
+    </main>
+
+  </body>
+</html>
