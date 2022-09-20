@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <menu>
+          <p class="s1">SISÄLTÄÄ MM.:</p>
+          <p class="s2">❱<span class="s3">Perusteet</span></p>
+          <p class="s2">❱<span class="s3">Yleiset ongelmat</span></p>
+          <p class="s2">❱<span class="s3">Debugging JQuery</span></p>
+          <p class="s2">❱<span class="s3">Mobile Debugging</span></p>
+          <p class="s2">❱<span class="s3">Debugging Tools...and More!</span></p>
+        </menu>
+        <h1 style="">JavaScriptin <span style=" color: #B30838;">virheenkorjaus</span></h1>
+        <nav>
+          <a href="index.html" class="av">Sivu 1</a>
+          <a href="sivu2.html">Sivu 2</a>
+          <a href="sivu3.html">Sivu 3</a>
+          <a href="sivu4.html">Sivu 4</a>
+          <a href="sivu5.html">Sivu 5</a>
+          <a href="sivu6.html">Sivu 6</a>
+
+        </nav>
+        <p class="s5">By: Ashutosh Sharma</p>
+      </header>
+      <article class="grid-container">
+        <section class="sec1">
+          <p class="s6">JOHDANTO</p>
+          <p>JavaScript maailman suosituin ohjelmointikieli ja sitä käytetään määrittämään web-sivujen logiikka sekä tekemään HTML-pohjaisia ohjelmia.
+            Sitä käytetään myös palvelin puolen ohjelmointikirjasto NodeJS:ssä. </p>
+          <p>Koska kaikki suosituimmat selaimet tukevat JavaScriptiä, kaikissa niissä on mukana myös sisäänrakennetut kehitystyökalut. Firefoxissa on myös mukana suosittu verkkokehitys lisäosa.</p>
+          <table cellspacing="0">
+            <tr class="tr1">
+              <td bgcolor="#A3D7F4">
+                <p class="s8">Browser</p>
+              </td>
+              <td class="td2" bgcolor="#A3D7F4">
+                <p class="s8">Developer Tool</p>
+              </td>
+            </tr>
+            <tr class="tr2">
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Chrome</p>
+              </td>
+              <td bgcolor="#D0E9F9">
+                <p class="s9">DevTools (build-in)</p>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#EAF5FC">
+                <p class="s9">Firefox</p>
+              </td>
+              <td bgcolor="#EAF5FC">
+                <p class="s9">Firebug (add-in)</p>
+              </td>
+            </tr>
+            <tr class="tr2">
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Opera</p>
+              </td>
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Dragonfly (built-in)</p>
+              </td>
+            </tr>
+            <tr style="height:13pt">
+              <td bgcolor="#EAF5FC">
+                <p class="s9">Internet Explorer</p>
+              </td>
+              <td bgcolor="#EAF5FC">
+                <p class="s9">IE Developer Tools (built-in)</p>
+              </td>
+            </tr>
+            <tr class="tr2">
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Safari</p>
+              </td>
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Web Inspector</p>
+              </td>
+            </tr>
+          </table>
+          <p>Each of these has its strengths and weaknesses, and it is useful to pick the right tool to debug the issue you are working on. For most of the discussion in this document, we will be using Chrome DevTools.</p>
+          <p class="s6">BASIC DEBUGGING</p>
+          <p >Errors can typically be classified into one of the following:</p>
+            <ol id="l1">
+              <li data-list-text="1.">
+                <p>Syntax or interpretation errors</p>
+              </li>
+              <li data-list-text="2.">
+                <p>Runtime exceptions</p>
+              </li>
+              <li data-list-text="3.">
+                <p>Incorrect logic</p>
+              </li>
+            </ol>
+            <p class="s10">Syntax Errors</p>
+            <p>These include mismatched or missing quotes, parentheses and braces, incorrect case, spelling mistakes, illegal characters, and more. These can usually be caught easily by <i>static code analyzers </i>such as JSHint [2] and JSLint [3]. These tools analyze your code before it is executed on a web page and point out syntax and other common errors before you make your code live on your web site or application.</p>
+            <p class="s10">Runtime Exceptions</p>
+            <p>These are the errors that occur when your JavaScript code executes. Such errors can be triggered by referring to an undefined variable, dividing by zero, by a failed “assert” statement, or by using a “throw” statement in your (or a JavaScript library’s) code to manually specify that an exception has occurred.</p>
+
+        </section>
+        <section class="sec2">
+          <p>When a runtime exception occurs, any JavaScript code after that line of code is not executed. Hence, if runtime exceptions are not caught and handled appropriately, they can leave your web page or application in an unexpected state.</p>
+          <p>You can catch and handle runtime exceptions by wrapping your code (that may throw an exception) with “try {}” and specifying the handler with “catch(exception) {}”:</p>
+          <div class="koodi">
+            <code>
+              try {<br />
+                var v = dummy: // causes a runtime exception<br />
+              } catch(e) { <br />
+                console.log(e.message); // "dummy is not defined" <br />
+              }
+            </code>
+          </div>
+          <p>In most browsers, you can also specify a global handler for all exceptions that have not been caught using a “try… catch” block, by defining <i>window. onerror:</i></p>
+          <div class="koodi">
+            <code>
+              window.onerror = function(errorMessage, url, lineNumber) {<br />
+              // ... }
+            </code>
+          </div>
+          <p>In Google Chrome, you can have DevTools pause JavaScript execution on all runtime exceptions by clicking the “pause” button at the bottom of the Sources panel. (You can launch DevTools by pressing Cmd-Opt-I
+          (Mac) or F12 (Windows), or via Menu &gt; Tools &gt; Developer Tools.) To pause JavaScript execution on only uncaught runtime exceptions, you can
+          click the “pause” button again. Clicking it again will disable pausing on exceptions.</p>
+          <figure>
+            <img src="images/dpause.png" alt="Don't pause">
+            <figcaption>Fig.1 - Don't pause on exceptions</figcaption>
+          </figure>
+          <p class="s10">Incorrect Logic</p>
+          <p>Incorrect logic in your code does not show any errors (e.g. in a JavaScript error console) but causes your code to not do what you intend it to.
+            Debugging such errors requires some practice using debugging tools that your browser provides.</p>
+          <p>Debugging logic errors typically involves the following:</p>
+            <ol id="l2">
+              <li data-list-text="1.">
+                <p class="s13" style="">Logs and Asserts</p>
+              </li>
+            </ol>
+          <p>Most browsers allow you to add logging statements to your code, to dump useful information about the execution of your JavaScript:</p>
+          <div class="koodi">
+            <code>
+              console.log("Mouse coordinates: " + evt.pageX + ", " + evt.pageY);
+            </code>
+          </div>
+          <p>In Google Chrome, this output can be seen in the <i>Console </i>panel in DevTools. In addition to “log,” you can also use “warn,” “error,” and “debug.” These different categories can be filtered in the DevTools <i>Console</i>.</p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

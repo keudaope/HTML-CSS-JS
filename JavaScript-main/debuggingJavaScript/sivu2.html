@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <menu>
+          <p class="s1">SISÄLTÄÄ MM.:</p>
+          <p class="s2">❱<span class="s3">Perusteet</span></p>
+          <p class="s2">❱<span class="s3">Yleiset ongelmat</span></p>
+          <p class="s2">❱<span class="s3">Debugging JQuery</span></p>
+          <p class="s2">❱<span class="s3">Mobile Debugging</span></p>
+          <p class="s2">❱<span class="s3">Debugging Tools...and More!</span></p>
+        </menu>
+        <h1 style="">JavaScriptin <span style=" color: #B30838;">virheenkorjaus</span></h1>
+        <nav>
+          <a href="index.html">Sivu 1</a>
+          <a href="sivu2.html" class="av">Sivu 2</a>
+          <a href="sivu3.html">Sivu 3</a>
+          <a href="sivu4.html">Sivu 4</a>
+          <a href="sivu5.html">Sivu 5</a>
+          <a href="sivu6.html">Sivu 6</a>
+
+        </nav>
+        <p class="s5">By: Ashutosh Sharma</p>
+      </header>
+      <article class="grid-container">
+        <section class="sec1">
+          <figure>
+            <img src="images/CDevtools.png" alt="Chrome Devtools">
+            <figcaption>Fig 2. Chrome Devtools</figcaption>
+          </figure>
+          <p>You can also use “console.assert()” to ensure that certain conditions or
+            assumptions are being met in your code:</p>
+          <div class="koodi">
+            <code>
+              function processData(n, data){<br />
+                console.assert(n>0, "n should be greater than zero");<br />
+                console.log("Processing data");<br />
+              }
+            </code>
+          </div>
+          <p>When the specified condition is not true, the corresponding message will be
+            printed to the Console.</p>
+          <p>Both “console.error” and “console.assert” also dump the execution call
+            stack. Execution does continue after the assert.</p>
+          <figure>
+            <img src="images/AssertionF.png" alt="Assertion Failed">
+            <figcaption>Fig 3. Assertion failed</figcaption>
+          </figure>
+          <ol id="l2"  start="2">
+            <li data-list-text="2.">
+              <p class="s13">Breakpoints</p>
+            </li>
+          </ol>
+          <p>You can also specify breakpoints on any lines in your JavaScript code in the
+            browser’s debugger, e.g. in the Sources panel in Chrome DevTools. Similar
+            functionality is available in all browsers. To specify a breakpoint on a line,
+            you can click on its line number:</p>
+          <figure>
+            <img src="images/BreakP.png" alt="Breakpoint">
+            <figcaption>Fig 4. Breakpoints</figcaption>
+          </figure>
+          <p>This will cause the debugger to pause the JavaScript when code execution
+            reaches that line of code. This allows you to inspect the values of all
+            variables, evaluate expressions, and inspect the call stack at that point in
+            time. You can hover the mouse pointer over any variable name in the source
+            text to see its value with the debugger paused.</p>
+            <p>You can see the call frames in the Call Stack side panel in the Sources panel.
+              It shows the file names and line numbers for all the frames in the call stack.
+              You can inspect the code and variable values at any of the call frames by
+              moving to them and by clicking on them in the Call Stack side panel.</p>
+            <figure>
+              <img src="images/CallS.png" alt="Call Stack sidepanel">
+              <figcaption>Fig 5. Call Stack sidepanel</figcaption>
+            </figure>
+            <p>With the debugger paused, you can bring up the Console (by pressing the
+              Escape key or moving to the Console panel in DevTools) and then evaluate
+              any expression at that point in time. You have access to all variables in
+              scope at the call frame selected in the Call Stack side panel (under Sources).</p>
+        </section>
+        <section class="sec2">
+          <p>With the debugger paused on a line of code, you can step over the code
+            line-by-line (e.g. by pressing F10 in DevTools) or step into the next function
+            call (F11). You can also step out of the current function after executing the
+            remainder of its code (Shift-F11) or continue execution by resuming the
+            debugger (F8).</p>
+            <ol id="l2" start="3">
+              <li data-list-text="3.">
+                <p class="s13">Watches</p>
+              </li>
+            </ol>
+          <p>In addition to hovering the mouse pointer over variables to inspect their
+            values, you can also set watches to allow you to monitor the values of
+            variables and expressions.</p>
+          <p>Once added to the Watches side panel in the Sources panel, values of
+            variables or expressions are kept up to date.</p>
+            <ol id="l2" start="4">
+              <li data-list-text="3.">
+                <p class="s13">Conditional Breakpoints</p>
+              </li>
+            </ol>
+          <p>If the breakpoint on a line gets hit to many times when you want it to break
+            the execution only in specific cases, you can specify a condition on the
+            breakpoint.</p>
+          <p>This can be done in DevTools by right-clicking on a line number and
+            selecting “Add Conditional Breakpoint,” or right-clicking on an existing
+            breakpoint and selecting “Edit Breakpoint.” You can then specify any
+            expression as a condition for the breakpoint. The breakpoint will cause the
+            JavaScript execution to pause only when the condition evaluates to true on
+            that line of code.</p>
+          <p class="s6">DEBUGGING COMMON PROBLEMS</p> 
+          </section>
+      </article>
+    </main>
+  </body>
+</html>
