@@ -92,6 +92,7 @@ article
 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 section
 {
@@ -106,6 +107,10 @@ section
 .sec2
 {
   grid-column-start: 2;
+}
+img
+{
+  width: 100%;
 }
 .s6
 {
@@ -127,6 +132,10 @@ table
 {
   height:13pt;
 }
+.tr3
+{
+  text-align: center;
+}
 td
 {
     width:122pt;
@@ -137,7 +146,11 @@ td
     border-bottom-style:solid;
     border-bottom-width:1pt;
     border-right-style:solid;
-    border-right-width:1pt
+    border-right-width:1pt;
+    padding: 0px 0px;
+    line-height: 0px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .td2
 {
@@ -176,7 +189,7 @@ li
 .s10
 {
     text-indent: 0pt;
-  line-height: 12pt;
+  line-height: 18pt;
   text-align: left;
   font-size: 16pt;
   font-weight: bolder;
@@ -201,4 +214,9 @@ li
   text-indent: -8pt;
   text-align: left;
   font-weight: bold;
+}
+.ta2
+{
+  border-collapse:collapse;
+  margin-left:1pt;
 }

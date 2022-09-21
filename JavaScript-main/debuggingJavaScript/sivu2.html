@@ -113,7 +113,90 @@
             expression as a condition for the breakpoint. The breakpoint will cause the
             JavaScript execution to pause only when the condition evaluates to true on
             that line of code.</p>
-          <p class="s6">DEBUGGING COMMON PROBLEMS</p> 
+          <p class="s6">DEBUGGING COMMON PROBLEMS</p>
+          <p>Let’s look at some common issues we run into and how we can debug them.</p>
+          <p class="s10">Incorrect Comparisons</p>
+          <p>The equality operator "==" compares for equality after performing any
+            necessary type conversions. The same is true for the inequality operator
+            "!=". This results in the following results for comparisons:</p>
+            <table cellspacing="0" class="ta2">
+              <tr class="tr1">
+                <td bgcolor="#A3D7F4">
+                  <p class="s8">Expressions</p>
+                </td>
+                <td class="td2" bgcolor="#A3D7F4">
+                  <p class="s8">Result</p>
+                </td>
+              </tr>
+              <tr class="tr3">
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">0 == 0</p>
+                </td>
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">true</p>
+                </td>
+              </tr class="tr3">
+              <tr>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">0==</p>
+                </td>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">0 == false</p>
+                </td>
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">undefined == null</p>
+                </td>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">" " == 0</p>
+                </td>
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">false != 0</p>
+                </td>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">false</p>
+                </td>
+              </tr>
+            </table>
+            <p>This results in the logic is incorrect when the code relies on the "==" and "!=" operators.</p>
+            <p>Unlike these operators, the identity operator "===" does not perform type
+              conversion and evaluates a comparison to false if the types of the operands
+              are different. The same is true for the "!==" operator.</p>
+            <p>To ensure that code logic does not rely on type coercions, you should always
+              use the "===" and "!==" operators instead of "==" and "!=".</p>
+            <p class="s10">Value of "this"</p>
+            <p>"this" can get quite tricky, especially in event callbacks and setTimeout() or
+              setInterval() handlers. For instance, if you extract a method from an object</p>
+            <div class="koodi">
+              <code>
+                var val = 1;<br />
+                var obj = {<br />
+                  val: 10,<br />
+                  value: function() {return this.val;}<br />
+                }
+              </code>
+            </div>
+            <p>Also, when code is executed later via setTimeout() or setInterval(), “this”
+              refers to the global “window” object.</p>
           </section>
       </article>
     </main>

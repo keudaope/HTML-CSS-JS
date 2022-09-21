@@ -30,10 +30,131 @@
       </header>
       <article class="grid-container">
         <section class="sec1">
-
+          <p>In both these cases, if you want “this” to refer to the original object (when
+            calling class methods), you should explicitly bind the original object to the
+            callback, using “bind” (Function.prototype.bind). For instance, in the example
+            above:</p>
+          <div class="koodi">
+            <code>
+              var value = obj.value.bind(obj);<br />
+              console.log(value()); // 10
+            </code>
+          </div>
+          <p class="s10">Unintentional Global Variables</p>
+          <p>In your JavaScript code, if you miss declaring a variable with the “var”
+            keyword, the variable is defined as a global (i.e. on the “window” object).
+            This can lead to bugs that can be hard to track down, since it is not a syntax
+            error.</p>
+          <div class="koodi">
+            <code>
+              var val = 10; <br />
+              function process() {<br />
+                //...<br />
+                val = 12; // This modifies the global variable “val”<br />
+              }<br />
+              process();<br />
+              console.log(val); // 12
+            </code>
+          </div>
+          <p>Similarly, if you misspell a variable's name in a function (e.g. incorrect case),
+            it will create or overwrite a global variable of that name.</p>
+          <p class="s10">Network Data</p>
+          <p>You can inspect both the outgoing and incoming network data from your
+            web page or application using Chrome DevTools, Firebug, and other tools.
+            This can be very useful when you receive unexpected data on the network.</p>
+          <p>The Networks panel in DevTools shows you, for each network request, the
+            “method” (e.g. GET, POST), the HTTP status code (e.g. 200, 403), the MIME-
+            type (e.g. application/json), the content’s size and whether the network
+            request was fulfilled from the browser’s cache. This information can come
+            in useful when you do not see the effect of code recently modified on the
+            server or on the client (because the browser was using the data from its
+            cache).</p>
+          <p>Developer tools in other browsers (e.g. Firebug) provide similar functionality.
+          <p class="s10">Using the Console API Effectively</p>
+          <p>The console.* API provides very useful functionality – we have already
+            looked at log, warn, error, debug and assert.</p>
+          <p>In addition to these is “console.trace()” which prints out the call stack at the
+            point where it is called. This can be very useful in debugging complex code
+            that involves a number of conditions to decide the code execution flow.</p>
+          <p>In Chrome DevTools and Firebug, console.log() also accepts some printf-
+            style format specifiers (such as “%s” and “%d”).</p>
+          <p>console.dir() can be used to display all the properties of a JavaScript object.</p>
+          <p>console.time(“name”) and console.timeEnd(“name”) can be used to
+            measure (and label) the time between two points in the code execution.</p>
+          <p>This helps you avoid creating Date objects to manually measure time
+            intervals. Multiple console.time() and console.timeEnd() timers can also be
+            used simultaneously.</p>
+          <p>It is also a good idea to keep the JavaScript Console panel opened when
+            working on a web page or application. The Console shows any runtime
+            errors that the browser wants to bring to your notice.</p>
+          <p class="s6">DEBUGGING DIFFICULT PROBLEMS</p>
+          <p>Let’s now look at ways to debug problems that are hard to pin down.</p>
+          <p class="s10">Logging All Calls to a Function</p>
+          <p>Firebug has a unique functionality that allows you to log all invocations
+            of a function. In addition, it also dumps the value of all arguments of the
+            function with each invocation. This can be very helpful when one is deep
+            within a workflow and in debugging third party code where one might not
+            want to modify the existing code.</p>
         </section>
         <section class="sec2">
-          </section>
+            <p>To log all calls to a function, one needs to console.log(functionName) in
+              Firebug, and then right-click on the printed result and select “Log Calls to
+              ‘functionName’.”</p>
+            <figure>
+              <img src="images/LogC.png" alt="Log Calls">
+              <figcaption>Fig 6. Log calls to a function</figcaption>
+            </figure>
+            <p class="s10">Finding Code that Initiated a Network Request</p>
+            <p>If you see a failed (or any) network request and you want to see the
+              code that initiated it, Chrome DevTools provides this functionality. In the
+              Networks panel, the "Initiator" column shows the line of code or HTML
+              that was responsible for a network request. For AJAX requests initiated via
+              JavaScript, it also shows the call stack that triggered the network request,
+              which can be seen by hovering the mouse pointer over the initiator column:</p>
+            <figure>
+              <img src="images/HoverO.png" alt="Hover over the initiator column">
+              <figcaption>Fig 7. Hover over the initiator column</figcaption>
+            </figure>
+            <p>You can also have DevTools pause JavaScript execution for all AJAX
+              requests by setting an "XHR Breakpoint" in the Sources Panel. You can also
+              specify a string that should be present in the URL for the breakpoint to be hit:</p>
+            <figure>
+              <img src="images/XhrBp.png" alt="Setting the XHR breakpoint">
+              <figcaption>Fig 8. Setting the XHR breakpoint</figcaption>
+            </figure>
+            <p class="s10">Passing Functions to setTimeout in a for Loop</p>
+            <p>If you pass an anonymous function as the first argument to setTimeout, and
+              the anonymous function makes use of the for loop’s index, each invocation
+              of the callback uses the same value of the index, unlike what you might have
+              intended.</p>
+            <div class="koodi">
+              <code>
+                for(var i = 0; i < 5; i++) {<br />
+                &nbsp;&nbsp;setTimeout(function() {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br />
+                  &nbsp;&nbsp;}, 100*i);<br />
+                }
+              </code>
+            </div>
+            <p>The above code prints out “5” five times to the Console. This is because the
+                for loop completes before the first setTimeout callback executes and by
+                then, the value of “i” (which is referenced by each of the five callbacks) is 5.
+                To avoid this problem, you need to ensure that each callback gets its own
+                copy of “i”. This can be done by either creating an anonymous closure for
+                each callback or by using a named function:</p>
+              <div class="koodi">
+                <code>
+                  for(var i = 0; i < 5; i++) {<br />
+                  &nbsp;&nbsp;(function(index) {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;setTimeout(function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(index);<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;}, 100*index);<br />
+                  &nbsp;&nbsp;})(i);<br />
+                  }
+                </code>
+              </div>
+
+        </section>
       </article>
     </main>
   </body>
