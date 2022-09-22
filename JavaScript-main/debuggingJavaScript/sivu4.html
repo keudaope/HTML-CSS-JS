@@ -37,7 +37,7 @@
             debugging code that involves JavaScript closures.</p>
           <figure>
             <img src="images/Scope.png" alt="Scope variables">
-            <figcaption>Fig9. Scope variables</figcaption>
+            <figcaption>Fig 9. Scope variables</figcaption>
           </figure>
           <p>The Scripts tab in Firebug also shows the values of all variables in the
             scope or closure.</p>
@@ -78,12 +78,12 @@
             Incognito mode, which does not load any extensions by default.</p>
           <p>Note that browser extensions may still interfere with your web page on the
             user’s device, and you may want to handle that case.</p>
-        </section>
-        <section class="sec2">
           <p class="s6">DEBUGGING JQUERY</p>
           <p>jQuery is perhaps the most popular JavaScript library that is used by web
-            developers. Let’s look at some tools that can help in debugging when you
-            use jQuery.</p>
+              developers. Let’s look at some tools that can help in debugging when you
+              use jQuery.</p>
+        </section>
+        <section class="sec2">
           <p class="s10">Visual Event (Bookmarklet)</p>
           <p>Visual Event [4] is a JavaScript bookmarklet that visually shows information
             about events that have been attached to DOM elements. It highlights the
@@ -97,6 +97,41 @@
           <p class="s10">Browser Extensions</p>
           <p>jQuery Debugger [5] is a browser extension for Google Chrome. It allows
             you to:</p>
+          <ul>
+            <li>Inspect jQuery selectors and watch their matching elements on the webpage</li>
+            <li>See jQuery and HTML5 data of the selected element in a side panel in the Elements panel in DevTools</li>
+            <li>See event handlers of the selected element</li>
+          </ul>
+          <figure>
+            <img src="images/jQueryD.png" alt="jQuery Data">
+            <figcaption>Fig 10. jQuery Data</figcaption>
+          </figure>
+          <p>FireQuery [6] is an extension for Firebug (which itself is a browser extension
+            for Firefox) that provides similar functionality.</p>
+          <p class="s6">TIPS AND TRICKS FOR DEBUGGING</p>
+          <p>Here are some tips and tricks to help you debug JavaScript more effectively:</p>
+          <p class="s10">debugger;</p>
+          <p>Instead of setting a breakpoint using the browser’s debugger tool (e.g.
+            Chrome DevTools), you can programmatically cause the JavaScript
+            execution to pause at any point in your code by adding a “debugger;”
+            statement at that point. If the debugger tool is not open, the “debugger;”
+            statement is ignored. However, if it is open, the debugger will pause
+            JavaScript execution and allow you to inspect the call stack and variables.</p>
+          <p>This can be more effective than adding a number of console.log()
+            statements to print the values of variables at some point in your code.</p>
+          <p class="s10">Pretty-print</p>
+          <p>Production code is often minified (to reduce its download size), thereby
+            making it very difficult to read. This is often the case with third party
+            libraries (such as jQuery) and can also be true for your JavaScript code.
+            You can improve the formatting of minified code in Chrome DevTools by
+            clicking the “{}” button at the bottom of the Sources panel:</p>
+          <figure>
+            <img src="images/prettyP.png" alt="Pretty print">
+            <figcaption>Fig 11. Pretty print</figcaption>
+          </figure>
+          <p>This not only makes the source code more readable, but also allows you
+            to set breakpoints at points in code where you couldn’t earlier (since they
+            were in the middle of long lines of code in the minified file).</p>
         </section>
       </article>
     </main>

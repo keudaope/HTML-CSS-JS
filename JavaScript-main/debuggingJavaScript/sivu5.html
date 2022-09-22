@@ -30,10 +30,103 @@
       </header>
       <article class="grid-container">
         <section class="sec1">
-
+          <p class="s10">console.log in Conditional Breakpoints</p>
+          <p>In addition to regular conditions that you can attach to breakpoints, you can
+            also use console.log(...) as a condition. This allows you to print debugging
+            information without modifying the code, e.g. when working with third-party
+            code, or when you’re deep within a workflow.</p>
+          <p>You can also use console.trace() as a breakpoint condition at a line of code
+            to dump the call stack each time that line is executed.</p>
+          <p>By combining the two, “console.trace(); console.log(arguments)” can be
+            used as a breakpoint condition at the first line of a function’s body to dump
+            the call stack and the value of arguments each time the function is invoked.</p>
+          <p class="s10">Disable the Browser Cache</p>
+          <p>To ensure that your web page is using the latest version of your code,
+            you can disable the browser cache (while Chrome DevTools is open) via
+            a DevTools setting (accessible via the cog wheel icon in the bottom right
+            corner of DevTools). Without this, it is possible that the web page uses an
+            old version of your code from the browser cache, while you keep making
+            tweaks to it on the server.</p>
+          <figure>
+            <img src="images/DisableC.png" alt="Disable cache">
+            <figcaption>Fig. 12 Disable Cache</figcaption>
+          </figure>
+          <p class="s10">Revisions of Your JavaScript Files</p>
+          <p>To force the users of your web page or application to use the latest version
+            of your code, you can add a “?ver=number” suffix to the URL of your
+            JavaScript file in your HTML source. Each time you push a new version of
+            your code, you can increment the number in the URL.</p>
+          <p>This technique can also be used for your .css files.</p>
+          <p class="s10">monitorEvents()</p>monitorEvents()
+          <p>In Chrome DevTools’ Console, you can use the monitorEvents(element)
+            command-line API obtain a log of all events for a specified element.</p>
+          <p>monitorEvents(document.body);</p>
+          <p>The above command will log all events on the body element. You can also
+            pass an optional second argument to monitorEvents() to specify the events
+            to log. You can specify individual events (e.g. “scroll,” “resize”) or a category
+            of events (e.g. “mouse,” “key,” “touch,” “control”).</p>
+          <p>To specify the element to monitor (the first argument), you can use
+            document.querySelector(selector) or use an existing reference to a DOM
+            node. You can also select an element in the Elements panel, by clicking on
+            it, and then using $0 as the first argument to monitorEvents(). $0 is a an
+            alias for the element that is currently selected in the Elements panel.</p>
+          <p>To stop all monitoring events on an element, you need to call
+            unmonitorEvents(element). You can optionally specify events or categories
+            of events to stop monitoring by passing a second argument.</p>
+          <p>monitorEvents() and $0 are also supported by Firebug.</p>
         </section>
         <section class="sec2">
-          </section>
+          <p class="s10">Clone JavaScript Objects for Logging</p>
+          <p>If you log a JavaScript object to the Console (with console.log) in a function
+            that gets invoked a large number of times, and inspect the logs later, all of
+            them would reflect the state of the object at the point in time when you later
+            expand them (in the Console).</p>
+          <p>This can be a problem when the object is deep or has a large number of
+            properties. (Using console.log() to log an object with only a few properties
+            prints a string that shows the values of all its properties at the time it was
+            logged.)</p>
+          <p>To capture the state of an object when it was logged, you can obtain a
+            JavaScript Object Notation (JSON) for the object and use that to create a
+            copy of the object:</p>
+          <div class="koodi">
+            <code>
+              console.log(JSON.parse(JSON.stringify(obj)));
+            </code>
+          </div>
+          <p>instead of:</p>
+          <div class="koodi">
+            <code>
+              console.log(obj);
+            </code>
+          </div>
+          <p class="s6">DEBUGGING MOBILE WEB PAGES</p>
+          <p>Let’s look at some ways in which one can debug mobile web pages and
+            applications, from a desktop machine.</p>
+          <p class="s10">JavaScript Console Remoting</p>
+          <p>JSConsole [7] is a useful tool that allows you to see the output of console.
+            log() statements running on a mobile device, on your desktop browser. After
+            including a specific &lt;script&gt; tag in your web page, any calls to console.log()
+            will show their output in the JSConsole session in the desktop browser.</p>
+          <p class="s10">Mobile Emulation</p>
+          <p>Chrome DevTools allows you to emulate a mobile device to some extent, in
+            your desktop browser. You can access this functionality in the Overrides tab
+            under DevTools’ settings (accessible via the cog wheel icon in the bottom
+            right corner of DevTools).</p>
+          <p>You can specify a mobile user agent, device metrics (e.g. screen resolution),
+            mocked geolocation, device orientation as well as emulate touch events.</p>
+          <p class="s10">Remote Debugging</p>
+          <p>Remote debugging for mobile devices is supported by Chrome [8], Safari
+            [9] and Firefox [10]. This allows you to debug web pages and applications
+            running on a mobile device, using your desktop browser’s debugging
+            interface.</p>
+          <p>Some additional remote debugging tools are also available:</p>
+          <ul>
+            <li>Weinre, which uses the WebKit remote debugging protocol and
+            allows you to debug web pages on mobile devices.</li>
+            <li>Adobe Edge Inspect, which helps you preview & inspect web
+            pages on multiple devices.</li>
+          </ul>
+        </section>
       </article>
     </main>
   </body>
