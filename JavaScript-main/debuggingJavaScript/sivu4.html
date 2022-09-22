@@ -30,10 +30,74 @@
       </header>
       <article class="grid-container">
         <section class="sec1">
-
+          <p class="s10">Inspecting the Current Scope and Closure</p>
+          <p>When the debugger is paused (e.g. at a breakpoint), you can inspect the
+            values of variables in the scope as well as the closure by using the Scope
+            Variables side panel in the Sources panel in DevTools. This can be useful
+            debugging code that involves JavaScript closures.</p>
+          <figure>
+            <img src="images/Scope.png" alt="Scope variables">
+            <figcaption>Fig9. Scope variables</figcaption>
+          </figure>
+          <p>The Scripts tab in Firebug also shows the values of all variables in the
+            scope or closure.</p>
+          <p class="s10">Browser Differences</p>
+          <p>Several functionalities are provided via different APIs by different
+            browsers. For example, to initiate an AJAX request, one needs to
+            instantiate different objects in different browsers – XMLHttpRequest or
+            ActiveXObject("Microsoft.XMLHTTP"). Also, different versions of Internet
+            Explorer require instantiating different ActiveXObjects.</p>
+          <p>Similarly, different browsers interpret JavaScript somewhat differently. For
+            example, a trailing comma in a JavaScript array or object is ignored by
+            all browsers except Internet Explorer. In IE, a trailing comma can lead to
+            unexpected or undefined behavior.</p>
+          <div class="koodi">
+            <code>
+              var arr = [ “a”, “b”, “c”, ]; // ok for non-IE browsers
+            </code>
+          </div>
+          <p>If your code works fine in one browser, it is not necessarily possible that
+            it may break in another. It is always a good idea to test your web page or
+            application in as many browsers as possible.</p>
+          <p>You can also use a library such as jQuery, which provides a cross-browser
+            API that hides or works around individual browser issues (e.g. using jQuery.
+            ajax for AJAX requests).
+          <p class="s10">Loading Insecure Scripts</p>
+          <p>If a web page served over HTTPS loads a script over HTTP, most
+            browsers do not execute the child script. This can cause your web page
+            or application to not function correctly. On some browsers, the user can
+            control whether insecure scripts should be loaded on secure web pages.</p>
+          <p>If your web page is served over HTTPS, you should ensure that all scripts
+            that it loads (via its HTML or via JavaScript) should also be served over
+            HTTPS.</p>
+          <p class="s10">Interference from Browser Extensions</p>
+          <p>If you have extensions (or add-ons) installed in your browser, they may
+            interfere with your web page. While debugging, it might be useful to disable
+            them to focus on debugging any issues in your JavaScript code.</p>
+          <p>A quick way of achieving this with Google Chrome is to use the browser’s
+            Incognito mode, which does not load any extensions by default.</p>
+          <p>Note that browser extensions may still interfere with your web page on the
+            user’s device, and you may want to handle that case.</p>
         </section>
         <section class="sec2">
-          </section>
+          <p class="s6">DEBUGGING JQUERY</p>
+          <p>jQuery is perhaps the most popular JavaScript library that is used by web
+            developers. Let’s look at some tools that can help in debugging when you
+            use jQuery.</p>
+          <p class="s10">Visual Event (Bookmarklet)</p>
+          <p>Visual Event [4] is a JavaScript bookmarklet that visually shows information
+            about events that have been attached to DOM elements. It highlights the
+            elements that have event listeners attached to them, the types of events, as
+            well as the code for the event handlers.</p>
+          <p>In addition to several other libraries (e.g. YUI, MooTools, DOM 0 events)
+            Visual Event also supports inspecting jQuery events. In the absence of
+            such a tool, inspecting event listeners leads to code that lies in the jQuery
+            library’s source. With Visual Event, one can directly inspect the user code
+            that handles jQuery events.</p>
+          <p class="s10">Browser Extensions</p>
+          <p>jQuery Debugger [5] is a browser extension for Google Chrome. It allows
+            you to:</p>
+        </section>
       </article>
     </main>
   </body>

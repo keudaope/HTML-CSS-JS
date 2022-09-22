@@ -139,7 +139,7 @@
             <p>The above code prints out “5” five times to the Console. This is because the
                 for loop completes before the first setTimeout callback executes and by
                 then, the value of “i” (which is referenced by each of the five callbacks) is 5.
-                To avoid this problem, you need to ensure that each callback gets its own
+            </p><p>To avoid this problem, you need to ensure that each callback gets its own
                 copy of “i”. This can be done by either creating an anonymous closure for
                 each callback or by using a named function:</p>
               <div class="koodi">
@@ -153,7 +153,19 @@
                   }
                 </code>
               </div>
-
+            <p>Or</p>
+            <div class="koodi">
+              <code>
+                  function setCallback(i) {<br />
+                  &nbsp;&nbsp;setTimeout(function() {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br />
+                  &nbsp;&nbsp;}, 100*i);<br />
+                  }<br />
+                  for(var i = 0; i < 5; i++) {<br />
+                  &nbsp;&nbsp;setCallback(i);<br />
+                  }
+                </code>
+            </div>
         </section>
       </article>
     </main>
