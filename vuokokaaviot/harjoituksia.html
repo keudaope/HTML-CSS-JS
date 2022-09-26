@@ -1,0 +1,1142 @@
+
+<HTML>
+<HEAD><TITLE>Unit 1 Section 2 : Flow Charts for Practical Tasks</TITLE></HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+
+<SCRIPT>
+
+<!-- THESE ARE ONLY REQUIRED ONCE FOR ALL ACTUAL QUESTIONS -->
+
+check = new Image();
+check.src = 'check78.gif';
+correct = new Image();
+correct.src = 'correct78.gif';
+wrong = new Image();
+wrong.src = 'wrong78.gif';
+tellme = new Image();
+tellme.src = 'tellme61.gif';
+blank = new Image();
+blank.src = 'blank61.gif';
+
+<!-- INITIAL STATISTICS FOR RESULTS CALCULATOR -->
+
+numq = 5;  cc = 0;  cw = 0;  ag = 0;  tm = 0;
+
+function Calculate()
+{
+	inputbox=eval('document.forms.resultform.elements.resQ'); inputbox.value = numq;
+	inputbox=eval('document.forms.resultform.elements.resC'); inputbox.value = cc;
+	inputbox=eval('document.forms.resultform.elements.resW'); inputbox.value = cw-ag-tm;
+	inputbox=eval('document.forms.resultform.elements.resG'); inputbox.value = tm;
+	inputbox=eval('document.forms.resultform.elements.resL'); inputbox.value = numq+ag-cw-cc;	// no longer requires brackets because I have set the text encoding correctly
+	inputbox=eval('document.forms.resultform.elements.resP');
+	extra = ((cc*100)%numq);
+	if (extra < (numq/2)) {extra = -1*extra} else {extra = numq-extra}
+	pc = ((cc*100)+extra)/numq;
+	inputbox.value = pc+"%";
+	window.focus();
+}
+
+<!-- SCRIPT FOR PICKER IMAGES AND DATA -->
+
+pblank = new Image();
+pblank.src = 'pblank.gif';
+
+<!-- PICKER 1 -->
+
+picques = new Array();
+picnum = new Array();
+pickerselected = new Array();
+pickernumselected = new Array();
+picked = new Array();
+picans = new Array();
+
+picques[1] = 5;
+picnum[1] = 3;
+pickerselected[1] = false;
+pickernumselected[1] = 0;
+
+picked[1] = new Array();
+picked[1][1] = 0;
+picked[1][2] = 0;
+picked[1][3] = 0;
+
+picans[1] = new Array();
+picans[1][1] = 2;
+picans[1][2] = 5;
+picans[1][3] = 4;
+
+p1selecta = new Image();
+p1a1 = new Image();
+p1a2 = new Image();
+p1a3 = new Image();
+p1a4 = new Image();
+p1a5 = new Image();
+
+p1selecta.src = 'p1selecta.gif';
+p1a1.src = 'p1a1.gif';
+p1a2.src = 'p1a2.gif';
+p1a3.src = 'p1a3.gif';
+p1a4.src = 'p1a4.gif';
+p1a5.src = 'p1a5.gif';
+
+<!-- PICKER 2 -->
+
+picques[2] = 4;
+picnum[2] = 4;
+pickerselected[2] = false;
+pickernumselected[2] = 0;
+
+picked[2] = new Array();
+picked[2][1] = 0;
+picked[2][2] = 0;
+picked[2][3] = 0;
+picked[2][4] = 0;
+
+picans[2] = new Array();
+picans[2][1] = 3;
+picans[2][2] = 1;
+picans[2][3] = 2;
+picans[2][4] = 4;
+
+p2selecta = new Image();
+p2a1 = new Image();
+p2a2 = new Image();
+p2a3 = new Image();
+p2a4 = new Image();
+
+p2selecta.src = 'p2selecta.gif';
+p2a1.src = 'p2a1.gif';
+p2a2.src = 'p2a2.gif';
+p2a3.src = 'p2a3.gif';
+p2a4.src = 'p2a4.gif';
+
+<!-- PICKER 3 -->
+
+picques[3] = 8;
+picnum[3] = 5;
+pickerselected[3] = false;
+pickernumselected[3] = 0;
+
+picked[3] = new Array();
+picked[3][1] = 0;
+picked[3][2] = 0;
+picked[3][3] = 0;
+picked[3][4] = 0;
+picked[3][5] = 0;
+
+picans[3] = new Array();
+picans[3][1] = 5;
+picans[3][2] = 8;
+picans[3][3] = 1;
+picans[3][4] = 6;
+picans[3][5] = 3;
+
+p3selecta = new Image();
+p3a1 = new Image();
+p3a2 = new Image();
+p3a3 = new Image();
+p3a4 = new Image();
+p3a5 = new Image();
+p3a6 = new Image();
+p3a7 = new Image();
+p3a8 = new Image();
+
+p3selecta.src = 'p2selecta.gif';
+p3a1.src = 'p3a1.gif';
+p3a2.src = 'p3a2.gif';
+p3a3.src = 'p3a3.gif';
+p3a4.src = 'p3a4.gif';
+p3a5.src = 'p3a5.gif';
+p3a6.src = 'p3a6.gif';
+p3a7.src = 'p3a7.gif';
+p3a8.src = 'p3a8.gif';
+
+<!-- PICKER 4 -->
+
+picques[4] = 8;
+picnum[4] = 5;
+pickerselected[4] = false;
+pickernumselected[4] = 0;
+
+picked[4] = new Array();
+picked[4][1] = 0;
+picked[4][2] = 0;
+picked[4][3] = 0;
+picked[4][4] = 0;
+picked[4][5] = 0;
+
+picans[4] = new Array();
+picans[4][1] = 2;
+picans[4][2] = 5;
+picans[4][3] = 3;
+picans[4][4] = 8;
+picans[4][5] = 1;
+
+p4selecta = new Image();
+p4a1 = new Image();
+p4a2 = new Image();
+p4a3 = new Image();
+p4a4 = new Image();
+p4a5 = new Image();
+p4a6 = new Image();
+p4a7 = new Image();
+p4a8 = new Image();
+
+p4selecta.src = 'p2selecta.gif';
+p4a1.src = 'p4a1.gif';
+p4a2.src = 'p4a2.gif';
+p4a3.src = 'p4a3.gif';
+p4a4.src = 'p4a4.gif';
+p4a5.src = 'p4a5.gif';
+p4a6.src = 'p4a6.gif';
+p4a7.src = 'p4a7.gif';
+p4a8.src = 'p4a8.gif';
+
+<!-- PICKER 5 -->
+
+picques[5] = 4;
+picnum[5] = 4;
+pickerselected[5] = false;
+pickernumselected[5] = 0;
+
+picked[5] = new Array();
+picked[5][1] = 0;
+picked[5][2] = 0;
+picked[5][3] = 0;
+picked[5][4] = 0;
+
+picans[5] = new Array();
+picans[5][1] = 3;
+picans[5][2] = 2;
+picans[5][3] = 4;
+picans[5][4] = 1;
+
+p5selecta = new Image();
+p5a1 = new Image();
+p5a2 = new Image();
+p5a3 = new Image();
+p5a4 = new Image();
+
+p5selecta.src = 'p2selecta.gif';
+p5a1.src = 'p5a1.gif';
+p5a2.src = 'p5a2.gif';
+p5a3.src = 'p5a3.gif';
+p5a4.src = 'p5a4.gif';
+
+<!-- PICKER 6 -->
+
+picques[6] = 5;
+picnum[6] = 5;
+pickerselected[6] = false;
+pickernumselected[6] = 0;
+
+picked[6] = new Array();
+picked[6][1] = 0;
+picked[6][2] = 0;
+picked[6][3] = 0;
+picked[6][4] = 0;
+picked[6][5] = 0;
+
+picans[6] = new Array();
+picans[6][1] = 3;
+picans[6][2] = 5;
+picans[6][3] = 2;
+picans[6][4] = 4;
+picans[6][5] = 1;
+
+p6selecta = new Image();
+p6a1 = new Image();
+p6a2 = new Image();
+p6a3 = new Image();
+p6a4 = new Image();
+p6a5 = new Image();
+
+p6selecta.src = 'p2selecta.gif';
+p6a1.src = 'p6a1.gif';
+p6a2.src = 'p6a2.gif';
+p6a3.src = 'p6a3.gif';
+p6a4.src = 'p6a4.gif';
+p6a5.src = 'p6a5.gif';
+
+<!-- PICKER IMAGE SELECTA AND PLACER -->
+
+function selectAB(picker,answerblock)
+{
+	ABimagename = "p"+picker+"ab"+answerblock;
+	if (document[ABimagename].src != pblank.src)
+	{
+		ABselectaname = "p"+picker+"s"+answerblock;
+		if (pickerselected[picker] && (pickernumselected[picker]==answerblock))
+		{
+			pickerselected[picker] = false;
+			pickernumselected[picker] = 0;
+			document[ABselectaname].src = pblank.src;
+		}
+		else
+		{
+			if (pickerselected[picker])
+			{
+				oldABselectaname = "p"+picker+"s"+pickernumselected[picker];
+				document[oldABselectaname].src = pblank.src;
+			}
+			pickerselected[picker] = true;
+			pickernumselected[picker] = answerblock;
+			document[ABselectaname].src = eval("p"+picker+"selecta.src");
+		}
+	}
+	window.focus();
+}
+
+function placeDB(picker,destinationblock)
+{
+	if (picked[picker][destinationblock]==0)
+	{
+		if (pickerselected[picker])
+		{
+			ABimagename = "p"+picker+"ab"+pickernumselected[picker];
+			document[ABimagename].src = pblank.src;
+			oldABselectaname = "p"+picker+"s"+pickernumselected[picker];
+			document[oldABselectaname].src = pblank.src;
+			DBimagename = "p"+picker+"db"+destinationblock;
+			document[DBimagename].src = eval("p"+picker+"a"+pickernumselected[picker]+".src");
+			picked[picker][destinationblock] = pickernumselected[picker];
+			pickernumselected[picker] = 0;
+			pickerselected[picker] = false;
+		}
+		else
+		{
+			alert("You haven't selected an item to place in this position.\nSelect an item from the list and then click here.");
+		}
+	}
+	else
+	{
+		if (pickerselected[picker])
+		{
+			alert("There is already an item in this position.\nYou need to remove it before you can place another item here.");
+		}
+		else
+		{
+			ABimagename = "p"+picker+"ab"+picked[picker][destinationblock];
+			document[ABimagename].src = eval("p"+picker+"a"+picked[picker][destinationblock]+".src");
+			DBimagename = "p"+picker+"db"+destinationblock;
+			document[DBimagename].src = pblank.src;
+			picked[picker][destinationblock] = 0;
+		}
+	}
+	window.focus();
+}
+
+function tellCorrect(picker)
+{
+	pickerselected[picker] = false;
+	pickernumselected[picker] = 0;
+	for (count=1; count<=picques[picker]; count++)
+	{
+		ABimagename = "p"+picker+"ab"+count;
+		ABselectaname = "p"+picker+"s"+count;
+		document[ABimagename].src = eval("p"+picker+"a"+count+".src");
+		document[ABselectaname].src = pblank.src;
+	}
+	for (count=1; count<=picnum[picker]; count++)
+	{
+		picked[picker][count] = picans[picker][count];
+		DBimagename = "p"+picker+"db"+count;
+		document[DBimagename].src = eval("p"+picker+"a"+picans[picker][count]+".src");
+		ABimagename = "p"+picker+"ab"+picans[picker][count];
+		document[ABimagename].src = pblank.src;
+	}
+}
+
+function countCorrect(picker)
+{
+	correctresults = 0;
+	for (count=1; count<=picnum[picker]; count++)
+	{
+		if (picked[picker][count] == picans[picker][count]) { correctresults++ }
+	}
+	return correctresults;
+}
+
+function filledIn(picker)
+{
+	filledresults = 0;
+	for (count=1; count<=picnum[picker]; count++)
+	{
+		if (picked[picker][count] != 0) { filledresults++ }
+	}
+	return filledresults;
+}
+
+function checkPicker(picker)
+{
+	inputformname = "p"+picker+"form";
+	inputboxname = "p"+picker+"response";
+	checkimagename = "p"+picker+"ck";
+	tellmeimagename = "p"+picker+"tm";
+	inputbox=eval('document.forms.p'+picker+'form.elements.'+inputboxname);
+	if (document[checkimagename].src==wrong.src)
+	{
+		ag = ag+1;
+		inputbox.value='When you have finished changing your answer, click the Check button again.';
+		document[checkimagename].src = check.src;
+		document[tellmeimagename].src = blank.src;
+	}
+	else
+	{
+		if (countCorrect(picker)==picnum[picker])
+			{
+				if (document[checkimagename].src != correct.src)
+				{
+					cc = cc+1;
+					inputbox.value = "You have put all the items in the correct places.  Well done!";
+					document[checkimagename].src = correct.src;
+					document[tellmeimagename].src = blank.src;
+				}
+			}
+		else	{
+				if (document[checkimagename].src == correct.src)
+				{
+					alert("Don't change an answer that is already correct!");
+					tellCorrect(picker);
+				}
+				else
+				{
+					cw = cw+1;
+					if (countCorrect(picker)==0)
+						{ inputbox.value = "You have placed no items in the correct positions." }
+					if (countCorrect(picker)==1)
+						{ inputbox.value = "You have placed 1 item in the correct position." }
+					if (countCorrect(picker)>1)
+						{ inputbox.value = "You have placed "+countCorrect(picker)+" items in the correct positions." }
+					if (filledIn(picker)<picnum[picker])
+					{
+						if ((picnum[picker]-filledIn(picker))==1)
+							{ inputbox.value = inputbox.value + "  You have left 1 position blank." }
+						else
+							{ inputbox.value = inputbox.value + "  You have left "+(picnum[picker]-filledIn(picker))+" positions blank." }
+					}
+					document[checkimagename].src = wrong.src;
+					document[tellmeimagename].src = tellme.src;
+				}
+			}
+	}
+	window.focus();
+	Calculate();
+}
+
+function tellPicker(picker)
+{
+	inputformname = "p"+picker+"form";
+	inputboxname = "p"+picker+"response";
+	checkimagename = "p"+picker+"ck";
+	tellmeimagename = "p"+picker+"tm";
+	inputbox=eval('document.forms.p'+picker+'form.elements.'+inputboxname);
+	if (document[checkimagename].src == wrong.src)
+	{
+		if (filledIn(picker)==0)	{ alert("You haven't filled anything in yet"); }
+		else
+		{
+			tm = tm+1;
+			tellCorrect(picker);
+			inputbox.value = "The answer shown is now correct because you used the Tell Me button.";
+			document[checkimagename].src = correct.src;
+			document[tellmeimagename].src = blank.src;
+		}
+	}
+	window.focus();
+	Calculate();
+}
+
+<!-- THESE TWO FUNCTIONS ARE FOR THE DEMO PICKER(S) -->
+
+function checkDemoPicker(picker)
+{
+	inputformname = "p"+picker+"form";
+	inputboxname = "p"+picker+"response";
+	checkimagename = "p"+picker+"ck";
+	tellmeimagename = "p"+picker+"tm";
+	inputbox=eval('document.forms.p'+picker+'form.elements.'+inputboxname);
+	if (document[checkimagename].src==wrong.src)
+	{
+		inputbox.value='When you have finished changing your answer, click the Check button again.';
+		document[checkimagename].src = check.src;
+		document[tellmeimagename].src = blank.src;
+	}
+	else
+	{
+		if (countCorrect(picker)==picnum[picker])
+			{
+				if (document[checkimagename].src != correct.src)
+				{
+					inputbox.value = "You have put all the items in the correct places.  Well done!";
+					document[checkimagename].src = correct.src;
+					document[tellmeimagename].src = blank.src;
+				}
+			}
+		else	{
+				if (document[checkimagename].src == correct.src)
+				{
+					alert("Don't change an answer that is already correct!");
+					tellCorrect(picker);
+				}
+				else
+				{
+					if (countCorrect(picker)==0)
+						{ inputbox.value = "You have placed no items in the correct positions." }
+					if (countCorrect(picker)==1)
+						{ inputbox.value = "You have placed 1 item in the correct position." }
+					if (countCorrect(picker)>1)
+						{ inputbox.value = "You have placed "+countCorrect(picker)+" items in the correct positions." }
+					if (filledIn(picker)<picnum[picker])
+					{
+						if ((picnum[picker]-filledIn(picker))==1)
+							{ inputbox.value = inputbox.value + "  You have left 1 position blank." }
+						else
+							{ inputbox.value = inputbox.value + "  You have left "+(picnum[picker]-filledIn(picker))+" positions blank." }
+					}
+					document[checkimagename].src = wrong.src;
+					document[tellmeimagename].src = tellme.src;
+				}
+			}
+	}
+	window.focus();
+	Calculate();
+}
+
+function tellDemoPicker(picker)
+{
+	inputformname = "p"+picker+"form";
+	inputboxname = "p"+picker+"response";
+	checkimagename = "p"+picker+"ck";
+	tellmeimagename = "p"+picker+"tm";
+	inputbox=eval('document.forms.p'+picker+'form.elements.'+inputboxname);
+	if (document[checkimagename].src == wrong.src)
+	{
+		if (filledIn(picker)==0)	{ alert("You haven't filled anything in yet"); }
+		else
+		{
+			tellCorrect(picker);
+			inputbox.value = "The answer shown is now correct because you used the Tell Me button.";
+			document[checkimagename].src = correct.src;
+			document[tellmeimagename].src = blank.src;
+		}
+	}
+	window.focus();
+	Calculate();
+}
+
+if (typeof window.event != "undefined") document.onkeydown = function()
+  { if (event.srcElement.tagName.toUpperCase() != "INPUT") return (event.keyCode != 8) }
+else document.onkeypress = function(e)
+  { if (e.target.nodeName.toUpperCase() != "INPUT") return (e.keyCode != 8) }
+
+function clearForms()  	{ for (c=0; c<document.forms.length; c++) { document.forms[c].reset();
+	for (i=0; i<document.forms[c].length; i++) { document.forms[c].elements[i].onkeypress = function(e)
+	{ var key = (window.event) ? window.event.keyCode : e.which; return (key != 13) } } } }
+
+</SCRIPT>
+
+
+
+
+
+<BODY link=blue alink=red vlink=red>
+
+<H1>Unit 1 Section 2 : Flow Charts for Practical Tasks</H1>
+
+A <I>flow chart</I> is a way of showing how a task should be carried out.
+
+<TABLE><TR><TD>
+<FONT color="blue">All the flow charts we will be looking at begin<BR>
+with a <I>Start Point</I> and finish with an <I>End<BR>
+Point</I>.  These look like this on the chart :</FONT>
+</TD><TD>
+<IMG src="s2startend.gif" width="245" height="87" alt="">
+</TD></TR><TR><TD>
+<FONT color="blue">Most of the boxes on a flow chart are <I>instructions</I>,<BR>
+which tell you what to do next.  These appear in<BR>
+rectangular boxes like the one shown on the right:</FONT>
+</TD><TD>
+<IMG src="s2instruction.gif" width="117" height="82" alt="">
+</TD></TR><TR><TD>
+<FONT color="blue">Sometimes a question needs to be answered to decide<BR>
+what instruction should happen next.  These questions<BR>
+are put in <I>decision</I> boxes like the one on the right:</FONT>
+</TD><TD>
+<IMG src="s2decision.gif" width="134" height="138" alt="">
+</TD></TR></TABLE>
+<P>
+<CENTER><FONT color="green">To construct a flow chart we need to think about the order in which the operations need to occur, then draw the chart.</FONT></CENTER>
+<P>
+<TABLE cellpadding="10"><TR><TD valign="top">
+<H2>Flow Chart Example 1</H2>
+We will now draw a flow chart for having a bath.
+<P>
+<FONT color="blue">We start by thinking about the steps involved:</FONT><BR><FONT color="red">
+(1) Fill the bath with water<BR>
+(2) Get undressed.<BR>
+(3) Get into bath.<BR>
+(4) Wash.<BR>
+(5) Get out of bath.<BR>
+(6) Empty the bath water.<BR>
+(7) Get dressed.</FONT>
+<P>
+<FONT color="blue">Now we need to draw the chart with instruction boxes.<BR>
+There are no decisions on this chart - the steps all follow<BR>
+on from one another.  Remember the <B>Start</B> and <B>End</B> boxes.</FONT>
+<P>
+<FONT color="red">The final chart is shown on the right.  Of course some<BR>
+people might do some of these steps in a different order,<BR>
+but hopefully they get undressed before getting in the bath!</FONT>
+</TD><TD>
+<IMG src="s2eg1fc.gif" align="right" width="209" height="393" alt="">
+</TD></TR></TABLE>
+
+<P>
+
+<TABLE cellpadding="10"><TR><TD valign="top">
+<H2>Flow Chart Example 2</H2>
+The step <I>Fill the bath with water</I> in the previous example<BR>
+could have been more detailed.  For example, you need to<BR>
+check if there is enough water and whether it is at the right<BR>
+temperature while running the bath.<BR>
+<P>
+<FONT color="blue">Again we need to think about the steps involved:</FONT><BR><FONT color="red">
+(1) Turn on the hot and cold taps.<BR>
+(2) Is it too hot or cold?  If it is, go to step 3, otherwise go to step 4.<BR>
+(3) Adjust the hot and cold taps and go back to step 2.<BR>
+(4) Wait for 2 minutes.<BR>
+(5) Is the bath full?  If it is, go to step 7, otherwise go to step 6.<BR>
+(6) Go back to step 4.<BR>
+(7) Turn off the hot and cold taps.</FONT>
+<P>
+<FONT color="blue">Now we need to draw the chart.  This time we need to<BR>
+use decision boxes for steps 2 (where the temperature of the<BR>
+water is checked) and 5 (where it is checked if the bath is full).</FONT>
+<P>
+<FONT color="red">The final chart is shown on the right.</FONT>
+</TD><TD>
+<IMG src="s2eg2fc.gif" align="right" width="209" height="393" alt="">
+</TD></TR></TABLE>
+
+
+<P>&nbsp<P>
+
+<H2>Exercises</H2>
+In the questions below, you will need to fill in the detail on some flow charts for practical tasks.
+<P>
+In each one you will be given several operations to choose from and a flow chart to fill in.  When
+you have finished, click on the
+<IMG src="check44.gif" width="44" height="18" alt="Click this button to see if you are correct">
+button to find out whether you have answered correctly.  If your answer is completely right
+then <IMG src="correct78.gif" width="78" height="18" alt=""> will appear and you should move on to the next
+question.  If <IMG src="wrong78.gif" width="78" height="18" alt=""> appears then part of your answer is wrong.  Click
+on <IMG src="wrong78.gif" width="78" height="18" alt=""> to have another go.
+If you can't work out the right answer then click on
+<IMG src="tellme61.gif" width="61" height="18" alt="Click on this button to see the correct answer"> to see
+the answer.
+
+<P>
+
+<FORM NAME="p1form"><CENTER><TABLE width="80%" border="1" cellspacing="0" cellpadding="0"><TR><TD>
+<TABLE cellpadding="5" border="0" cellspacing="0"><TR><TD valign="top" width=50%>
+
+<CENTER><B><U>Filling in diagrams</U></B></CENTER>
+<P>
+<FONT color="green">At various points in this exercise you will need to fill in flow charts by picking items
+and placing them in the correct place.  The boxes on the right are for practising
+this process.
+</FONT>
+<P>
+<FONT color="blue">To copy a letter into a box, first click on the letter, then click the
+box where you want it to go.  An arrow will show the currently selected letter.  To
+clear a box, make sure no letter is selected, and then click that box.</FONT>
+<P>
+<FONT color="red">Try putting the word BED in the blue boxes, then check if you are correct below.</FONT>
+</TD><TD width=10%>
+
+<CENTER><TABLE border="1" cellpadding="5" cellspacing="0" bgcolor="cyan"><TR>
+<TD><A HREF="#" onClick="placeDB(1,1); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="30" height="30" border="0" name="p1db1"></A></TD>
+<TD><A HREF="#" onClick="placeDB(1,2); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="30" height="30" border="0" name="p1db2"></A></TD>
+<TD><A HREF="#" onClick="placeDB(1,3); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="30" height="30" border="0" name="p1db3"></A></TD>
+</TR></TABLE>
+<BR>
+<TABLE border="0" cellpadding="5" cellspacing="0" bgcolor="yellow"><TR>
+<TD><A HREF="#" onClick="selectAB(1,1); return false;" onmouseover="return true;">
+<IMG src="p1a1.gif" width="30" height="30" border="1" name="p1ab1"></A></TD>
+<TD><A HREF="#" onClick="selectAB(1,2); return false;" onmouseover="return true;">
+<IMG src="p1a2.gif" width="30" height="30" border="1" name="p1ab2"></A></TD>
+<TD><A HREF="#" onClick="selectAB(1,3); return false;" onmouseover="return true;">
+<IMG src="p1a3.gif" width="30" height="30" border="1" name="p1ab3"></A></TD>
+<TD><A HREF="#" onClick="selectAB(1,4); return false;" onmouseover="return true;">
+<IMG src="p1a4.gif" width="30" height="30" border="1" name="p1ab4"></A></TD>
+<TD><A HREF="#" onClick="selectAB(1,5); return false;" onmouseover="return true;">
+<IMG src="p1a5.gif" width="30" height="30" border="1" name="p1ab5"></A></TD>
+</TR><TR>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p1s1"></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p1s2"></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p1s3"></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p1s4"></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p1s5"></TD>
+</TR></TABLE></CENTER>
+</TD></TR></TABLE>
+
+<CENTER>
+<INPUT type="text" name="p1response" value="When you have finished, click the Check button." size="80">
+<A HREF="#" onClick="checkDemoPicker(1); return false;" onmouseover="return true;">
+<IMG src="check78.gif" width="78" height="18" alt="" border=0 name="p1ck"></A>
+<A HREF="#" onClick="tellDemoPicker(1); return false;" onmouseover="return true;">
+<IMG src="blank61.gif" width="61" height="18" alt="" border=0 name="p1tm"></A>
+</CENTER>
+
+</TD></TR></TABLE></CENTER></FORM>
+
+<TABLE>
+<TR><TD colspan="2"></TD></TR>
+</TABLE>
+
+<P>&nbsp;<P>
+
+<FORM NAME="p2form"><TABLE border="0" cellpadding="0" cellspacing="10"><TR><TD valign="top">
+<B>Question 1</B><BR>
+The flow chart on the right is meant to show the steps<BR>
+for making and drinking a glass of blackcurrant squash.
+<P>
+<FONT color="blue">Place the instructions below in the flow chart.<BR>
+Make sure you put the instructions in the correct order.</FONT>
+<P>
+
+
+<TABLE border="0" cellpadding="10" cellspacing="0" bgcolor="white"><TR><TD>
+
+<TABLE border="0" cellpadding="5" cellspacing="0">
+<TR><TD><A HREF="#" onClick="selectAB(2,1); return false;" onmouseover="return true;">
+<IMG src="p2a1.gif" width="135" height="40" border="0" name="p2ab1"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p2s1"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(2,2); return false;" onmouseover="return true;">
+<IMG src="p2a2.gif" width="135" height="40" border="0" name="p2ab2"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p2s2"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(2,3); return false;" onmouseover="return true;">
+<IMG src="p2a3.gif" width="135" height="40" border="0" name="p2ab3"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p2s3"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(2,4); return false;" onmouseover="return true;">
+<IMG src="p2a4.gif" width="135" height="40" border="0" name="p2ab4"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p2s4"></TD></TR>
+</TABLE></TD></TR></TABLE>
+
+</TD><TD>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" background="s2q1fcb.gif" height="390" width="135">
+<TR><TD><TABLE border="0" cellpadding="0" cellspacing="0" background="c11.gif">
+<TR><TD height="70">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(2,1); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p2db1"></A></TD></TR>
+<TR><TD height="30">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(2,2); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p2db2"></A></TD></TR>
+<TR><TD height="30">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(2,3); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p2db3"></A></TD></TR>
+<TR><TD height="30">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(2,4); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p2db4"></A></TD></TR>
+<TR><TD height="70">&nbsp;</TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+
+</TD></TR><TR><TD colspan="2">
+
+<INPUT type="text" name="p2response" value="When you have finished, click the Check button." size="80">
+<A HREF="#" onClick="checkPicker(2); return false;" onmouseover="return true;">
+<IMG src="check78.gif" width="78" height="18" alt="" border=0 name="p2ck"></A>
+<A HREF="#" onClick="tellPicker(2); return false;" onmouseover="return true;">
+<IMG src="blank61.gif" width="61" height="18" alt="" border=0 name="p2tm"></A>
+
+</TD></TR></TABLE></FORM>
+
+
+
+
+<P>&nbsp;<P>
+
+<FORM NAME="p3form"><TABLE border="0" cellpadding="0" cellspacing="10"><TR><TD valign="top">
+<B>Question 2</B><BR>
+The flow chart on the right is meant to show the steps<BR>
+for stopping working on a computer and shutting it down.
+<P>
+<FONT color="blue">Place the instructions below in the flow chart.<BR>
+Some of the instructions are not required - you should<BR>
+only include those which are relevant to the task.</FONT>
+<P>
+
+
+<TABLE border="0" cellpadding="10" cellspacing="0" bgcolor="white"><TR><TD>
+
+<TABLE border="0" cellpadding="5" cellspacing="0">
+<TR><TD><A HREF="#" onClick="selectAB(3,1); return false;" onmouseover="return true;">
+<IMG src="p3a1.gif" width="135" height="40" border="0" name="p3ab1"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s1"></TD>
+<TD><A HREF="#" onClick="selectAB(3,2); return false;" onmouseover="return true;">
+<IMG src="p3a2.gif" width="135" height="40" border="0" name="p3ab2"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s2"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(3,3); return false;" onmouseover="return true;">
+<IMG src="p3a3.gif" width="135" height="40" border="0" name="p3ab3"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s3"></TD>
+<TD><A HREF="#" onClick="selectAB(3,4); return false;" onmouseover="return true;">
+<IMG src="p3a4.gif" width="135" height="40" border="0" name="p3ab4"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s4"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(3,5); return false;" onmouseover="return true;">
+<IMG src="p3a5.gif" width="135" height="40" border="0" name="p3ab5"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s5"></TD>
+<TD><A HREF="#" onClick="selectAB(3,6); return false;" onmouseover="return true;">
+<IMG src="p3a6.gif" width="135" height="40" border="0" name="p3ab6"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s6"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(3,7); return false;" onmouseover="return true;">
+<IMG src="p3a7.gif" width="135" height="40" border="0" name="p3ab7"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s7"></TD>
+<TD><A HREF="#" onClick="selectAB(3,8); return false;" onmouseover="return true;">
+<IMG src="p3a8.gif" width="135" height="40" border="0" name="p3ab8"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p3s8"></TD></TR>
+</TABLE></TD></TR></TABLE>
+
+</TD><TD>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" background="s2q2fcb.gif" height="400" width="135">
+<TR><TD><TABLE border="0" cellpadding="0" cellspacing="0" background="c11.gif">
+<TR><TD height="60">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(3,1); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p3db1"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(3,2); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p3db2"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(3,3); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p3db3"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(3,4); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p3db4"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(3,5); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p3db5"></A></TD></TR>
+<TR><TD height="60">&nbsp;</TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+
+</TD></TR><TR><TD colspan="2">
+
+<INPUT type="text" name="p3response" value="When you have finished, click the Check button." size="80">
+<A HREF="#" onClick="checkPicker(3); return false;" onmouseover="return true;">
+<IMG src="check78.gif" width="78" height="18" alt="" border=0 name="p3ck"></A>
+<A HREF="#" onClick="tellPicker(3); return false;" onmouseover="return true;">
+<IMG src="blank61.gif" width="61" height="18" alt="" border=0 name="p3tm"></A>
+
+</TD></TR></TABLE></FORM>
+
+<P>&nbsp;<P>
+
+<FORM NAME="p4form"><TABLE border="0" cellpadding="0" cellspacing="10"><TR><TD valign="top">
+<B>Question 3</B><BR>
+The flow chart on the right is meant to show the steps<BR>
+for working out 4.72 divided by 1.18 on a calculator.
+<P>
+<FONT color="blue">Place the instructions below in the flow chart.<BR>
+Some of the instructions are not required - you should<BR>
+only include those which are relevant to the task.</FONT>
+<P>
+
+
+<TABLE border="0" cellpadding="10" cellspacing="0" bgcolor="white"><TR><TD>
+
+<TABLE border="0" cellpadding="5" cellspacing="0">
+<TR><TD><A HREF="#" onClick="selectAB(4,1); return false;" onmouseover="return true;">
+<IMG src="p4a1.gif" width="135" height="40" border="0" name="p4ab1"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s1"></TD>
+<TD><A HREF="#" onClick="selectAB(4,2); return false;" onmouseover="return true;">
+<IMG src="p4a2.gif" width="135" height="40" border="0" name="p4ab2"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s2"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(4,3); return false;" onmouseover="return true;">
+<IMG src="p4a3.gif" width="135" height="40" border="0" name="p4ab3"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s3"></TD>
+<TD><A HREF="#" onClick="selectAB(4,4); return false;" onmouseover="return true;">
+<IMG src="p4a4.gif" width="135" height="40" border="0" name="p4ab4"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s4"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(4,5); return false;" onmouseover="return true;">
+<IMG src="p4a5.gif" width="135" height="40" border="0" name="p4ab5"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s5"></TD>
+<TD><A HREF="#" onClick="selectAB(4,6); return false;" onmouseover="return true;">
+<IMG src="p4a6.gif" width="135" height="40" border="0" name="p4ab6"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s6"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(4,7); return false;" onmouseover="return true;">
+<IMG src="p4a7.gif" width="135" height="40" border="0" name="p4ab7"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s7"></TD>
+<TD><A HREF="#" onClick="selectAB(4,8); return false;" onmouseover="return true;">
+<IMG src="p4a8.gif" width="135" height="40" border="0" name="p4ab8"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p4s8"></TD></TR>
+</TABLE></TD></TR></TABLE>
+
+</TD><TD>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" background="s2q2fcb.gif" height="400" width="135">
+<TR><TD><TABLE border="0" cellpadding="0" cellspacing="0" background="c11.gif">
+<TR><TD height="60">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(4,1); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p4db1"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(4,2); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p4db2"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(4,3); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p4db3"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(4,4); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p4db4"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(4,5); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="135" height="40" border="0" name="p4db5"></A></TD></TR>
+<TR><TD height="60">&nbsp;</TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+
+</TD></TR><TR><TD colspan="2">
+
+<INPUT type="text" name="p4response" value="When you have finished, click the Check button." size="80">
+<A HREF="#" onClick="checkPicker(4); return false;" onmouseover="return true;">
+<IMG src="check78.gif" width="78" height="18" alt="" border=0 name="p4ck"></A>
+<A HREF="#" onClick="tellPicker(4); return false;" onmouseover="return true;">
+<IMG src="blank61.gif" width="61" height="18" alt="" border=0 name="p4tm"></A>
+
+</TD></TR></TABLE></FORM>
+
+<P>&nbsp;<P>
+
+<FORM NAME="p5form"><TABLE border="0" cellpadding="0" cellspacing="10"><TR><TD valign="top">
+<B>Question 4</B><BR>
+The flow chart on the right is meant to show the steps<BR>
+for safely crossing the road. There is a decision box in<BR>
+this flow chart.
+<P>
+<FONT color="blue">Place the boxes below in the flow chart.</FONT>
+<P>
+
+
+<TABLE border="0" cellpadding="10" cellspacing="0" bgcolor="white"><TR><TD>
+
+<TABLE border="0" cellpadding="5" cellspacing="0">
+<TR><TD><A HREF="#" onClick="selectAB(5,1); return false;" onmouseover="return true;">
+<IMG src="p5a1.gif" width="170" height="40" border="0" name="p5ab1"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p5s1"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(5,2); return false;" onmouseover="return true;">
+<IMG src="p5a2.gif" width="170" height="40" border="0" name="p5ab2"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p5s2"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(5,3); return false;" onmouseover="return true;">
+<IMG src="p5a3.gif" width="170" height="40" border="0" name="p5ab3"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p5s3"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(5,4); return false;" onmouseover="return true;">
+<IMG src="p5a4.gif" width="170" height="100" border="0" name="p5ab4"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p5s4"></TD></TR>
+</TABLE></TD></TR></TABLE>
+
+</TD><TD>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" background="s2q4fcb.gif" height="400" width="170">
+<TR><TD><TABLE border="0" cellpadding="0" cellspacing="0" background="c11.gif">
+<TR><TD height="60">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(5,1); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="170" height="40" border="0" name="p5db1"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(5,2); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="170" height="40" border="0" name="p5db2"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(5,3); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="170" height="100" border="0" name="p5db3"></A></TD></TR>
+<TR><TD height="20">&nbsp;</TD></TR>
+<TR><TD><A HREF="#" onClick="placeDB(5,4); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="170" height="40" border="0" name="p5db4"></A></TD></TR>
+<TR><TD height="60">&nbsp;</TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+
+</TD></TR><TR><TD colspan="2">
+
+<INPUT type="text" name="p5response" value="When you have finished, click the Check button." size="80">
+<A HREF="#" onClick="checkPicker(5); return false;" onmouseover="return true;">
+<IMG src="check78.gif" width="78" height="18" alt="" border=0 name="p5ck"></A>
+<A HREF="#" onClick="tellPicker(5); return false;" onmouseover="return true;">
+<IMG src="blank61.gif" width="61" height="18" alt="" border=0 name="p5tm"></A>
+
+</TD></TR></TABLE></FORM>
+
+<P>&nbsp;<P>
+
+<FORM NAME="p6form"><TABLE border="0" cellpadding="0" cellspacing="10"><TR><TD valign="top">
+<B>Question 5</B><BR>
+The flow chart on the right is meant to show the steps<BR>
+for making a move in a 'Snakes and Ladders' game.
+<P>
+<FONT color="blue">Place the boxes below in the flow chart.  Some are<BR>
+instruction boxes and some are decision boxes, so<BR>
+you need to decide which is which.</FONT>
+<P>
+
+
+<TABLE border="0" cellpadding="10" cellspacing="0" bgcolor="white"><TR><TD>
+
+<TABLE border="0" cellpadding="5" cellspacing="0">
+<TR><TD><A HREF="#" onClick="selectAB(6,1); return false;" onmouseover="return true;">
+<IMG src="p6a1.gif" width="75" height="30" border="0" name="p6ab1"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p6s1"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(6,2); return false;" onmouseover="return true;">
+<IMG src="p6a2.gif" width="75" height="30" border="0" name="p6ab2"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p6s2"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(6,3); return false;" onmouseover="return true;">
+<IMG src="p6a3.gif" width="75" height="30" border="0" name="p6ab3"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p6s3"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(6,4); return false;" onmouseover="return true;">
+<IMG src="p6a4.gif" width="75" height="30" border="0" name="p6ab4"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p6s4"></TD></TR>
+<TR><TD><A HREF="#" onClick="selectAB(6,5); return false;" onmouseover="return true;">
+<IMG src="p6a5.gif" width="75" height="30" border="0" name="p6ab5"></A></TD>
+<TD><IMG src="pblank.gif" width="30" height="30" border="0" name="p6s5"></TD></TR>
+</TABLE></TD></TR></TABLE>
+
+</TD><TD>
+
+<TABLE border="0" cellpadding="0" cellspacing="0" background="s2q5fcb.gif" height="390" width="260">
+<TR><TD><TABLE border="0" cellpadding="0" cellspacing="0" background="c11.gif">
+
+<TR><TD colspan="5" width="260" height="50"></TD></TR>
+
+<TR>
+<TD rowspan="7" width="30" height="255"></TD>
+<TD width="75" height="30"><A HREF="#" onClick="placeDB(6,1); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="75" height="30" border="0" name="p6db1"></A></TD>
+<TD rowspan="7" width="45" height="255"></TD>
+<TD rowspan="6" width="75" height="225"></TD>
+<TD rowspan="7" width="35" height="255"></TD>
+</TR>
+
+<TR><TD width="75" height="10"></TD></TR>
+
+<TR>
+<TD width="75" height="30"><A HREF="#" onClick="placeDB(6,2); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="75" height="30" border="0" name="p6db2"></A></TD>
+</TR>
+
+<TR><TD width="75" height="45"></TD></TR>
+
+<TR>
+<TD width="75" height="30"><A HREF="#" onClick="placeDB(6,3); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="75" height="30" border="0" name="p6db3"></A></TD>
+</TR>
+
+<TR><TD width="75" height="80"></TD></TR>
+
+<TR>
+<TD width="75" height="30"><A HREF="#" onClick="placeDB(6,4); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="75" height="30" border="0" name="p6db4"></A></TD>
+<TD width="75" height="30"><A HREF="#" onClick="placeDB(6,5); return false;" onmouseover="return true;">
+<IMG src="pblank.gif" width="75" height="30" border="0" name="p6db5"></A></TD>
+</TR>
+
+<TR><TD colspan="5" width="260" height="85"></TD></TR>
+
+</TABLE></TD></TR>
+</TABLE>
+
+</TD></TR><TR><TD colspan="2">
+
+<INPUT type="text" name="p6response" value="When you have finished, click the Check button." size="80">
+<A HREF="#" onClick="checkPicker(6); return false;" onmouseover="return true;">
+<IMG src="check78.gif" width="78" height="18" alt="" border=0 name="p6ck"></A>
+<A HREF="#" onClick="tellPicker(6); return false;" onmouseover="return true;">
+<IMG src="blank61.gif" width="61" height="18" alt="" border=0 name="p6tm"></A>
+
+</TD></TR></TABLE></FORM>
+
+<P>&nbsp;<P>
+
+
+<P>
+<HR>
+<CENTER>
+<B>You have now completed Unit 1 Section 2<BR>
+
+<FORM name="resultform"><TABLE border="1" cellpadding="0" cellspacing="0"><TR><TD>
+<TABLE border="0" cellpadding="5" cellspacing="0" bgcolor="lightyellow">
+<TR><TD><CENTER><FONT FACE=ARIAL SIZE="+1" COLOR="blue"><B>
+Your overall score for this section is <input type=text name="resP" rows=1 size=4,1 onchange="Calculate(); return false;" onkeypress="Calculate(); return false;">
+</B></FONT></CENTER></TD></TR>
+<TR><TD><FONT FACE=ARIAL color="green"><B>Correct Answers</B></FONT><BR><FONT FACE=ARIAL SIZE="-1">
+You answered <INPUT type="text" name="resC" value="" size=3,1 onchange="Calculate(); return false;" onkeypress="Calculate(); return false;"> questions correctly out of
+the <INPUT type="text" name="resQ" value="" size=3,1 onchange="Calculate(); return false;" onkeypress="Calculate(); return false;"> questions in this section.
+</FONT></TD></TR>
+<TR><TD><FONT FACE=ARIAL color="red"><B>Incorrect Answers</B></FONT><BR><FONT FACE=ARIAL SIZE="-1">
+There were <INPUT type="text" name="resG" value="" size=3,1 onchange="Calculate(); return false;" onkeypress="Calculate(); return false;"> questions where you used the <I>Tell Me</I> button.<BR>
+There were <INPUT type="text" name="resW" value="" size=3,1 onchange="Calculate(); return false;" onkeypress="Calculate(); return false;"> questions with wrong answers.<BR>
+There were <INPUT type="text" name="resL" value="" size=3,1 onchange="Calculate(); return false;" onkeypress="Calculate(); return false;"> questions you didn't attempt.<BR>
+</FONT></TD></TR></TABLE>
+</TD></TR></TABLE></FORM>
+
+<SCRIPT>
+<!-- FEEDBACK WINDOW OPENER -->
+function feedback(unit,section)
+{
+tands = 'Y8 Unit '+unit+' Section '+section;
+var fbwin = window.open("about:blank","fbwin","resizeable=no,height=400,width=600");
+fbwin.document.open();
+fbwin.document.write('<HTML><HEAD><TITLE>Feedback on '+tands+'</TITLE></HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">');
+fbwin.document.write('<BODY bgcolor="#000080" text="#DCDCFF" link="#FFFF00" alink="#FFFF00" vlink="#FFFF00">');
+fbwin.document.write('<FONT FACE="ARIAL"><TABLE border="0" cellspacing="0" cellpadding="5"><TR>');
+fbwin.document.write('<TD COLSPAN=2><FONT  FACE="ARIAL" SIZE="-1"><B>We appreciate any comments you have ');
+fbwin.document.write('about '+tands+'.  We are particularly interested in mathematical errors or aspects of the ');
+fbwin.document.write('page which could be confusing.</B></TD></TR><TR><TD>');
+fbwin.document.write('<FONT FACE="ARIAL" COLOR="yellow" SIZE="-1">');
+fbwin.document.write('<B>If you were happy that the unit worked correctly, please click the button on the right.  If you ');
+fbwin.document.write('found any problems or would like to add any comments, please fill out the form below and click ');
+fbwin.document.write('on the send button.</B></TD><TD>');
+fbwin.document.write('<form method="get" action="https://www.cimt.org.uk/cimtscripts/formmail.php" name="npform">');
+fbwin.document.write('<input type="hidden" name="recipients" value="feedback@cimt.org.uk">');
+fbwin.document.write('<input type="hidden" name="good_url" value="https://www.cimt.org.uk/siteinfo/feedback.htm">');
+fbwin.document.write('<input type="hidden" name="subject" value="NP: '+tands+'">');
+fbwin.document.write('<input type="hidden" name="email" value="noproblem@cimt.org.uk">');
+fbwin.document.write('<CENTER><input type="submit" name="button" value="No Problems"></FORM></CENTER>');
+fbwin.document.write('</TD></TR></TABLE><P><CENTER><TABLE border="1" cellpadding="5" cellspacing="0">');
+fbwin.document.write('<TR><TD><form method="get" action="https://www.cimt.org.uk/cimtscripts/formmail.php" name="fbform">');
+fbwin.document.write('<TABLE border="0" cellpadding="5" cellspacing="0"><TR><TD><FONT FACE="ARIAL" SIZE="-1">');
+fbwin.document.write('<input type="hidden" name="recipients" value="feedback@cimt.org.uk">');
+fbwin.document.write('<input type="hidden" name="good_url" value="https://www.cimt.org.uk/siteinfo/feedback.htm">');
+fbwin.document.write('<B>Section:</TD><TD><input type="text" name="subject" value="'+tands+'" size="40"></TD></TR>');
+fbwin.document.write('<TR><TD><FONT FACE="ARIAL" SIZE="-1"><B>Your name:</TD><TD>');
+fbwin.document.write('<input type="text" name="name" size="40"></TD></TR><TR><TD>');
+fbwin.document.write('<FONT FACE="ARIAL" SIZE="-1">');
+fbwin.document.write('<B>Your e-mail:</TD><TD><input type="text" name="useremail" size="40"></TD></TR>');
+fbwin.document.write('<TR><TD><FONT FACE="ARIAL" SIZE="-1"><B>Comments:</TD><TD>');
+fbwin.document.write('<textarea name="comments" cols="34" rows="4"></textarea></TD></TR><TR><TD COLSPAN=2>');
+fbwin.document.write('<CENTER><input type="submit" name="button" value="Send Feedback"></CENTER></TD>');
+fbwin.document.write('</TR></TABLE></TD></TR></TABLE></CENTER></FORM></FONT></BODY></HTML>');
+fbwin.document.close();
+}
+</SCRIPT>
+
+<TABLE cellpadding="5" cellspacing="10" border="0"><TR><TD BGCOLOR="yellow">
+<FONT FACE=ARIAL COLOR=RED SIZE="-1"><B><CENTER>Since these pages are under
+development, we find any feedback extremely valuable.  Click
+<A name="feedingback"><A href="#feedingback" onClick="feedback(1,2);">
+here</A> to fill out a very short form which allows you make comments about
+the page, or simply confirm that everything works correctly.</CENTER></B></FONT>
+</TD></TR></TABLE>
+Return to the <A HREF="../book8int.htm">Y8 Tutorials Menu</A></B>
+<HR><FONT size="-2">Produced by A.J. Reynolds December 2002</FONT>
+</CENTER>
+
+<SCRIPT> if ((!!navigator.vendor) && (navigator.vendor.indexOf("Apple")!=-1)) {
+document.write('<SCR'+'IPT> pagepath=document.URL.substr(0,document.URL.lastIndexOf("/")+1);');
+document.write('for (var prop in window) { t'+'ry { srcstr = eval(prop+".src") } catch( err ) { srcstr="none" };');
+document.write('if ((typeof(srcstr)!="undefined") && (srcstr.indexOf(".gif")!=-1) && (srcstr.indexOf("/")==-1))');
+document.write('{ eval(prop).src = pagepath+srcstr } } </SCR'+'IPT>'); } </SCRIPT>
+
+</BODY>
+</HTML>
