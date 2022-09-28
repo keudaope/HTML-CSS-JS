@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <menu>
+          <p class="s1">SISÄLTÄÄ MM.:</p>
+          <p class="s2">❱<span class="s3">Perusteet</span></p>
+          <p class="s2">❱<span class="s3">Yleiset ongelmat</span></p>
+          <p class="s2">❱<span class="s3">Debugging JQuery</span></p>
+          <p class="s2">❱<span class="s3">Mobile Debugging</span></p>
+          <p class="s2">❱<span class="s3">Debugging Tools...and More!</span></p>
+        </menu>
+        <h1 style="">JavaScriptin <span style=" color: #B30838;">virheenkorjaus</span></h1>
+        <nav>
+          <a href="index.html">Sivu 1</a>
+          <a href="sivu2.html" class="av">Sivu 2</a>
+          <a href="sivu3.html">Sivu 3</a>
+          <a href="sivu4.html">Sivu 4</a>
+          <a href="sivu5.html">Sivu 5</a>
+          <a href="sivu6.html">Sivu 6</a>
+
+        </nav>
+        <p class="s5">By: Ashutosh Sharma</p>
+      </header>
+      <article class="grid-container">
+        <section class="sec1">
+          <figure>
+            <img src="images/CDevtools.png" alt="Chrome Devtools">
+            <figcaption>Fig 2. Chrome Devtools</figcaption>
+          </figure>
+          <p>Voit myös käyttää "console.assert()"-komentoa varmistaaksesi, että tietyt ehdot tai oletukset täyttyvät koodissasi:</p>
+          <div class="koodi">
+            <code>
+              function processData(n, data){<br />
+                console.assert(n>0, "n should be greater than zero");<br />
+                console.log("Processing data");<br />
+              }
+            </code>
+          </div>
+          <p>Jos määritetty ehto ei ole tosi, vastaava viesti tulostetaan konsoliin.</p>
+          <p>Sekä "console.error" että "console.assert" tyhjentävät myös suorituskutsupinon. Toteutus jatkuu väitteen jälkeen.</p>
+          <figure>
+            <img src="images/AssertionF.png" alt="Assertion Failed">
+            <figcaption>Fig 3. Assertion failed</figcaption>
+          </figure>
+          <ol id="l2"  start="2">
+            <li data-list-text="2.">
+              <p class="s13">Keskeytyspisteet</p>
+            </li>
+          </ol>
+          <p>Voit myös määrittää keskeytyspisteitä mille tahansa JavaScript-koodisi
+            riveille selaimen virheenkorjausohjelmassa, esim. Chrome DevToolsin
+            Sources-paneelissa. Samanlainen toiminto on saatavilla kaikissa selaimissa.
+            Voit määrittää riville keskeytyskohdan napsauttamalla sen rivin numeroa:</p>
+          <figure>
+            <img src="images/BreakP.png" alt="Breakpoint">
+            <figcaption>Fig 4. Breakpoints</figcaption>
+          </figure>
+          <p>Tämä saa debuggerin keskeyttämään JavaScriptin, kun koodin suoritus
+            saavuttaa kyseisen koodirivin. Tämän avulla voit tarkastaa kaikkien
+            muuttujien arvot, arvioida lausekkeita ja tarkastaa kutsupinon
+            kyseisellä hetkellä. Voit siirtää hiiren osoittimen minkä tahansa
+            muuttujan nimen päälle lähdetekstissä nähdäksesi sen arvon
+            virheenkorjauksen ollessa keskeytettynä.</p>
+            <p>YVoit nähdä kutsukehykset Sources-paneelin kutsupinon sivupaneelissa.
+              Se näyttää tiedostonimet ja rivinumerot kaikille kutsupinon kehyksille.
+              Voit tarkistaa koodin ja muuttujien arvot missä tahansa kutsukehyksessä
+              siirtymällä niihin ja napsauttamalla niitä Call Stack -sivupaneelissa.</p>
+            <figure>
+              <img src="images/CallS.png" alt="Call Stack sidepanel">
+              <figcaption>Fig 5. Call Stack sidepanel</figcaption>
+            </figure>
+            <p>Kun debuggeri on keskeytetty, voit tuoda konsolin esiin (painamalla
+              Esc-näppäintä tai siirtymällä DevToolsin konsolipaneeliin) ja arvioida
+              minkä tahansa lausekkeen sillä hetkellä. Sinulla on pääsy kaikkiin scopessa
+              oleviin muuttujiin kutsukehyksessä, joka on valittu kutsupinon
+              sivupaneelista (kohdassa Sources).</p>
+        </section>
+        <section class="sec2">
+          <p>With the debugger paused on a line of code, you can step over the code
+            line-by-line (e.g. by pressing F10 in DevTools) or step into the next function
+            call (F11). You can also step out of the current function after executing the
+            remainder of its code (Shift-F11) or continue execution by resuming the
+            debugger (F8).</p>
+            <ol id="l2" start="3">
+              <li data-list-text="3.">
+                <p class="s13">Watches</p>
+              </li>
+            </ol>
+          <p>In addition to hovering the mouse pointer over variables to inspect their
+            values, you can also set watches to allow you to monitor the values of
+            variables and expressions.</p>
+          <p>Once added to the Watches side panel in the Sources panel, values of
+            variables or expressions are kept up to date.</p>
+            <ol id="l2" start="4">
+              <li data-list-text="3.">
+                <p class="s13">Conditional Breakpoints</p>
+              </li>
+            </ol>
+          <p>If the breakpoint on a line gets hit to many times when you want it to break
+            the execution only in specific cases, you can specify a condition on the
+            breakpoint.</p>
+          <p>This can be done in DevTools by right-clicking on a line number and
+            selecting “Add Conditional Breakpoint,” or right-clicking on an existing
+            breakpoint and selecting “Edit Breakpoint.” You can then specify any
+            expression as a condition for the breakpoint. The breakpoint will cause the
+            JavaScript execution to pause only when the condition evaluates to true on
+            that line of code.</p>
+          <p class="s6">DEBUGGING COMMON PROBLEMS</p>
+          <p>Let’s look at some common issues we run into and how we can debug them.</p>
+          <p class="s10">Incorrect Comparisons</p>
+          <p>The equality operator "==" compares for equality after performing any
+            necessary type conversions. The same is true for the inequality operator
+            "!=". This results in the following results for comparisons:</p>
+            <table cellspacing="0" class="ta2">
+              <tr class="tr1">
+                <td bgcolor="#A3D7F4">
+                  <p class="s8">Expressions</p>
+                </td>
+                <td class="td2" bgcolor="#A3D7F4">
+                  <p class="s8">Result</p>
+                </td>
+              </tr>
+              <tr class="tr3">
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">0 == 0</p>
+                </td>
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">true</p>
+                </td>
+              </tr class="tr3">
+              <tr>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">0==</p>
+                </td>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">0 == false</p>
+                </td>
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">undefined == null</p>
+                </td>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">" " == 0</p>
+                </td>
+                <td bgcolor="#D0E9F9">
+                  <p class="tr3">true</p>
+                </td>
+              </tr>
+              <tr  class="tr3">
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">false != 0</p>
+                </td>
+                <td bgcolor="#EAF5FC">
+                  <p class="tr3">false</p>
+                </td>
+              </tr>
+            </table>
+            <p>This results in the logic is incorrect when the code relies on the "==" and "!=" operators.</p>
+            <p>Unlike these operators, the identity operator "===" does not perform type
+              conversion and evaluates a comparison to false if the types of the operands
+              are different. The same is true for the "!==" operator.</p>
+            <p>To ensure that code logic does not rely on type coercions, you should always
+              use the "===" and "!==" operators instead of "==" and "!=".</p>
+            <p class="s10">Value of "this"</p>
+            <p>"this" can get quite tricky, especially in event callbacks and setTimeout() or
+              setInterval() handlers. For instance, if you extract a method from an object</p>
+            <div class="koodi">
+              <code>
+                var val = 1;<br />
+                var obj = {<br />
+                  val: 10,<br />
+                  value: function() {return this.val;}<br />
+                }
+              </code>
+            </div>
+            <p>Also, when code is executed later via setTimeout() or setInterval(), “this”
+              refers to the global “window” object.</p>
+          </section>
+      </article>
+    </main>
+  </body>
+</html>

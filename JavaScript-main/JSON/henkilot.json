@@ -1,0 +1,18 @@
+{
+    "henkilot":
+    [
+        {
+            "etunimi": "Joonas",
+            "sukunimi": "Kyllönen"
+        },
+        {
+            "etunimi": "Sari",
+            "sukunimi": "Havas"
+        },
+        {
+            "etunimi": "Matti",
+            "sukunimi": "Ranin"
+        }
+    ]
+
+}

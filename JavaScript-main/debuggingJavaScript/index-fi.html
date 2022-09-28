@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <menu>
+          <p class="s1">SISÄLTÄÄ MM.:</p>
+          <p class="s2">❱<span class="s3">Perusteet</span></p>
+          <p class="s2">❱<span class="s3">Yleiset ongelmat</span></p>
+          <p class="s2">❱<span class="s3">Debugging JQuery</span></p>
+          <p class="s2">❱<span class="s3">Mobile Debugging</span></p>
+          <p class="s2">❱<span class="s3">Debugging Tools...and More!</span></p>
+        </menu>
+        <h1 style="">JavaScriptin <span style=" color: #B30838;">virheenkorjaus</span></h1>
+        <nav>
+          <a href="index-fi.html" class="av">Sivu 1</a>
+          <a href="sivu2-fi.html">Sivu 2</a>
+          <a href="sivu3.html">Sivu 3</a>
+          <a href="sivu4.html">Sivu 4</a>
+          <a href="sivu5.html">Sivu 5</a>
+          <a href="sivu6.html">Sivu 6</a>
+
+        </nav>
+        <p class="s5">By: Ashutosh Sharma</p>
+      </header>
+      <article class="grid-container">
+        <section class="sec1">
+          <p class="s6">JOHDANTO</p>
+          <p>JavaScript maailman suosituin ohjelmointikieli ja sitä käytetään määrittämään web-sivujen logiikka sekä tekemään HTML-pohjaisia ohjelmia.
+            Sitä käytetään myös palvelin puolen ohjelmointikirjasto NodeJS:ssä. </p>
+          <p>Koska kaikki suosituimmat selaimet tukevat JavaScriptiä, kaikissa niissä on mukana myös sisäänrakennetut kehitystyökalut. Firefoxissa on myös mukana suosittu verkkokehitys lisäosa.</p>
+          <table cellspacing="0">
+            <tr class="tr1">
+              <td bgcolor="#A3D7F4">
+                <p class="s8">Browser</p>
+              </td>
+              <td class="td2" bgcolor="#A3D7F4">
+                <p class="s8">Developer Tool</p>
+              </td>
+            </tr>
+            <tr class="tr2">
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Chrome</p>
+              </td>
+              <td bgcolor="#D0E9F9">
+                <p class="s9">DevTools (build-in)</p>
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#EAF5FC">
+                <p class="s9">Firefox</p>
+              </td>
+              <td bgcolor="#EAF5FC">
+                <p class="s9">Firebug (add-in)</p>
+              </td>
+            </tr>
+            <tr class="tr2">
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Opera</p>
+              </td>
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Dragonfly (built-in)</p>
+              </td>
+            </tr>
+            <tr style="height:13pt">
+              <td bgcolor="#EAF5FC">
+                <p class="s9">Internet Explorer</p>
+              </td>
+              <td bgcolor="#EAF5FC">
+                <p class="s9">IE Developer Tools (built-in)</p>
+              </td>
+            </tr>
+            <tr class="tr2">
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Safari</p>
+              </td>
+              <td bgcolor="#D0E9F9">
+                <p class="s9">Web Inspector</p>
+              </td>
+            </tr>
+          </table>
+          <p>Jokaisella näistä on vahvuutensa ja heikkoutensa, ja on hyödyllistä valita oikea työkalu käsittelemäsi ongelman korjaamiseen. Suurimman osan tämän asiakirjan keskustelusta käytämme Chrome DevToolsia.</p>
+          <p class="s6">PERUSVIRHEENKORJAUS</p>
+          <p>Virheet voidaan yleensä luokitella johonkin seuraavista:</p>
+            <ol id="l1">
+              <li data-list-text="1.">
+                <p>Syntaksi- tai tulkintavirheen</p>
+              </li>
+              <li data-list-text="2.">
+                <p>Ajonaikaiset poikkeukset</p>
+              </li>
+              <li data-list-text="3.">
+                <p>Väärä logiikka</p>
+              </li>
+            </ol>
+            <p class="s10">Syntaksivirheet</p>
+            <p>Näitä ovat esimerkiksi yhteensopimattomat tai puuttuvat lainausmerkit, sulut ja aaltosulut, väärät kirjaimet, kirjoitusvirheet, laittomat merkit ja paljon muuta. Ne voidaan yleensä siepata helposti <i>staattisilla koodianalysaattoreilla </i>, kuten JSHint [2] ja JSLint [3]. Nämä työkalut analysoivat koodisi ennen sen suorittamista verkkosivulla ja osoittavat syntaksin ja muut yleiset virheet ennen kuin julkaiset koodisi verkkosivustollasi tai sovelluksessasi.</p>
+            <p class="s10">Ajonaikaiset poikkeukset</p>
+            <p>Nämä ovat virheitä, jotka tapahtuvat, kun JavaScript-koodisi suoritetaan. Tällaisia virheitä voidaan laukaista viittaamalla määrittelemättömään muuttujaan, jakamalla nolla, epäonnistuneella "assert"-lauseella tai käyttämällä "throw"-lausetta koodissasi (tai JavaScript-kirjaston) määrittämään manuaalisesti, että poikkeus on tapahtunut.</p>
+
+        </section>
+        <section class="sec2">
+          <p>Kun ajonaikainen poikkeus tapahtuu, mitään kyseisen koodirivin jälkeistä JavaScript-koodia ei suoriteta. Jos ajonaikaisia poikkeuksia ei siis havaita ja käsitellä asianmukaisesti, ne voivat jättää verkkosivusi tai sovelluksesi odottamattomaan tilaan.</p>
+          <p>Voit ottaa kiinni ja käsitellä ajonaikaisia poikkeuksia käärimällä koodisi (joka saattaa aiheuttaa poikkeuksen) tekstillä "try {}" ja määrittämällä käsittelijän "catch(exception) {}":</p>
+          <div class="koodi">
+            <code>
+              try {<br />
+                var v = dummy: // causes a runtime exception<br />
+              } catch(e) { <br />
+                console.log(e.message); // "dummy is not defined" <br />
+              }
+            </code>
+          </div>
+          <p>Useimmissa selaimissa voit myös määrittää yleisen käsittelijän kaikille poikkeuksille, joita ei ole saatu kiinni "try… catch" -lohkon avulla, määrittämällä <i>window.onerror:</i></p>
+          <div class="koodi">
+            <code>
+              window.onerror = function(errorMessage, url, lineNumber) {<br />
+              // ... }
+            </code>
+          </div>
+          <p>Google Chromessa voit asettaa DevToolsin keskeyttämään JavaScriptin suorittamisen kaikissa ajonaikaisissa poikkeuksissa napsauttamalla Lähteet-paneelin alaosassa olevaa keskeytyspainiketta. (Voit käynnistää DevToolsin painamalla Cmd-Opt-I
+           (Mac) tai F12 (Windows) tai Valikko &gt; Työkalut &gt; Kehittäjätyökalut.) Voit keskeyttää JavaScriptin suorittamisen vain havaitsemattomissa suoritusaikapoikkeuksissa
+           napsauta "tauko"-painiketta uudelleen. Napsauttaminen uudelleen poistaa keskeytyksen käytöstä poikkeusten yhteydessä.</p>
+          <figure>
+            <img src="images/dpause.png" alt="Don't pause">
+            <figcaption>Fig.1 - Don't pause on exceptions</figcaption>
+          </figure>
+          <p class="s10">Väärä logiikka</p>
+          <p>Virheellinen logiikka koodissasi ei näytä virheitä (esim. JavaScript-virhekonsolissa), mutta se saa koodisi toimimaan ei-haluamallasi tavalla.
+             Tällaisten virheiden virheenkorjaus vaatii jonkin verran harjoittelua selaimesi tarjoamien virheenkorjaustyökalujen avulla.</p>
+          <p>Logiikkavirheiden virheenkorjaus sisältää yleensä seuraavat asiat:</p>
+            <ol id="l2">
+              <li data-list-text="1.">
+                <p class="s13" style="">Lokit ja väitteet</p>
+              </li>
+            </ol>
+          <p>Useimmat selaimet antavat sinun lisätä lokilausekkeita koodiisi, jotta voit kerätä hyödyllistä tietoa JavaScriptin suorittamisesta:</p>
+          <div class="koodi">
+            <code>
+              console.log("Mouse coordinates: " + evt.pageX + ", " + evt.pageY);
+            </code>
+          </div>
+          <p>Google Chromessa tämä tulos näkyy DevToolsin <i>Console </i> -paneelissa. "Lokin" lisäksi voit käyttää myös "varoita", "virhe" ja "debug". Nämä eri luokat voidaan suodattaa DevToolsin <i>konsolissa</i>.</p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
