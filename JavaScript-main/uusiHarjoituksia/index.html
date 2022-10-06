@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <menu>
+          <p class="s1">SISÄLTÄÄ MM.:</p>
+          <p class="s2">❱<span class="s3">Perusharjoituksia</span></p>
+          <p class="s2">❱<span class="s3">Ehtolauseita</span></p>
+          <p class="s2">❱<span class="s3">Silmukoita</span></p>
+          <p class="s2">❱<span class="s3">Taulukoita</span></p>
+          <p class="s2">❱<span class="s3">Objekteja ... ja paljon muuta</span></p>
+        </menu>
+        <h1 style="">Ohjelmointi <span style=" color: #B30838;">tehtäviä</span></h1>
+        <nav>
+          <a href="index.html" class="av">Sivu 1</a>
+          <a href="sivu2.html">Sivu 2</a>
+          <a href="sivu3.html">Sivu 3</a>
+          <a href="sivu4.html">Sivu 4</a>
+          <a href="sivu5.html">Sivu 5</a>
+          <a href="sivu6.html">Sivu 6</a>
+
+        </nav>
+        <p class="s5">Kerätty internetin sivustoilta</p>
+      </header>
+      <article class="grid-container">
+        <section class="sec1">
+          <p class="s6">PERUSHARJOITUKSIA</p>
+          <details closed>
+            <summary>Tee ohjelma, joka tulostaa "Hei maailma!"</summary>
+            <p class="lihava">Javascript</p>
+            <p class = "koodi">console.log("Hei maailma");</p>
+            <p class = "lihava">Python</p>
+            <p class = "koodi">print("Hei maailma")</p>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+                class HeiMaailma
+                {
+                  public static void main(String[] args)
+                  {
+                    System.out.println("Hei maailma!");
+                  }
+                }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              namespace HeiMaailma
+              {
+                class Hei
+                {
+                  static void Main(string[] args)
+                  {
+                    System.Console.WriteLine("Hei maailma!");
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka laskee kaksi lukua yhteen ja tulostaa summan</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var l1, l2, summa;
+              l1 = 3;
+              l2 = 5;
+              summa = l1 + l2;
+              console.log(summa);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              l1 = 3
+              l2 = 5
+              summa = l1 + l2
+              print(summa)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int l1 = 3, l2 = 5, summa;
+                  summa = l1 + l2;
+                  System.out.println(summa);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int l1 = 3;
+                    int l2 = 5;
+                    int summa = l1 + l2;
+                    Console.WriteLine(summa);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka laskee kahden luvun erotuksen ja tulostaa sen</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var l1, l2, erotus;
+              l1 = 3;
+              l2 = 5;
+              erotus = l2 - l1;
+              console.log(erotus);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              l1 = 3
+              l2 = 5
+              erotus = l2 - l1
+              print(erotus)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int l1 = 3, l2 = 5, erotus;
+                  erotus = l2 - l1;
+                  System.out.println(erotus);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int l1 = 3;
+                    int l2 = 5;
+                    int erotus = l2 - l1;
+                    Console.WriteLine(erotus);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka laskee kahden luvun tulon ja tulostaa sen</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var l1, l2, tulo;
+              l1 = 3;
+              l2 = 5;
+              tulo = l2 * l1;
+              console.log(tulo);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              l1 = 3
+              l2 = 5
+              tulo = l2 * l1
+              print(tulo)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int l1 = 3, l2 = 5, tulo;
+                  tulo = l2 * l1;
+                  System.out.println(tulo);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int l1 = 3;
+                    int l2 = 5;
+                    int tulo = l2 * l1;
+                    Console.WriteLine(tulo);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka laskee kahden luvun osamäärän ja tulostaa sen</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var l1, l2, osam;
+              l1 = 3;
+              l2 = 5;
+              osam = l2 / l1;
+              console.log(osam);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              l1 = 3
+              l2 = 5
+              osam = l2 / l1
+              print(osam)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int l1 = 3;
+                  int l2 = 5;
+                  float osam;
+                  osam = (float)l2 / l1;
+                  System.out.println(osam);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int l1 = 3;
+                    int l2 = 5;
+                    float osam = (float)l2 / l1;
+                    Console.WriteLine(osam);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Celsius-asteet Fahrenheiteiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              cel = 23;
+              fah = cel * 9 / 5 + 32;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              cel = 23
+              fah = cel * 9 / 5 + 32
+              print(fah)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int cel = 23;
+                  float fah = (float)cel * 9 / 5 + 32;
+                  System.out.println(fah);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int cel = 23;
+                    float fah = (float)cel * 9 / 5 + 32;
+                    Console.WriteLine(fah);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa mailit kilometreiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var maili, km;
+              maili = 74;
+              km = 1.609 * maili;
+              console.log(km);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>Tee ohjelma, joka muuntaa Fahrenheit-asteet Celsiuksiksi</summary>
+            <p class="lihava">Javascript</p>
+            <pre class = "koodi">
+              var cel, fah;
+              fah = 74;
+              cel = (fah - 32) * 5 / 9;
+              console.log(fah);
+            </pre>
+            <p class = "lihava">Python</p>
+            <pre class = "koodi">
+              fah = 74
+              cel = (fah - 32) * 5 / 9
+              print(cel)
+            </pre>
+            <p class="lihava">Java</p>
+            <pre class = "koodi">
+              public class lukujenSumma
+              {
+                public static void main(String args[])
+                {
+                  int fah = 74;
+                  float cel = ((float)(fah - 32) * 5) / 9;
+                  System.out.println(cel);
+                }
+              }
+            </pre>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int fah = 75;
+                    float cel = ((float)(fah - 32) * 5) / 9;
+                    Console.WriteLine(cel);
+                  }
+                }
+              }
+            </pre>
+          </details>
+        </section>
+        <section class="sec2">
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
