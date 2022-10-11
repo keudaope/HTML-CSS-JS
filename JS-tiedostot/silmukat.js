@@ -2,7 +2,7 @@
 function fors()
 {
   var vast = "";
-  for(i = 10; i < 5; i++)
+  for(i = 1; i < 5; i++)
   {
     vast += i+1 + ". for-kierros <br />";
      document.getElementById('vastaus').innerHTML = vast;
@@ -12,7 +12,7 @@ function fors()
 function whiles()
 {
   var vast = "";
-  var j = 10;
+  var j = 1;
   while(j < 5)
   {
     vast += j+1 + ". while-kierros <br />";
@@ -24,7 +24,7 @@ function whiles()
 function dos()
 {
   var vast = "";
-  var k = 10;
+  var k = 1;
   do {
     vast += k+1 + ". do-while-kierros <br />";
      document.getElementById('vastaus').innerHTML = vast;
