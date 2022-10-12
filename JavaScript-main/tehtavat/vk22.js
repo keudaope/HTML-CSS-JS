@@ -32,7 +32,7 @@ function viikko()
     case 6:
       document.getElementById('v2').innerHTML = "Lauantai";
       break;
-    case 6:
+    case 7:
       document.getElementById('v2').innerHTML = "Sunnuntai";
       break;
     default:
@@ -58,7 +58,13 @@ function karkaus()
 function summaKeskiarvo()
 {
   var luku1, luku2, luku3, luku4, luku5, summa, keskiarvo;
-  luku1 = parseInt(document.getElementById('lu1').value);
+  luku1 = document.getElementById('lu1').value;
+  try {
+    luku1 = parseInt(luku1);
+  }
+  catch (ex) {
+    document.getElementById('v4').innerHTML = ex.message;
+  }
   luku2 = parseInt(document.getElementById('lu2').value);
   luku3 = parseInt(document.getElementById('lu3').value);
   luku4 = parseInt(document.getElementById('lu4').value);

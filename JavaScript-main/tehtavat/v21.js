@@ -6,7 +6,7 @@ function jarjesta()
   luku3 = parseInt(document.getElementById('kolmas').value);
   document.write("Annoit luvut: " + luku1 + ' ' + luku2 + ' ' + luku3 + "<br>");
   if(luku1 < luku2 && luku1 < luku3)
-  {k
+  {
     if(luku2 < luku3)
     {
       document.write("Lukujen jÃ¤rjestys: " + luku1 + ' ' + luku2 + ' ' + luku3);
@@ -66,7 +66,7 @@ function etsiSuurin()
       suurin = l1;
     }
     document.write("Annoit luvut: " + l1 + ' ' + l2 + ' ' + l3 + ' ' + l4 + ' ' + l5);
-    document.write("<br>Suurin niistÃ¤ on: " + suurin);
+    document.write("<br>Suurin niistä on: " + suurin);
   }
   function paritonParillinen()
   {
@@ -86,7 +86,7 @@ function etsiSuurin()
     var age = parseInt(document.getElementById('ika').value);
     if(age < 16)
     {
-      document.write("Voit ajaa polkupyÃ¶rÃ¤Ã¤");
+      document.write("Voit ajaa polkupyörää");
     }
     else if(age < 18)
     {
@@ -111,7 +111,7 @@ function etsiSuurin()
     // Muussa tapauksessa, jos se on ruotsi
     else if(lang == 'swe')
     {
-      document.write("Hej vÃ¤rlden!");
+      document.write("Hej världen!");
     }
     else {
       document.write("Hola Mundo!");

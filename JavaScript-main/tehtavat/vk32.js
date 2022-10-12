@@ -20,11 +20,11 @@ function laskePisteet()
         pisteet++;
         break;
       case 'o':
-      case 'ÃƒÂ¤':
+      case 'ä':
       case 'k':
       case 'l':
       case 'O':
-      case 'Ãƒâ€ž':
+      case 'Ä':
       case 'K':
       case 'L':
         pisteet+=2;
@@ -49,9 +49,9 @@ function laskePisteet()
       case 'V':
         pisteet+=4;
         break;
-      case 'ÃƒÂ¶':
+      case 'ö':
       case 'd':
-      case 'Ãƒâ€“':
+      case 'Ö':
       case 'D':
         pisteet+=7;
         break;
@@ -73,6 +73,30 @@ function laskePisteet()
     document.getElementById('tscrabble').innerHTML = "<p>Sanan " + annettuSana + " pisteet ovat: " + pisteet + "</p>";
   }
 }
+function arvoLotto()
+{
+  var lnumerot = [];
+  var temp;
+  for(var lotto = 0; lotto < 7; lotto++)
+  {
+    temp = Math.floor(Math.random()*40)+1;
+    for(var i = 0; i < lnumerot.length; i++)
+    {
+      if(temp == lnumerot[i])
+      {
+        lotto--;
+      }
+      else {
+        lnumerot[lotto] = temp;
+      }
+    }
+    //lnumerot[lotto] = temp;
+  }
+  lnumerot.sort(function(a, b){return a-b});
+  alert(lnumerot);
+  document.getElementById('ltaulu').innerHTML = '<p>'+lnumerot+'</p>';
+}
+
 function muunnaTaulukoksi()
 {
   var jono = [];
@@ -121,11 +145,11 @@ function arvoKortit()
       {
         pakka[laskuri] = maat[m] + numerot[n];
       }
-      else {
+      else
+      {
         pakka[laskuri] = maat[m]+numerot[n];
         laskuri++;
       }
-
     }
   }
   var kortit = [];
@@ -145,27 +169,4 @@ function arvoKortit()
       }
   }
   document.getElementById('pakka').innerHTML = '<p>'+kortit+'</p>';
-}
-function arvoLotto()
-{
-  var lnumerot = [];
-  var temp;
-  for(var lotto = 0; lotto < 7; lotto++)
-  {
-    temp = Math.floor(Math.random()*40)+1;
-    for(var i = 0; i < lnumerot.length; i++)
-    {
-      if(temp = lnumerot[i])
-      {
-        lotto--;
-      }
-      else {
-        lnumerot[lotto] = temp;
-      }
-    }
-
-  }
-  lnumerot.sort(/*function(a, b){return a-b}*/);
-
-  document.getElementById('ltaulu').innerHTML = '<p>'+lnumerot+'</p>';
 }
