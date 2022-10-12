@@ -5,7 +5,7 @@ var rivi3 = document.getElementById('m3');
 var arvattava = Math.floor(Math.random()*10) + 1;
 var arvaustenLukumaara = 1;
 let arvatutNumerot = [];
-var voitot = 0, voitot2 = 0;
+var voitot = 0;
 var tappiot = 0;
 
 function arvauspeli()
