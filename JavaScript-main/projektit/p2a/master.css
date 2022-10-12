@@ -5,6 +5,13 @@ main
   background-color: yellow;
   padding: 20px;
 }
+article
+{
+  margin: 0 auto;
+  padding: 20px;
+  background-color: pink;
+  width: 270px;
+}
 .nappi
 {
   width: 50px;

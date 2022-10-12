@@ -46,7 +46,6 @@ function arvauspeli()
 
 function napit(arvo)
 {
-  //alert(arvattava);
   if(arvaustenLukumaara >= 3)
   {
     arvatutNumerot.push(arvo.value);
@@ -83,7 +82,7 @@ function napit(arvo)
       document.getElementById(j).classList.add("disabled");
       document.getElementById(j).disabled = true;
     }
-    if(arvaustenLukumaara > 3)
+    if(arvaustenLukumaara >= 3)
     {
       tappiot++;
     }
