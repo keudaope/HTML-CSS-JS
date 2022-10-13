@@ -131,12 +131,13 @@ if(l1 >= 'a' && l1 <= 'ö' || l1 >= 'A' && l1 <= 'Ö')
 else
 {
   console.log("Annettu merkki ei ole kirjain");
-}*/
+}
 var l1 = 'Ä';
 if(l1 >= 'a' && l1 <= 'ö' || l1 >= 'A' && l1 <= 'Ö')
 {
   l1 = l1.toLowerCase();
-  if(l1 == 'a' || l1 == 'e' || l1 == 'i' || l1 == 'o' || l1 == 'u' || l1 == 'y' || l1 == 'å' || l1 == 'ä' || l1 == 'ö')
+  if(l1 == 'a' || l1 == 'e' || l1 == 'i' || l1 == 'o' || l1 == 'u' ||
+  l1 == 'y' || l1 == 'å' || l1 == 'ä' || l1 == 'ö')
   {
     console.log("Annettu merkki on vokaali");
   }
@@ -149,3 +150,135 @@ else
 {
   console.log("Annettu merkki ei ole kirjain");
 }
+var l1 = '!';
+if(l1 >= 'a' && l1 <= 'ö' || l1 >= 'A' && l1 <= 'Ö')
+{
+  console.log("Annettu merkki on kirjain!");
+}
+else if (l1 >= 0 && l1 <= 9)
+{
+  console.log("Annettu merkki on numero!");
+}
+else
+{
+  console.log("Annettu merkki on erikoismerkki!");
+}
+var l1 = '3';
+if(l1 >= 'a' && l1 <= 'ö' || l1 >= 'A' && l1 <= 'Ö')
+{
+  if(l1 >= 'a' && l1 <= 'z' || l1 == 'å' || l1 == 'ä' || l1 == 'ö')
+  {
+    console.log("Annettu kirjain on pieni kirjain");
+  }
+  else
+  {
+    console.log("Annettu kirjain on iso kirjain");
+  }
+}
+else
+{
+  console.log("Annettu merkki ei ole kirjain");
+}
+var l1 = '13';
+if(l1 == 1 || l1 == 3 || l1 == 5 || l1 == 7 || l1 == 8 || l1 == 10 || l1 == 12)
+{
+  console.log("Kuukaudessa on 31 päivää");
+}
+else if(l1 == 4 || l1 == 6 || l1 == 9 || l1 == 11)
+{
+  console.log("Kuukaudessa on 30 päivää");
+}
+else if(l1 == 2)
+{
+  console.log("Kuukaudessa on 28 päivää");
+}
+else
+{
+  console.log("Ei ole annettua kuukautta!");
+}
+var l1 = '3999';
+var temp;
+var lista = "";
+if(l1 >= 500)
+{
+  temp = parseInt(l1 / 500);
+  lista += temp + " x 500€, ";
+  l1 = l1 - (temp * 500);
+}
+if(l1 >= 200)
+{
+  temp = parseInt(l1 / 200);
+  lista += temp + " x 200€, ";
+  l1 = l1 - (temp * 200);
+}
+if(l1 >= 100)
+{
+  temp = parseInt(l1 / 100);
+  lista += temp + " x 100€, ";
+  l1 = l1 - (temp * 100);
+}
+if(l1 >= 50)
+{
+  temp = parseInt(l1 / 50);
+  lista += temp + " x 50€, ";
+  l1 = l1 - (temp * 50);
+}
+if(l1 >= 20)
+{
+  temp = parseInt(l1 / 20);
+  lista += temp + " x 20€, ";
+  l1 = l1 - (temp * 20);
+}
+if(l1 >= 10)
+{
+  l1 = Math.ceil(l1);
+  temp = parseInt(l1 / 10);
+  lista += temp + " x 10€, ";
+  l1 = l1 - (temp * 10);
+
+}
+if(l1 >= 5)
+{
+  temp = parseInt(l1 / 5);
+  lista += temp + " x 5€, ";
+  l1 = l1 - (temp * 5);
+}
+if(l1 >= 2)
+{
+  temp = parseInt(l1 / 2);
+  lista += temp + " x 2€, ";
+  l1 = l1 - (temp * 2);
+}
+if(l1 >= 1)
+{
+  temp = parseInt(l1 / 1);
+  lista += temp + " x 1€";
+  l1 = l1 - (temp * 1);
+}
+console.log(lista);
+var k1 = 87, k2 = 92, k3 = 65, k4 = 78, k5 = 51;
+var keskiarvo = (k1 + k2 + k3 + k4 + k5) / 5;
+if(keskiarvo > 90)
+{
+  console.log("Arvosanasi on K5");
+}
+else if(keskiarvo > 80)
+{
+  console.log("Arvosanasi on H4");
+}
+else if(keskiarvo > 70)
+{
+  console.log("Arvosanasi on H3");
+}
+else if(keskiarvo > 60)
+{
+  console.log("Arvosanasi on T2");
+}
+else if(keskiarvo > 50)
+{
+  console.log("Arvosanasi on T1");
+}
+else
+{
+  console.log("Arvosanasi on Hylätty");
+}*/
