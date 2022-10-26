@@ -1,5 +1,13 @@
 // Luodaan kortit
-var merkit = ['kuva0.png','kuva1.png','kuva2.png','kuva3.png','kuva4.png','kuva5.png','kuva6.png','kuva7.png','kuva0.png','kuva1.png','kuva2.png','kuva3.png','kuva4.png','kuva5.png','kuva6.png','kuva7.png'];
+//var merkit = ['kuva0.png','kuva1.png','kuva2.png','kuva3.png','kuva4.png','kuva5.png','kuva6.png','kuva7.png','kuva0.png','kuva1.png','kuva2.png','kuva3.png','kuva4.png','kuva5.png','kuva6.png','kuva7.png'];
+var merkit = [];
+var koko = 18;
+for(var i = 0; i < koko; i++)
+{
+  merkit.push("kuva" + i + ".png");
+  merkit.push("kuva" + i + ".png");
+}
+console.log(merkit);
 // luodaan laskurimuuttuja
 var smerkki = 0;
 // luodaan vanha-muuttuja vanhaa korttia varten
@@ -7,8 +15,17 @@ var smerkki = 0;
 var vanha = -1;
 // luodaan vanhan kortin alt-ominaisuutta varten muuttuja
 var valtti;
+var rivisarake = 0;
 // varsinaisen taulukon luonti-funktio, jota kutsutaan HTML:n onload-komennolla
 function luoTaulukko() {
+  if(koko == 8)
+  {
+    rivisarake = 4;
+  }
+  else if(koko == 18)
+  {
+    rivisarake = 6;
+  }
   // Sekoitetaan alkuperäinen taulukko
    sekoitetut = sekoita(merkit);
    // Haetaan HTML-sivulta paikka, johon peli tulee
@@ -18,12 +35,12 @@ function luoTaulukko() {
    // Luodaan peliä varten taulukon sisältö elementti
   var taulukonSisus = document.createElement('tbody');
   // Itse taulukon luominen, ulompi for tekee rivit ja sisempi sarakkeet
-  for(var i = 0; i < 4; i++)
+  for(var i = 0; i < rivisarake; i++)
   {
     // Luodaan rivielementti
     var rivi = document.createElement('tr');
 
-    for(var j = 0; j < 4; j++)
+    for(var j = 0; j < rivisarake; j++)
     {
       // luodaan sarake-elementti
       var solu = document.createElement('td');
