@@ -281,4 +281,212 @@ else if(keskiarvo > 50)
 else
 {
   console.log("Arvosanasi on Hylätty");
-}*/
+}
+var l1 = 13;
+switch(l1)
+{
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10:
+  case 12:
+    console.log("Kuukaudessa on 31 päivää");
+    break;
+  case 4:
+  case 6:
+  case 9:
+  case 11:
+    console.log("Kuukaudessa on 30 päivää");
+    break;
+  case 2:
+    console.log("Kuukaudessa on 28 päivää");
+    break;
+  default:
+    console.log("Ei ole annettua kuukautta!");
+}
+var l1 = 8;
+switch(l1)
+{
+  case 1:
+    console.log("maanantai");
+    break;
+  case 2:
+    console.log("tiistai");
+    break;
+  case 3:
+    console.log("keskiviikko");
+    break;
+  case 4:
+    console.log("torstai");
+    break;
+  case 5:
+    console.log("perjantai");
+    break;
+  case 6:
+    console.log("lauantai");
+    break;
+  case 7:
+    console.log("sunnuntai");
+    break;
+  default:
+    console.log("Ei ole annettua viikonpäivää!");
+}
+var l1 = '!';
+l1 = l1.toLowerCase();
+switch(l1)
+{
+  case 'a':
+  case 'e':
+  case 'i':
+  case 'o':
+  case 'u':
+  case 'y':
+  case 'å':
+  case 'ä':
+  case 'ö':
+    console.log("Merkki on vokaali");
+    break;
+  case 'b':
+  case 'c':
+  case 'd':
+  case 'f':
+  case 'g':
+  case 'h':
+  case 'j':
+  case 'k':
+  case 'l':
+  case 'm':
+  case 'n':
+  case 'p':
+  case 'q':
+  case 'r':
+  case 's':
+  case 't':
+  case 'v':
+  case 'w':
+  case 'x':
+  case 'z':
+    console.log("Merkki on konsonantti");
+    break;
+  default:
+    console.log("Merkki ei ole vokaali eikä konsonantti!");
+}
+var l1 = 20, l2 = 20;
+switch(l1 > l2)
+{
+  case true:
+    console.log(l1 + " on suurempi");
+    break;
+  case false:
+    console.log(l2 + " on suurempi tai luvut ovat yhtäsuuret");
+    break;
+}
+var l1 = 0;
+switch(l1 > 0)
+{
+  case true:
+    console.log("Luku on positiivinen");
+    break;
+  case false:
+    switch (l1 < 0)
+    {
+      case true:
+        console.log("Luku on negatiivinen");
+        break;
+      case false:
+        console.log("Luku on 0");
+        break;
+    }
+}
+var l1 = 6;
+var l2 = 3;
+var merkki = '?';
+switch(merkki)
+{
+  case '+':
+    console.log(l1 + l2);
+    break;
+  case '-':
+    console.log(l1 - l2);
+    break;
+  case '*':
+    console.log(l1 * l2);
+    break;
+  case '/':
+    console.log(l1 / l2);
+    break;
+  default:
+    console.log("Antamasi merkki ei kuulu peruslaskutoimituksiin!");
+    break;
+}
+var annettuLuku = 9;
+for(var i = 0; i <= annettuLuku; i++)
+{
+  console.log(i);
+}
+for(var i = 97; i <= 122; i++)
+{
+  console.log(String.fromCharCode(i));
+}
+var annettuLuku = 16;
+for(var i = 0; i <= annettuLuku; i+=2)
+{
+  console.log(i);
+}
+var annettuLuku = 16;
+var summa = 0;
+for(var i = 0; i <= annettuLuku; i+=2)
+{
+  summa += i;
+}
+console.log(summa);
+var annettuLuku = 9;
+var summa = 0;
+for(var i = 0; i <= annettuLuku; i++)
+{
+  summa += i;
+}
+console.log(summa);
+var annettuLuku = 16;
+var kertotaulu = "";
+for(var i = 1; i <= 10; i++)
+{
+  kertotaulu += annettuLuku + " * " + i + " = " + annettuLuku * i + "\n";
+}
+console.log(kertotaulu);
+var annettuLuku = 65231;
+//console.log(annettuLuku.toString().length);
+var lukujenMaara = 0;
+do
+{
+  lukujenMaara++;
+  annettuLuku = parseInt(annettuLuku / 10);
+}while(annettuLuku != 0);
+console.log(lukujenMaara);
+var annettuLuku = 65235;
+var ensimmainen, viimeinen;
+viimeinen = annettuLuku % 10;
+ensimmainen = annettuLuku;
+while(ensimmainen >= 10)
+{
+  ensimmainen = parseInt(ensimmainen / 10);
+}
+console.log("Ensimmäinen luku: " + ensimmainen + " ja viimeinen luku: " + viimeinen);
+var annettuLuku = 65235;
+var ensimmainen, viimeinen;
+viimeinen = parseInt(annettuLuku % 10);
+ensimmainen = annettuLuku;
+while(ensimmainen >= 10)
+{
+  ensimmainen = parseInt(ensimmainen / 10);
+}
+console.log("Ensimmäinen luku: " + ensimmainen + " ja viimeinen luku: " + viimeinen + " ja niiden summa " + (ensimmainen+viimeinen));*/
+var annettuLuku = 12345, kaannetty = "";
+annettuLuku = annettuLuku.toString();
+for(var i = annettuLuku.length -1; i >=0; i--)
+{
+  kaannetty += annettuLuku[i];
+}
+console.log(kaannetty);
