@@ -7,6 +7,31 @@ function uusiKuva()
     document.getElementById('kuva').style.width = '400px';
   } );
 }
+function vitsi()
+{
+  fetch("https://official-joke-api.appspot.com/random_joke")
+  .then(response => response.json())
+  .then(data => {
+    //console.log(data);
+    document.getElementById('vitsi').innerHTML = data.setup + "<br>" + data.punchline;
+  } );
+}
+function tietoa()
+{
+  fetch("https://randomuser.me/api/")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.results[0]);
+    document.getElementById('tietoa').innerHTML = data.results[0].name.title + " " + data.results[0].name.first + " " + data.results[0].name.last
+     + "<br>" + data.results[0].location.street.number + " " + data.results[0].location.street.name
+     + "<br>" + data.results[0].location.city + " " + data.results[0].location.state
+     + "<br>" + data.results[0].location.postcode + " " + data.results[0].location.country
+     + "<br>" + data.results[0].phone
+     + "<br>" + data.results[0].login.username + " " + data.results[0].login.password;
+     document.getElementById('kuva2').src = data.results[0].picture.large;
+     document.getElementById('kuva2').style.width = '400px';
+  } );
+}
 function chuckNorris()
 {
   fetch("https://api.chucknorris.io/jokes/random")

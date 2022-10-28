@@ -5,7 +5,7 @@ function drag(ev) {
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
+0
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
