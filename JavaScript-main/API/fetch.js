@@ -17,6 +17,15 @@ function chuckNorris()
       console.log(data);
     })
 }
+function db()
+{
+  fetch("http://127.0.0.1:58593/JavaScript-main/JSON/db.json")
+  .then(response => response.json())
+    .then(data => {
+      document.getElementById('db').innerHTML = data.dogs[2].breed + "<br>" + data.dogs[0].name;
+      console.log(data);
+    })
+}
 function kissaTieto()
 {
   fetch("https://cat-fact.herokuapp.com/facts")
