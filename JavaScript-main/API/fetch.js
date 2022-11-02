@@ -3,6 +3,7 @@ function uusiKuva()
   fetch("https://dog.ceo/api/breeds/image/random")
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     document.getElementById('kuva').src = data.message;
     document.getElementById('kuva').style.width = '400px';
   } );
@@ -36,7 +37,19 @@ function chuckNorris()
 {
   fetch("https://api.chucknorris.io/jokes/random")
   .then(response => response.json())
-  .then(data => document.getElementById('chuck').innerHTML = data.value);
+    .then(data => {
+      document.getElementById('chuck').innerHTML = data.created_at + "<br>" + data.value + "<br>" + data.updated_at;
+      console.log(data);
+    })
+}
+function db()
+{
+  fetch("http://127.0.0.1:58593/JavaScript-main/JSON/db.json")
+  .then(response => response.json())
+    .then(data => {
+      document.getElementById('db').innerHTML = data.dogs[2].breed + "<br>" + data.dogs[0].name;
+      console.log(data);
+    })
 }
 function kissaTieto()
 {
