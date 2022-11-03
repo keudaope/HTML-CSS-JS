@@ -23,12 +23,19 @@ function tietoa()
   .then(response => response.json())
   .then(data => {
     console.log(data.results[0]);
-    document.getElementById('tietoa').innerHTML = data.results[0].name.title + " " + data.results[0].name.first + " " + data.results[0].name.last
-     + "<br>" + data.results[0].location.street.number + " " + data.results[0].location.street.name
+    var spaiva = new Date((data.results[0].dob.date).slice(0,10));
+    var paiva = spaiva.getDate();
+    var kk = spaiva.getMonth();
+    var vuosi = spaiva.getYear();
+    document.getElementById('tietoa').innerHTML = "<b>Nimi: </b>" + data.results[0].name.title + " " + data.results[0].name.first + " " + data.results[0].name.last
+     + "<br><b>Osoite: </b>" + data.results[0].location.street.number + " " + data.results[0].location.street.name
      + "<br>" + data.results[0].location.city + " " + data.results[0].location.state
      + "<br>" + data.results[0].location.postcode + " " + data.results[0].location.country
-     + "<br>" + data.results[0].phone
-     + "<br>" + data.results[0].login.username + " " + data.results[0].login.password;
+     + "<br><b>Puhelin: </b>" + data.results[0].phone
+     + "<br><b>Maa: </b>" + data.results[0].location.country
+     + "<br><b>Käyttäjätunnus + salasana: </b>" + data.results[0].login.username + " " + data.results[0].login.password
+     + "<br><b>Syntymäaika: </b>" + paiva + "." + kk + "." + vuosi
+     + "<br><b>Sähköposti: </b>" + data.results[0].email;
      document.getElementById('kuva2').src = data.results[0].picture.large;
      document.getElementById('kuva2').style.width = '400px';
   } );
@@ -42,24 +49,31 @@ function chuckNorris()
       console.log(data);
     })
 }
-function db()
+function saa()
 {
-  fetch("http://127.0.0.1:58593/JavaScript-main/JSON/db.json")
+  fetch("https://data.rijksmuseum.nl/object-metadata/api/")
   .then(response => response.json())
     .then(data => {
-      document.getElementById('db').innerHTML = data.dogs[2].breed + "<br>" + data.dogs[0].name;
+      //document.getElementById('chuck').innerHTML = data.created_at + "<br>" + data.value + "<br>" + data.updated_at;
+      console.log(data);
+    })
+}
+function db()
+{
+  fetch("http://127.0.0.1:3000/JavaScript-main/API/db.json")
+  .then(response => response.json())
+    .then(data => {
+      document.getElementById('db').innerHTML = data.dogs[2].breed + "<br>" + data.dogs[2].name;
       console.log(data);
     })
 }
 function kissaTieto()
 {
-  fetch("https://cat-fact.herokuapp.com/facts")
+  fetch("https://catfact.ninja/fact")
   .then(response => response.json())
   .then(data => {
-    var pituus = data.length;
-    var satunnainen = Math.floor(Math.random()*pituus);
-    //console.log(data[0].text);
-    document.getElementById('kissa').innerHTML = data[satunnainen].text;
+    //console.log(data);
+    document.getElementById('kissa').innerHTML = data.fact;
       } );
 }
 function tarkasta()
