@@ -1,0 +1,13 @@
+form
+{
+  margin: 0 auto;
+  width: 660px;
+  border: 1px solid blue;
+  padding: 10px;
+  background-color: yellow;
+  border-radius: 10px;
+}
+*
+{
+  font-size: 32px;
+}
