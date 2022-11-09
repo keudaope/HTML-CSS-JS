@@ -6,7 +6,8 @@
 -- Generation Time: 09.11.2022 klo 06:38
 -- Palvelimen versio: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
-
+CREATE DATABASE IF NOT EXISTS osoitetieto; 
+USE osoitetieto;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
