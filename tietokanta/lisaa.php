@@ -1,4 +1,5 @@
 <?php
+// Luodaan muuttujat ja niiden sisältö
 $etu = $_POST["etunimi"];
 $suku = $_POST["sukunimi"];
 $os = $_POST["losoite"];
@@ -10,7 +11,7 @@ echo $etu . " " . $suku . "<br>";
 echo $os . "<br>";
 echo $pnro . " " . $ptp . "<br>";
 echo $maa;*/
-// Luodaan muuttujat ja niiden sisältö
+
 $palvelin = "localhost";
 $kayttajatunnus = "root";
 $salasana = "";

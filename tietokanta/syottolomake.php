@@ -112,7 +112,7 @@ else
 }
 
 // Tarkistetaan, tuleeko yhtään riviä vastaukseksi, jos ei, jätetään while-looppi suorittamatta
-$select= '<select name="select">';
+$select= '<select name="manager_id">';
     while($rs = mysqli_fetch_array($vastaus))
     {
 
@@ -193,7 +193,7 @@ else
 
 // Tarkistetaan, tuleeko yhtään riviä vastaukseksi, jos ei, jätetään while-looppi suorittamatta
 
-$select= '<select name="select">';
+$select= '<select name="department_id">';
     while($rs = mysqli_fetch_array($vastaus))
     {
 
