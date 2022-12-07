@@ -1,0 +1,145 @@
+
+.klikkaus           /*laskurin muotoilu*/
+{
+  text-align: center;
+  font-size: 2.2rem;
+  border: 1px solid black;
+  width: 15rem;
+  margin: 0 auto;
+  background-color: lightgray;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+.card_container {
+  position: relative;
+  margin: 1px auto;
+  padding: 3px;
+  width: 9em;
+  height: 12em;
+  line-height: 12em;
+  z-index: 1;
+}
+.card_container {
+  -moz-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+.card {
+  box-shadow: 2px 3px 10px ;
+	border-radius: 10px;
+
+  background-image: url(Play.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+/*  border-radius: 3px;
+  box-shadow: 0.5px 2.5px #ccc;*/
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip .card{
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  color: white;
+  font-size: 6.5em;
+  background-color: #FFCC66;
+  border-radius: 3px;
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+table {
+	margin: 0px auto;
+}
+
+.timer {
+  display: block;
+  margin: 10px auto;
+  position: relative;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 2px solid #1abc9c;
+  font-size: 40px;
+  text-align: center;
+  color: #999;
+}
+
+.startbtn {
+  display: block;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.critical {
+  color: red;
+}
+
+.cntr {
+  margin: 15px auto;
+}
+
+.points {
+  position: absolute;
+}
+.kuva{
+  width: 90%;
+}
+
+.table-top{
+
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 0 5px #aaa inset;
+	border-radius: 10px;
+}
+body{
+    background: linear-gradient(270deg, #246366, #1bb6bd, #07494d, #5e6d6e);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 24s ease infinite;
+    -moz-animation: AnimationName 24s ease infinite;
+    animation: AnimationName 24s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

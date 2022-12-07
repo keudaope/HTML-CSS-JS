@@ -18,6 +18,7 @@ function retrieveRecords(){ //retrieves items in the localStorage
     var records = window.localStorage.getItem(key); //searches for the key in localStorage
     // Ylemmän tilalle alle oleva
     var data = JSON.parse(localStorage.getItem(key));
+    console.log(data.brand);
     // Luodaan kappale, joka myöhemmin lisätään sivulle
     var paragraph = document.createElement("p");
     // Haetaan JSONista mallitieto ja hintatieto

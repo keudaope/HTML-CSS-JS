@@ -1,0 +1,88 @@
+
+table
+{
+  margin: 11px 100px 0px 69px;
+  background-image: url(Matrixcode.gif);
+  height: 95px;
+  width: 146px;
+  border-radius: 4px;
+  transform:  perspective(120px) rotateX(10deg);
+  transform-origin: bottom center;
+  transform-style: preserve-3d;
+    border-style: ridge;
+}
+#ylän
+{
+  border-radius: 3px;
+  margin: 55px 0px 0px 70px;
+  width: 135px;
+  height: 77px;
+  border-style: ridge;
+}
+
+body
+{
+
+  background-image: url(3ds.png);
+  background-size: 300px;
+  background-repeat: no-repeat;
+}
+#reload:hover
+{
+  background-color: gray;
+}
+
+#reload
+{
+
+  color: red;
+  width: 28.5px;
+  height: 19.5px;
+  border-radius: 60%;
+  font-size: 5px;
+  float: left;
+  margin-top: -71.8px;
+  margin-left: 32.6px;
+  border-style: ridge;
+  border: 3px solid lightgray;
+}
+
+
+.nappi
+{
+  width: 100%;
+  height: 13px;
+  font-size: 7px;
+}
+tr, td
+{
+  width: 43px;
+
+}
+
+#nolla
+{
+  text-align: center;
+}
+
+#m1, #m2, #m3
+{
+  color: #ffffff;
+  font-size: 8px;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-family: 'Silkscreen', cursive;
+}
+article
+{
+  margin: 0 auto;
+  padding: 4px;
+  background-image: url(Matrixcode.gif);
+  width: 270px;
+}
+main
+{
+  margin: 0 auto;
+  width: 250px;
+  background-color: yellow;
+  padding: 20px;
+}
