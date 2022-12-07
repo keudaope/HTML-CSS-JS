@@ -15,7 +15,6 @@ function taulukko()
         ['04200', 'Kerava']
       ]
     ]
-
   ];
   console.log(taulukko[0][1][0][0]);
 }

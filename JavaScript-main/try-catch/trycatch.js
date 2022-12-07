@@ -9,9 +9,5 @@ function testaa()
       alert("Virhe syötössä! " + e.message);
   } finally {
       alert("Annoit seuraavat tiedot: " + etunimi + " " + sukunimi);
-      if(enimi.length > 0 && snimi.length > 0)
-      {
-        alert("Annoit hyväksytyt tiedot");
-      }
   }
 }
