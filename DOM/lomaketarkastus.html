@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lomaketarkastus</title>
+    <link href="lomaketarkastus.css" rel="stylesheet" />
+    <script src="lomaketarkastus.js"></script>
+</head>
+<body>
+    <div class="ekaosio">
+        <table>
+            <tr>
+                <td>Anna Etunimesi:</td>
+                <td><input type="text" id="enimi" value="" /></td>
+            </tr>
+            <tr>
+                <td>Anna Sukunimesi:</td>
+                <td><input type="text" id="snimi" value="" /></td>
+            </tr>
+        </table>
+    </div>
+    <div class="ekaosio">
+        <p>Tulin t‰n‰‰n kouluun:</p>
+        <input type="radio" name="kouluun" value="Jalan" />Jalan<br />
+        <input type="radio" name="kouluun" value="Autolla" />Autolla<br />
+        <input type="radio" name="kouluun" value="Junalla" />Junalla<br />
+        <input type="radio" name="kouluun" value="Bussilla" />Bussilla<br />
+        <input type="radio" name="kouluun" value="Mopolla" />Mopolla<br />
+        <input type="radio" name="kouluun" value="Uiden" />Uiden<br />
+    </div>
+    <div class="ekaosio">
+        Lempituntini koulussa on:
+        <select id="lempitunti">
+            <option value="">Valitse alla olevista vaihtoehdoista:</option>
+            <option value="YTO">YTO-aineet</option>
+            <option value="TVT">TVT-perusteet</option>
+            <option value="Ohjelmointi">Ohjelmointi</option>
+            <option value="IT-tuki">IT-tuki</option>
+        </select>
+        <button onclick="tarkastaLomake()">Tarkasta lomake</button>
+    </div>
+</body>
+</html>
