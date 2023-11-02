@@ -8,11 +8,11 @@ function tarkastaLomake() {
     }
     lempiaine = document.getElementById("lempitunti").value;
     //alert(enimi + snimi + kouluun + lempiaine + ""); 
-    if (enimi == "") {
-        alert("Anna etunimesi");
+    if (enimi.length < 3) {
+        alert("Anna vähintään 3 kirjaiminen etunimi");
     }
-    else if (snimi == "") {
-        alert("Anna sukunimesi");
+    else if (snimi.length < 5) {
+        alert("Anna vähintään 5 kirjaiminen sukunimi");
     }
     else if (!kouluun) {
         alert("Kerro, millä  tulit kouluun");

@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Kirjautumislomake</title>
+    <link href="projekti1.css" rel="stylesheet" />
+    <script src="projekti1.js"></script>
+</head>
+<body>
+    <div class="lomake">
+        <h1>Kirjautumislomake</h1>
+        <form action="/" method="post">
+            <p>
+                <label>Nimi</label><br />
+                <input type="text" id="nimi" value="" />
+            </p>
+            <p>
+                <label>Salasana</label><br />
+                <input type="password" id="salasana" value="" />
+            </p>
+            <p>
+                <input type="hidden" id="piilotettu" name="piilotettu" value="Tätä tietoa ei näytetä asiakkaalle">
+            </p>
+            <p>
+                <label>Millainen koneenkäyttäjä olet?</label><br />
+                <input type="radio" name="kayttaja" value="Himopelaaja" />Himopelaaja<br />
+                <input type="radio" name="kayttaja" value="Opiskelu" />Käytän opiskeluun<br />
+                <input type="radio" name="kayttaja" value="En_kayta" />En käytä konetta<br />
+            </p>
+            <p>
+                <Label>Mitä mieltä olet sivuistani tähän asti?</Label><br />
+                <input type="checkbox" id="Thienot" value="" name="checkbox" />Todella hienot<br />
+                <input type="checkbox" id="Ammattimaiset" value="" name="checkbox" />Ammattimaisesti tehdyt<br />
+                <input type="checkbox" id="Ostan" value="" name="checkbox" />Ostan sinulta!<br />
+            </p>
+            <p>
+                <label>Mikä on lempiaineesi koulussa?</label>
+                <select id="lempiaine">
+                    <option value="">Valitse alla olevista vaihtoehdoista</option>
+                    <option value="TVT-perusteet">TVT-perusteet</option>
+                    <option value="Ohjelmointi">Ohjelmointi</option>
+                    <option value="Ohjelmistokehittaja">Ohjelmistokehittäjänä toimiminen</option>
+                    <option value="Komponenttikirjasto">Ohjelmiston toteuttaminen komponenttikirjastolla</option>
+                    <option value="Kyberturva">Kyberturva</option>
+                    <option value="YTOt">YTOt</option>
+                </select>
+            </p>
+            <p>
+                <label>Kerro, miten kehittäisit sivujani:</label><br/>
+                <textarea id="kehitys"></textarea>
+            </p>
+            <p><input type="button" onclick="tarkastaLomake()" value="Tarkasta lomake" /></p>
+        </form>
+    </div>
+</body>
+</html>
