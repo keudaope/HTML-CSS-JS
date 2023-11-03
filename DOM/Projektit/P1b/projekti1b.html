@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Kirjautumislomake</title>
+    <link href="projekti1b.css" rel="stylesheet" />
+    <script src="projekti1b.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center">Projekti 1b</h1>
+    <div class="lomake">
+        <h1 id="otsikko">Kirjautumissivu</h1>
+        <p id="kuvaus">Tervetuloa kirjautumissivulle!</p>
+        <form action="/" id="kyselylomake" method="post">
+            <p>
+                <label for="nimi">Anna nimi:</label><br />
+                <input type="text" id="nimi" name="name" value="" placeholder="Tähän nimi" autocomplete="Jyri Lindroos"/>
+            </p>
+            <p>
+                <label for="email">Anna sähköpostisi:</label><br />
+                <input type="email" id="email" name="name" value="" placeholder="Tähän sähköposti" autocomplete="jyri.lindroos@keuda.fi"/>
+            </p>
+            <p>
+                <label for="ika">Anna ikäsi:</label><br />
+                <input type="number" id="ika" name="name" value="" min="16" max="120" placeholder="Tähän ikä" autocomplete="58"/>
+            </p>
+            <p>
+                <label for="suosikki">Valitse suosikki ajanvietetapasi:</label>
+                <select id="suosikki">
+                    <option value="">Valitse alla olevista vaihtoehdoista</option>
+                    <option value="pelaaminen">Tietokonepelaaminen</option>
+                    <option value="lukeminen">Lukeminen</option>
+                    <option value="nukkuminen">Nukkuminen</option>
+                </select>
+            </p>
+            <table>
+                <tr>
+                    <td>
+                        <b>Millä tulen kouluun</b><br />
+                        <input type="radio" name="kouluun" value="Bussilla" />Bussilla <br />
+                        <input type="radio" name="kouluun" value="Junalla" />Junalla <br />
+                        <input type="radio" name="kouluun" value="Kävellen" />Kävellen <br />
+                    </td>
+                    <td>
+                        <b>Millä lähden koulusta</b><br />
+                        <input type="radio" name="koulusta" value="Bussilla" />Bussilla <br />
+                        <input type="radio" name="koulusta" value="Junalla" />Junalla <br />
+                        <input type="radio" name="koulusta" value="Kävellen" />Kävellen <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Kouluruoka</b><br />
+                        <input type="checkbox" name="kouluruoka" id="pidan" value="Pidän" />Pidän <br />
+                        <input type="checkbox" name="kouluruoka" id="en" value="En pidä" />En pidä <br />
+                    </td>
+                    <td>
+                        <b>Energiajuoma</b><br />
+                        <input type="checkbox" name="energiajuoma" id="juon" value="Juon" />Juon<br />
+                        <input type="checkbox" name="energiajuoma" id="enj" value="En_juo" />En juo<br />
+                    </td>
+                </tr>
+            </table>
+            <label for="kommentti">Kommentteja:</label><br />
+            <textarea id="kommentti"></textarea>
+            <p><input type="button" name="name" id="laheta" value="Lähetä" onclick="tarkastaLomake()"/></p>
+        </form>
+    </div>
+</body>
+</html>
