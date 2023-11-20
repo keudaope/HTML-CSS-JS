@@ -1,0 +1,72 @@
+[
+  {
+    "koodi": "<h2>KYSYMYS 1</h2>function sayHi() <br/>{<br/>&nbsp;&nbsp;console.log(name);<br/>&nbsp;&nbsp;console.log(age);<br/>&nbsp;&nbsp;var name = 'Lydia';<br/>&nbsp;&nbsp;let age = 21;<br/>}<br/>sayHi();",
+    "A": "Lydia and undefined",
+    "B": "Lydia and ReferenceError",
+    "C": "ReferenceError and 21",
+    "D": "undefined and ReferenceError"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 2</h2>for (var i = 0; i < 3; i++) <br/>{<br/>setTimeout(() => console.log(i), 1);<br/>}<br/><br/>for (let i = 0; i < 3; i++) <br/>{<br/>&nbsp;&nbsp;setTimeout(() => console.log(i), 1);<br/>}",
+    "A": "0 1 2 and 0 1 2",
+    "B": "0 1 2 and 3 3 3",
+    "C": "3 3 3 and 0 1 2",
+    "D": "0 0 0 and 0 0 0"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 3</h2>const shape = <br/>{<br/>&nbsp;&nbsp;radius: 10,<br/>&nbsp;&nbsp;diameter() {<br/>&nbsp;&nbsp;return this.radius * 2;<br/>},<br/>&nbsp;&nbsp;perimeter: () => 2 * Math.PI * this.radius,<br/>};<br/><br/>console.log(shape.diameter());<br/>console.log(shape.perimeter());",
+    "A": "20 and 62.831853",
+    "B": "20 and NaN",
+    "C": "20 and 63",
+    "D": "NaN and 63"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 4</h2>+true;<br/>!'Lydia';",
+    "A": "1 and false",
+    "B": "false and NaN",
+    "C": "false and false",
+    "D": "none of the above"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 5</h2>let c = { greeting: 'Hey!' };<br/>let d;<br/>d = c;<br/>c.greeting = 'Hello';<br/>console.log(d.greeting);",
+    "A": "Hello",
+    "B": "Hey!",
+    "C": "undefined",
+    "D": "ReferenceError"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 6</h2>let a = 3;<br/>let b = new Number(3);<br/>let c = 3;<br/>console.log(a == b);<br/>console.log(a === b);<br/>console.log(b === c);",
+    "A": "true false true",
+    "B": "false false true",
+    "C": "true false false",
+    "D": "false true true"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 7</h2>class Chameleon {<br/>&nbsp;&nbsp;static colorChange(newColor){<br/>&nbsp;&nbsp;&nbsp;&nbsp;this.newColor = newColor;<br/>&nbsp;&nbsp;&nbsp;&nbsp;return this.newColor;<br/>&nbsp;&nbsp;}<br/>&nbsp;&nbsp;constructor({ newColor = 'green' } = {}) {<br/>&nbsp;&nbsp;this.newColor = newColor;<br/>&nbsp;&nbsp;}<br/>}<br/>const freddie = new Chameleon({ newColor: 'purple' });<br/>console.log(freddie.colorChange('orange'));",
+    "A": "orange",
+    "B": "purple",
+    "C": "green",
+    "D": "TypeError"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 8</h2>let greeting;<br/>greetign = {}; // Typo!<br/>console.log(greetign);",
+    "A": "{}",
+    "B": "ReferenceError: greetign is not defined",
+    "C": "undefined",
+    "D": "Application error"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 9</h2>function bark() {<br/>&nbsp;&nbsp;console.log('Woof!');<br/>}<br/>bark.animal = 'dog';",
+    "A": "SyntaxError",
+    "B": "Woof",
+    "C": "ReferenceError",
+    "D": "Hau"
+  },
+  {
+    "koodi": "<h2>KYSYMYS 10</h2>function Person(firstName, lastName) {<br/>&nbsp;&nbsp;this.firstName = firstName;<br/>&nbsp;&nbsp;this.lastName = lastName;<br/>}<br/>const member = new Person('Lydia', 'Hallie');<br/>Person.getFullName = function() {<br/>&nbsp;&nbsp;return `${this.firstName} ${this.lastName}`;<br/>};<br/>console.log(member.getFullName());",
+    "A": "TypeError",
+    "B": "SyntaxError",
+    "C": "Lydia Hallie",
+    "D": "undefined undefined"
+  }
+]

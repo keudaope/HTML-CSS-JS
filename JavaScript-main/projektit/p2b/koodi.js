@@ -1,5 +1,6 @@
-function lahetaVastaukset()
-{
+
+function lahetaVastaukset(event) {
+
   // Alustetaan muuttujat
   var yhteensa = 5;
   var pisteet = 0;
@@ -13,15 +14,12 @@ function lahetaVastaukset()
   var k5 = document.forms['kyselylomake']['k5'].value;
 
   // Onko kaikkiin vastattu - tarkastus
-  for(i = 1; i <= yhteensa; i++)
-  {
-    if(eval('k'+ i) == null || eval('k' + i) == '')
-    {
+  for (i = 1; i <= yhteensa; i++) {
+    if (eval('k' + i) == null || eval('k' + i) == '') {
       alert('Et vastannut kysymykseen nro: ' + i);
       huom = 1;
     }
-    if(huom == 1)
-    {
+    if (huom == 1) {
       return false;
     }
   }
@@ -30,10 +28,8 @@ function lahetaVastaukset()
   var vastaukset = ['b', 'a', 'd', 'b', 'd'];
   // Tarkastetaan vastaukset
   {
-    for(var j = 1; j <= yhteensa; j++)
-    {
-      if(eval('k' + j) == vastaukset[j-1])
-      {
+    for (var j = 1; j <= yhteensa; j++) {
+      if (eval('k' + j) == vastaukset[j - 1]) {
         pisteet++;
       }
     }
@@ -41,5 +37,6 @@ function lahetaVastaukset()
   tulokset = document.getElementById('tulokset');
   alert('Sait ' + pisteet + ' pistettä, kun maksimi pistemäärä oli ' + yhteensa);
   tulokset.innerHTML = '<h3>Sait <span>' + pisteet + '</span> pistettä, kun maksimipistemäärä oli <span>' + yhteensa + '</span></h3>';
-  return false;
+  event.preventDefault();
 }
+

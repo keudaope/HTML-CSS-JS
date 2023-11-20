@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+}
+.kortti{
+    float: left;
+    width: 25%;
+    height: 400px;
+    padding: 10px;
+    background-color:azure;
+    margin: 10px;
+}

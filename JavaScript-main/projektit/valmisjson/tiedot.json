@@ -1,0 +1,312 @@
+{
+  "users": [
+    {
+      "first_name": "Matti",
+      "last_name": "Virtanen",
+      "address": "Katu 1",
+      "zip_code": "00100",
+      "city": "Helsinki",
+      "phone_number": "+358 40 123 4567",
+      "email": "matti.virtanen@example.com",
+      "age": 28,
+      "picture": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "first_name": "Anna",
+      "last_name": "Korhonen",
+      "address": "Osoite 2",
+      "zip_code": "02100",
+      "city": "Espoo",
+      "phone_number": "+358 50 234 5678",
+      "email": "anna.korhonen@example.com",
+      "age": 35,
+      "picture": "https://randomuser.me/api/portraits/women/2.jpg"
+    },
+    {
+      "first_name": "Juha",
+      "last_name": "Laine",
+      "address": "Polku 3",
+      "zip_code": "03150",
+      "city": "Vantaa",
+      "phone_number": "+358 45 345 6789",
+      "email": "juha.laine@example.com",
+      "age": 42,
+      "picture": "https://randomuser.me/api/portraits/men/3.jpg"
+    },
+    {
+      "first_name": "Saara",
+      "last_name": "Järvinen",
+      "address": "Tie 4",
+      "zip_code": "04100",
+      "city": "Turku",
+      "phone_number": "+358 50 456 7890",
+      "email": "saara.jarvinen@example.com",
+      "age": 31,
+      "picture": "https://randomuser.me/api/portraits/women/4.jpg"
+    },
+    {
+      "first_name": "Kari",
+      "last_name": "Mäkinen",
+      "address": "Katu 5",
+      "zip_code": "05120",
+      "city": "Tampere",
+      "phone_number": "+358 40 567 8901",
+      "email": "kari.makinen@example.com",
+      "age": 50,
+      "picture": "https://randomuser.me/api/portraits/men/5.jpg"
+    },
+    {
+      "first_name": "Laura",
+      "last_name": "Heikkinen",
+      "address": "Osoite 6",
+      "zip_code": "06140",
+      "city": "Oulu",
+      "phone_number": "+358 45 678 9012",
+      "email": "laura.heikkinen@example.com",
+      "age": 29,
+      "picture": "https://randomuser.me/api/portraits/women/6.jpg"
+    },
+    {
+      "first_name": "Timo",
+      "last_name": "Lehto",
+      "address": "Polku 7",
+      "zip_code": "07100",
+      "city": "Jyväskylä",
+      "phone_number": "+358 50 789 0123",
+      "email": "timo.lehto@example.com",
+      "age": 38,
+      "picture": "https://randomuser.me/api/portraits/men/7.jpg"
+    },
+    {
+      "first_name": "Sari",
+      "last_name": "Kallio",
+      "address": "Tie 8",
+      "zip_code": "08150",
+      "city": "Lahti",
+      "phone_number": "+358 40 890 1234",
+      "email": "sari.kallio@example.com",
+      "age": 45,
+      "picture": "https://randomuser.me/api/portraits/women/8.jpg"
+    },
+    {
+      "first_name": "Marko",
+      "last_name": "Ranta",
+      "address": "Katu 9",
+      "zip_code": "09120",
+      "city": "Kuopio",
+      "phone_number": "+358 45 901 2345",
+      "email": "marko.ranta@example.com",
+      "age": 33,
+      "picture": "https://randomuser.me/api/portraits/men/9.jpg"
+    },
+    {
+      "first_name": "Hanna",
+      "last_name": "Karjalainen",
+      "address": "Osoite 10",
+      "zip_code": "10140",
+      "city": "Pori",
+      "phone_number": "+358 50 234 5678",
+      "email": "hanna.karjalainen@example.com",
+      "age": 27,
+      "picture": "https://randomuser.me/api/portraits/women/10.jpg"
+    },
+    {
+      "first_name": "Pekka",
+      "last_name": "Niemi",
+      "address": "Polku 11",
+      "zip_code": "11100",
+      "city": "Kouvola",
+      "phone_number": "+358 40 345 6789",
+      "email": "pekka.niemi@example.com",
+      "age": 48,
+      "picture": "https://randomuser.me/api/portraits/men/11.jpg"
+    },
+    {
+      "first_name": "Niina",
+      "last_name": "Lammi",
+      "address": "Tie 12",
+      "zip_code": "12150",
+      "city": "Joensuu",
+      "phone_number": "+358 45 456 7890",
+      "email": "niina.lammi@example.com",
+      "age": 36,
+      "picture": "https://randomuser.me/api/portraits/women/12.jpg"
+    },
+    {
+      "first_name": "Antti",
+      "last_name": "Rantanen",
+      "address": "Katu 13",
+      "zip_code": "13120",
+      "city": "Seinäjoki",
+      "phone_number": "+358 40 567 8901",
+      "email": "antti.rantanen@example.com",
+      "age": 32,
+      "picture": "https://randomuser.me/api/portraits/men/13.jpg"
+    },
+    {
+      "first_name": "Tiina",
+      "last_name": "Salonen",
+      "address": "Osoite 14",
+      "zip_code": "14140",
+      "city": "Vaasa",
+      "phone_number": "+358 50 678 9012",
+      "email": "tiina.salonen@example.com",
+      "age": 41,
+      "picture": "https://randomuser.me/api/portraits/women/14.jpg"
+    },
+    {
+      "first_name": "Jari",
+      "last_name": "Koivisto",
+      "address": "Polku 15",
+      "zip_code": "15100",
+      "city": "Mikkeli",
+      "phone_number": "+358 45 789 0123",
+      "email": "jari.koivisto@example.com",
+      "age": 49,
+      "picture": "https://randomuser.me/api/portraits/men/15.jpg"
+    },
+    {
+      "first_name": "Leena",
+      "last_name": "Salmi",
+      "address": "Tie 16",
+      "zip_code": "16150",
+      "city": "Kotka",
+      "phone_number": "+358 40 890 1234",
+      "email": "leena.salmi@example.com",
+      "age": 30,
+      "picture": "https://randomuser.me/api/portraits/women/16.jpg"
+    },
+    {
+      "first_name": "Tomi",
+      "last_name": "Jokinen",
+      "address": "Katu 17",
+      "zip_code": "17120",
+      "city": "Hämeenlinna",
+      "phone_number": "+358 50 901 2345",
+      "email": "tomi.jokinen@example.com",
+      "age": 37,
+      "picture": "https://randomuser.me/api/portraits/men/17.jpg"
+    },
+    {
+      "first_name": "Outi",
+      "last_name": "Leppänen",
+      "address": "Osoite 18",
+      "zip_code": "18100",
+      "city": "Kajaani",
+      "phone_number": "+358 45 123 4567",
+      "email": "outi.leppanen@example.com",
+      "age": 44,
+      "picture": "https://randomuser.me/api/portraits/women/18.jpg"
+    },
+    {
+      "first_name": "Ville",
+      "last_name": "Kallio",
+      "address": "Polku 19",
+      "zip_code": "19140",
+      "city": "Rovaniemi",
+      "phone_number": "+358 40 234 5678",
+      "email": "ville.kallio@example.com",
+      "age": 26,
+      "picture": "https://randomuser.me/api/portraits/men/19.jpg"
+    },
+    {
+      "first_name": "Heli",
+      "last_name": "Laakso",
+      "address": "Tie 20",
+      "zip_code": "20100",
+      "city": "Porvoo",
+      "phone_number": "+358 50 345 6789",
+      "email": "heli.laakso@example.com",
+      "age": 39,
+      "picture": "https://randomuser.me/api/portraits/women/20.jpg"
+    },
+    {
+      "first_name": "Jukka",
+      "last_name": "Koivunen",
+      "address": "Katu 21",
+      "zip_code": "21150",
+      "city": "Salo",
+      "phone_number": "+358 45 456 7890",
+      "email": "jukka.koivunen@example.com",
+      "age": 43,
+      "picture": "https://randomuser.me/api/portraits/men/21.jpg"
+    },
+    {
+      "first_name": "Marja",
+      "last_name": "Rinne",
+      "address": "Osoite 22",
+      "zip_code": "22120",
+      "city": "Lappeenranta",
+      "phone_number": "+358 40 567 8901",
+      "email": "marja.rinne@example.com",
+      "age": 34,
+      "picture": "https://randomuser.me/api/portraits/women/22.jpg"
+    },
+    {
+      "first_name": "Petri",
+      "last_name": "Niemelä",
+      "address": "Polku 23",
+      "zip_code": "23140",
+      "city": "Hyvinkää",
+      "phone_number": "+358 50 678 9012",
+      "email": "petri.niemela@example.com",
+      "age": 46,
+      "picture": "https://randomuser.me/api/portraits/men/23.jpg"
+    },
+    {
+      "first_name": "Sanna",
+      "last_name": "Koskinen",
+      "address": "Tie 24",
+      "zip_code": "24100",
+      "city": "Nokia",
+      "phone_number": "+358 45 789 0123",
+      "email": "sanna.koskinen@example.com",
+      "age": 28,
+      "picture": "https://randomuser.me/api/portraits/women/24.jpg"
+    },
+    {
+      "first_name": "Ari",
+      "last_name": "Lindholm",
+      "address": "Katu 25",
+      "zip_code": "25150",
+      "city": "Rauma",
+      "phone_number": "+358 40 890 1234",
+      "email": "ari.lindholm@example.com",
+      "age": 40,
+      "picture": "https://randomuser.me/api/portraits/men/25.jpg"
+    },
+    {
+      "first_name": "Henna",
+      "last_name": "Koivisto",
+      "address": "Osoite 26",
+      "zip_code": "26100",
+      "city": "Imatra",
+      "phone_number": "+358 50 901 2345",
+      "email": "henna.koivisto@example.com",
+      "age": 31,
+      "picture": "https://randomuser.me/api/portraits/women/26.jpg"
+    },
+    {
+      "first_name": "Eero",
+      "last_name": "Laine",
+      "address": "Polku 27",
+      "zip_code": "27140",
+      "city": "Kokkola",
+      "phone_number": "+358 45 123 4567",
+      "email": "eero.laine@example.com",
+      "age": 37,
+      "picture": "https://randomuser.me/api/portraits/men/27.jpg"
+    },
+    {
+      "first_name": "Mira",
+      "last_name": "Väisänen",
+      "address": "Tie 28",
+      "zip_code": "28100",
+      "city": "Savonlinna",
+      "phone_number": "+358 40 234 5678",
+      "email": "mira.vaisanen@example.com",
+      "age": 29,
+      "picture": "https://randomuser.me/api/portraits/women/28.jpg"
+    }
+  ]
+}

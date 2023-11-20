@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <script src="koodi.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="master.css" />
     <title>JavaScript kysely</title>
   </head>
   <body>
@@ -14,37 +14,46 @@
       </header>
       <section>
         <div id="tulokset"></div>
-        <form name="kyselylomake" onsubmit="return lahetaVastaukset()">
+        <form name="kyselylomake" onsubmit="lahetaVastaukset(event)">
           <h3>Mihin HTML elementtiin sijoitamme JavaScript-koodin?</h3>
-          <input type="radio" name="k1" value="a" id="k1a" checked>a. &lt;js&gt;<br />
-          <input type="radio" name="k1" value="b" id="k1b">b. &lt;script&gt;<br />
-          <input type="radio" name="k1" value="c" id="k1c">c. &lt;body&gt;<br />
-          <input type="radio" name="k1" value="d" id="k1d">d. &lt;link&gt;<br />
-          <h3>Mitä HTML attribuuttia käytetään viittaamaan ulkoiseen JavaScript tiedostoon?</h3>
-          <input type="radio" name="k2" value="a" id="k2a" checked>a. src<br />
-          <input type="radio" name="k2" value="b" id="k2b">b. link<br />
-          <input type="radio" name="k2" value="c" id="k2c">c. rel<br />
-          <input type="radio" name="k2" value="d" id="k2d">d. href<br />
+          <input type="radio" name="k1" value="a" id="k1a" checked />a.
+          &lt;js&gt;<br />
+          <input type="radio" name="k1" value="b" id="k1b" />b.
+          &lt;script&gt;<br />
+          <input type="radio" name="k1" value="c" id="k1c" />c. &lt;body&gt;<br />
+          <input type="radio" name="k1" value="d" id="k1d" />d. &lt;link&gt;<br />
+          <h3>
+            Mitä HTML attribuuttia käytetään viittaamaan ulkoiseen JavaScript
+            tiedostoon?
+          </h3>
+          <input type="radio" name="k2" value="a" id="k2a" checked />a. src<br />
+          <input type="radio" name="k2" value="b" id="k2b" />b. link<br />
+          <input type="radio" name="k2" value="c" id="k2c" />c. rel<br />
+          <input type="radio" name="k2" value="d" id="k2d" />d. href<br />
           <h3>Kuinka saat "Moikka" -viestin ponnahdusikkunaan?</h3>
-          <input type="radio" name="k3" value="a" id="k3a" checked>a. msg("Moikka");<br />
-          <input type="radio" name="k3" value="b" id="k3b">b. alertBox("Moikka");<br />
-          <input type="radio" name="k3" value="c" id="k3c">c. document.write("Moikka");<br />
-          <input type="radio" name="k3" value="d" id="k3d">d. alert("Moikka");<br />
+          <input type="radio" name="k3" value="a" id="k3a" checked />a.
+          msg("Moikka");<br />
+          <input type="radio" name="k3" value="b" id="k3b" />b.
+          alertBox("Moikka");<br />
+          <input type="radio" name="k3" value="c" id="k3c" />c.
+          document.write("Moikka");<br />
+          <input type="radio" name="k3" value="d" id="k3d" />d.
+          alert("Moikka");<br />
           <h3>JavaScript on suoraan "Java" ohjelmointikielen sukulainen</h3>
-          <input type="radio" name="k4" value="a" id="k4a" checked>a. Kyllä<br />
-          <input type="radio" name="k4" value="b" id="k4b">b. Ei<br />
+          <input type="radio" name="k4" value="a" id="k4a" checked />a. Kyllä<br />
+          <input type="radio" name="k4" value="b" id="k4b" />b. Ei<br />
           <h3>JavaScript muuttujan pitää alkaa tietyllä merkillä?</h3>
-          <input type="radio" name="k5" value="a" id="k2a" checked>a. @<br />
-          <input type="radio" name="k5" value="b" id="k2b">b. $<br />
-          <input type="radio" name="k5" value="c" id="k2c">c. #<br />
-          <input type="radio" name="k5" value="d" id="k2d">d. Ei tarvitse tiettyä merkkiä<br />
+          <input type="radio" name="k5" value="a" id="k2a" checked />a. @<br />
+          <input type="radio" name="k5" value="b" id="k2b" />b. $<br />
+          <input type="radio" name="k5" value="c" id="k2c" />c. #<br />
+          <input type="radio" name="k5" value="d" id="k2d" />d. Ei tarvitse
+          tiettyä merkkiä<br />
           <p></p>
-          <input type="submit" value="Lähetä vastaukset">
+          <input type="submit" value="Lähetä vastaukset" />
           <p></p>
         </form>
       </section>
       <footer>Copyright &copy; Jyri Lindroos 2022</footer>
     </main>
-
   </body>
 </html>
