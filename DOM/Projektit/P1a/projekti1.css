@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Caveat&family=Dancing+Script&family=Pacifico&family=Sedgwick+Ave+Display&display=swap');
+.lomake{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 350px;
+    padding: 20px;
+    background-color: aliceblue;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+label{
+    font-weight: 900;
+}
+input[type="text"], input[type="password"], input[type="button"] {
+    width: 310px;
+}
+input[type="button"]{
+    font-size: 24px;
+    background-color: orange;
+    border-radius: 10px;
+}
+textarea {
+    width: 310px;
+    height: 90px;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: red;
+}
