@@ -31,7 +31,7 @@ function hae() { //haetaan tiedot localstoragesta
     var kappale = document.createElement("p");
     var kappale2 = document.createElement("p");
     var kappale3 = document.createElement("p");
-    // Haetaan JSONista mallitieto ja hintatieto
+    // Haetaan JSONista tiedot
     var nimi = document.createTextNode(data.etunimi + " " + data.sukunimi);
     var osoite = document.createTextNode(data.osoite + ", " + data.pnro + ", " + data.ptp);
     var email = document.createTextNode(data.sahkoposti)
@@ -42,12 +42,12 @@ function hae() { //haetaan tiedot localstoragesta
     var rivinvaihto = document.createElement("br");
     // Lisätään ensimmäinen otsikkoteksti
     kappale.appendChild(teksti);
-    // Lisätään nimi JSONista (kts. rivi 31)
+    // Lisätään nimi JSONista (kts. rivi 35)
     kappale.appendChild(nimi);
 
     // Lisätään toinen otsikkoteksti
     kappale2.appendChild(teksti2);
-    // Lisätään osoite JSONista (kts. rivi 32)
+    // Lisätään osoite JSONista (kts. rivi 36)
     kappale2.appendChild(osoite);
 
     // Lisätään toinen otsikkoteksti
@@ -61,9 +61,20 @@ function hae() { //haetaan tiedot localstoragesta
     element.appendChild(kappale);
     element.appendChild(kappale2);
     element.appendChild(kappale3);
+    setTimeout(function () {
+        window.location.reload();
+    }, 5000)
 }
 function poista() { //deletes item from localStorage
     var avain = document.getElementById('avain').value; //gets key from user
     localStorage.removeItem(avain) //passes key to the removeItem method
     alert("Tietue poistettu");
+}
+
+function wait(ms) {
+    var start = new Date().getTime();
+    var end = start;
+    while (end < start + ms) {
+        end = new Date().getTime();
+    }
 }
