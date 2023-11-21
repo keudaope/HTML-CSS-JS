@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <title>Tietojen keruutaulukko</title>
+  </head>
+  <body>
+    <div class="kortti">
+      <table>
+        <tr>
+          <td>Anna etunimesi:</td>
+          <td><input type="text" id="enimi" /></td>
+        </tr>
+        <tr>
+          <td>Anna sukunimesi:</td>
+          <td><input type="text" id="snimi" /></td>
+        </tr>
+        <tr>
+          <td>Anna katuosoitteesi:</td>
+          <td><input type="text" id="losoite" /></td>
+        </tr>
+        <tr>
+          <td>Anna postinumerosi:</td>
+          <td><input type="text" id="pnro" /></td>
+        </tr>
+        <tr>
+          <td>Anna postitoimipaikkasi:</td>
+          <td><input type="text" id="ptp" /></td>
+        </tr>
+        <tr>
+          <td>Anna puhelinnumerosi:</td>
+          <td><input type="text" id="puh" /></td>
+        </tr>
+        <tr>
+          <td>Anna sähköpostiosoitteesi:</td>
+          <td><input type="email" id="email" /></td>
+        </tr>
+        <tr>
+          <td><button onClick="tallenna()">Tallenna tiedot</button></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="text"
+              id="avain"
+              placeholder="puhelinnro = avain"
+              value="0401744562"
+            />
+          </td>
+          <td>
+            <button onClick="hae()">Hae tiedot</button
+            ><button onClick="poista()">Poista tiedot</button>
+          </td>
+        </tr>
+      </table>
+      <div id="haetut"></div>
+    </div>
+  </body>
+</html>
