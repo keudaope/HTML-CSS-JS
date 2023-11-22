@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2023 by anonymous (http://jsbin.com/veluqenivi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex" />
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="css/peli.css" rel="stylesheet" type="text/css" />
+    <script src="peli.js"></script>
+    <title>Kivi, paperi, sakset -peli</title>
+    <style id="jsbin-css">
+      /* Tuodaan GoogleFonts:sta ulkoinen kirjaisin */
+      @import url("https://fonts.googleapis.com/css?family=Oleo+Script");
+      /* Määritellään koko sivustoa koskevat määritykset */
+      body {
+        background: #282631;
+        font-family: "Oleo Script", cursive;
+        margin: 0 auto; /* keskitetaan sivu */
+      }
+      /* Kun usealle elementille voidaan antaa samoja arvoja, ne voidaan niputtaa, niinkuin
+   tässä pistetaulu-luokka ja article-elementti ja jäljempänä annetaan erikseen eriytetyt arvot */
+      .tulostaulu,
+      article {
+        margin: 0 auto; /* Koska pistetaulu maaritetaan relatiiviseksi, se maaritellaan uudestaan */
+        color: #fff;
+        font-size: 48px;
+        text-align: center;
+      }
+      .tulostaulu {
+        width: 10%;
+        border: solid 3px #fff;
+        position: relative; /* Maaritellaan relatiiviseksi, jotta kayttajan ja tietokoneen tiedot saadaan sijoitettua oikein kohdalleen */
+      }
+      .pisteet {
+        font-size: 18px;
+      }
+      /* Taas yhteiset arvot yhdessa, eriytetyt erikseen */
+      #kayttaja,
+      #tietokone {
+        position: absolute; /* Kun ed. pistetaulu on maaritetty, voidaan nyt nama maarittaa helposti */
+        top: 25px;
+        background: #d3534c;
+      }
+      /* Tasta alkaa eriytetyt arvot */
+      #kayttaja {
+        left: -25px;
+      }
+      #tietokone {
+        right: -25px;
+      }
+      /* Keskitetaan kuvat */
+      main {
+        text-align: center;
+      }
+
+      /* Koska kuvat erikokoisia, tehdaan kuville laatikot ja pyoristetaan ne */
+      .valinta {
+        height: 150px;
+        width: 150px;
+        display: inline-block;
+        border: solid 3px #fff;
+        border-radius: 50%;
+        padding: 15px;
+        margin: 20px;
+      }
+      /* Annetaan ympyroille taustavari, kun hiirella mennaan ylitse */
+      .valinta:hover {
+        background: #84ccd8;
+      }
+      /* Pienennetaan alkuperaiset kuvat sopivan kokoisiksi */
+      img {
+        height: 50%;
+        margin-top: 30px;
+      }
+      /* Voitto, tappio, tasapelihehkut */
+      .green-glow {
+        border: 4px solid #4dcc7d;
+        box-shadow: 0 0 10px #31b43a;
+      }
+
+      .red-glow {
+        border: 4px solid #fc121b;
+        box-shadow: 0 0 10px #d01115;
+      }
+
+      .gray-glow {
+        border: 4px solid #464647;
+        box-shadow: 0 0 10px #25292b;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="tulostaulu">
+      <var id="kayttaja" class="pisteet">kayttaja</var>
+      <var id="tietokone" class="pisteet">tietokone</var>
+      <span id="kayttajan_pisteet">0</span>:<span id="tietokoneen_pisteet"
+        >0</span
+      >
+    </header>
+    <article class="vastaus"><p>Paperi peittää kiven, sinä voitit!</p></article>
+    <main class="valinnat">
+      <div id="k" class="valinta">
+        <img src="https://lumoakatemia.eu/Tehtavat/kivi.png" alt="" />
+      </div>
+      <div id="p" class="valinta">
+        <img src="https://lumoakatemia.eu/Tehtavat/paperi.png" alt="" />
+      </div>
+      <div id="s" class="valinta">
+        <img src="https://lumoakatemia.eu/Tehtavat/sakset.png" alt="" />
+      </div>
+    </main>
+    <article><p>Tee siirtosi</p></article>
+    <script id="jsbin-javascript">
+      /* alustetaan käyttäjän ja tietokoneen pisteet 0:ksi */
+      let kPisteet = 0;
+      let tPisteet = 0;
+      const kPisteet_span = document.getElementById("kayttajan_pisteet");
+      const tPisteet_span = document.getElementById("tietokoneen_pisteet");
+      const tulosTaulu_header = document.querySelector(".tulostaulu");
+      const vastaus_article = document.querySelector(".vastaus");
+      const kividfn = document.getElementById("k");
+      const saksetdfn = document.getElementById("s");
+      const paperidfn = document.getElementById("p");
+
+      function haeTietsikanValinta() {
+        const valinnat = ["k", "p", "s"]; /* Jokin näistä */
+        /* Otetaan satunnaisesti jokin kolmesta */
+        const randomNumber = Math.floor(Math.random() * 3);
+        return valinnat[randomNumber];
+      }
+
+      function muunnaKirjaimetSanoiksi(kirjain) {
+        if (kirjain === "k") return "Kivi";
+        if (kirjain === "p") return "Paperi";
+        else return "Sakset";
+      }
+      function voitto(kayttajanValinta, tietsikanValinta) {
+        /* Käyttäjän pisteitä lisätään */
+        kPisteet++;
+        /* Pisteet näytetään taulussa */
+        kPisteet_span.innerHTML = kPisteet;
+        tPisteet_span.innerHTML = tPisteet;
+        /* Kirjoitetaan näkyviin myös kilpailun tulos */
+        vastaus_article.innerHTML =
+          muunnaKirjaimetSanoiksi(kayttajanValinta) +
+          " on voimakkaampi kuin " +
+          muunnaKirjaimetSanoiksi(tietsikanValinta) +
+          ". Sinä voitit!";
+        document.getElementById(kayttajanValinta).classList.add("green-glow");
+        setTimeout(function () {
+          document
+            .getElementById(kayttajanValinta)
+            .classList.remove("green-glow");
+        }, 3000);
+      }
+
+      function tappio(kayttajanValinta, tietsikanValinta) {
+        /* Tietokoneen pisteitä lisätään */
+        tPisteet++;
+        /* Pisteet näytetään taulussa */
+        tPisteet_span.innerHTML = tPisteet;
+        kPisteet_span.innerHTML = kPisteet;
+        /* Kirjoitetaan näkyviin myös kilpailun tulos */
+        vastaus_article.innerHTML =
+          muunnaKirjaimetSanoiksi(tietsikanValinta) +
+          " on voimakkaampi kuin " +
+          muunnaKirjaimetSanoiksi(kayttajanValinta) +
+          ". Sinä hävisit!";
+        document.getElementById(kayttajanValinta).classList.add("red-glow");
+        setTimeout(function () {
+          document
+            .getElementById(kayttajanValinta)
+            .classList.remove("red-glow");
+        }, 3000);
+      }
+
+      function tasapeli(kayttajanValinta, tietsikanValinta) {
+        /* Pisteet näytetään taulussa */
+        tPisteet_span.innerHTML = tPisteet;
+        kPisteet_span.innerHTML = kPisteet;
+        /* Kirjoitetaan näkyviin myös kilpailun tulos */
+        document.getElementById(kayttajanValinta).classList.add("gray-glow");
+        setTimeout(function () {
+          document
+            .getElementById(kayttajanValinta)
+            .classList.remove("gray-glow");
+        }, 3000);
+
+        vastaus_article.innerHTML = "Oi, ei, tuli tasapeli!";
+      }
+      function peli(kayttajanValinta) {
+        /* Arvotaan tietokoneen valinta */
+        const tietsikanValinta = haeTietsikanValinta();
+        /* Yhdistetään käyttäjän valinta tietokoneen valintaan */
+        /* ja tarkastellaan vaihtoehtoja */
+        switch (kayttajanValinta + tietsikanValinta) {
+          case "ks": /* Kivi voittaa sakset */
+          case "pk": /* Paperi voittaa kiven */
+          case "sp" /* Sakset voittaa paperin */:
+            voitto(kayttajanValinta, tietsikanValinta);
+            break;
+          case "sk": /* Sakset häviää kivelle */
+          case "kp": /* kivi häviää paperille */
+          case "ps" /* paperi häviää saksille */:
+            tappio(kayttajanValinta, tietsikanValinta);
+            break;
+          case "ss": /* Sakset sakset tasapeli */
+          case "pp": /* Paperi paperi tasapeli */
+          case "kk" /* Kivi kivi tasapeli */:
+            tasapeli(kayttajanValinta, tietsikanValinta);
+            break;
+        }
+      }
+      function main() {
+        /* Kun käyttäjä napauttaa kiven kuvaa, */
+        kividfn.addEventListener("click", function () {
+          /* saa peli ts. käyttäjä arvon "k" */
+          peli("k");
+        });
+        /* Kun käyttäjä napauttaa saksien kuvaa, */
+        saksetdfn.addEventListener("click", function () {
+          /* saa peli ts. käyttäjä arvon "s" */
+          peli("s");
+        });
+        /* Kun käyttäjä napauttaa paperin kuvaa, */
+        paperidfn.addEventListener("click", function () {
+          /* saa peli ts. käyttäjä arvon "p" */
+          peli("p");
+        });
+      }
+      main();
+    </script>
+  </body>
+</html>

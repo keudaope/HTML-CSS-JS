@@ -24,9 +24,7 @@ function tallenna() {
 
 function hae() { //haetaan tiedot localstoragesta
     var avain = document.getElementById('avain').value; //hakee avaimen lomakkeelta
-    console.log("retrive records");
     var data = JSON.parse(localStorage.getItem(avain)); //Hakee yllä olevalla avaimella LocalStoragesta
-    console.log(data.etunimi); // Tulostaa etunimen konsoliin
     // Luodaan kappale, joka myöhemmin lisätään sivulle
     var kappale = document.createElement("p");
     var kappale2 = document.createElement("p");
@@ -34,12 +32,12 @@ function hae() { //haetaan tiedot localstoragesta
     // Haetaan JSONista tiedot
     var nimi = document.createTextNode(data.etunimi + " " + data.sukunimi);
     var osoite = document.createTextNode(data.osoite + ", " + data.pnro + ", " + data.ptp);
-    var email = document.createTextNode(data.sahkoposti)
+    var email = document.createTextNode(data.sahkoposti);
     // Luodaan otsikkotekstit ja rivinvaihto
     var teksti = document.createTextNode("Nimi: ");
     var teksti2 = document.createTextNode("Osoite: ");
     var teksti3 = document.createTextNode("Sähköposti: ");
-    var rivinvaihto = document.createElement("br");
+    //var rivinvaihto = document.createElement("br");
     // Lisätään ensimmäinen otsikkoteksti
     kappale.appendChild(teksti);
     // Lisätään nimi JSONista (kts. rivi 35)
@@ -63,18 +61,11 @@ function hae() { //haetaan tiedot localstoragesta
     element.appendChild(kappale3);
     setTimeout(function () {
         window.location.reload();
-    }, 5000)
+    }, 15000)
 }
 function poista() { //deletes item from localStorage
     var avain = document.getElementById('avain').value; //gets key from user
-    localStorage.removeItem(avain) //passes key to the removeItem method
+    localStorage.removeItem(avain); //passes key to the removeItem method
     alert("Tietue poistettu");
 }
 
-function wait(ms) {
-    var start = new Date().getTime();
-    var end = start;
-    while (end < start + ms) {
-        end = new Date().getTime();
-    }
-}

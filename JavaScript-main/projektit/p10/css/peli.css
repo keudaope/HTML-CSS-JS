@@ -1,0 +1,78 @@
+/* Tuodaan GoogleFonts:sta ulkoinen kirjaisin */
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script");
+/* Määritellään koko sivustoa koskevat määritykset */
+body {
+  background: #282631;
+  font-family: "Oleo Script", cursive;
+  margin: 0 auto; /* keskitetaan sivu */
+}
+/* Kun usealle elementille voidaan antaa samoja arvoja, ne voidaan niputtaa, niinkuin
+   tässä pistetaulu-luokka ja article-elementti ja jäljempänä annetaan erikseen eriytetyt arvot */
+.tulostaulu,
+article {
+  margin: 0 auto; /* Koska pistetaulu maaritetaan relatiiviseksi, se maaritellaan uudestaan */
+  color: #fff;
+  font-size: 48px;
+  text-align: center;
+}
+.tulostaulu {
+  width: 10%;
+  border: solid 3px #fff;
+  position: relative; /* Maaritellaan relatiiviseksi, jotta kayttajan ja tietokoneen tiedot saadaan sijoitettua oikein kohdalleen */
+}
+.pisteet {
+  font-size: 18px;
+}
+/* Taas yhteiset arvot yhdessa, eriytetyt erikseen */
+#kayttaja,
+#tietokone {
+  position: absolute; /* Kun ed. pistetaulu on maaritetty, voidaan nyt nama maarittaa helposti */
+  top: 25px;
+  background: #d3534c;
+}
+/* Tasta alkaa eriytetyt arvot */
+#kayttaja {
+  left: -25px;
+}
+#tietokone {
+  right: -25px;
+}
+/* Keskitetaan kuvat */
+main {
+  text-align: center;
+}
+
+/* Koska kuvat erikokoisia, tehdaan kuville laatikot ja pyoristetaan ne */
+.valinta {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  border: solid 3px #fff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 20px;
+}
+/* Annetaan ympyroille taustavari, kun hiirella mennaan ylitse */
+.valinta:hover {
+  background: #84ccd8;
+}
+/* Pienennetaan alkuperaiset kuvat sopivan kokoisiksi */
+img {
+  height: 50%;
+  margin-top: 30px;
+}
+/* Voitto, tappio, tasapelihehkut */
+.green-glow {
+  border: 4px solid #4dcc7d;
+  box-shadow: 0 0 10px #31b43a;
+}
+
+.red-glow {
+  border: 4px solid #fc121b;
+  box-shadow: 0 0 10px #d01115;
+}
+
+.gray-glow {
+  border: 4px solid #464647;
+  box-shadow: 0 0 10px #25292b;
+}
