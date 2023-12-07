@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiedonkeruulomake</title>
+</head>
+<body>
+    <!-- Käytämme tässä get-metodia, koska PHP:ssä haemme $_GET-komennolla -->
+    <form action="yhteys.php" method="get">
+        <table>
+            <tr>
+                <td><label for="etunimi">Etunimi</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="etunimi" placeholder="syötä tähän etunimesi" required></td>
+            </tr>
+            <tr>
+                <td><label for="sukunimi">Sukunimi</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="sukunimi" placeholder="syötä tähän sukunimesi" required></td>
+            </tr>
+            <tr>
+                <td><label for="lahiosoite">Lahiosoite</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="lahiosoite" placeholder="syötä tähän lähiosoitteesi" required></td>
+            </tr>
+            <tr>
+                <td><label for="postinumero">Postinumero</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="postinumero" placeholder="syötä tähän postinumerosi" required></td>
+            </tr>
+            <tr>
+                <td><label for="postitoimipaikka">Postitoimipaikka</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="postitoimipaikka" placeholder="syötä tähän postitoimipaikkasi" required></td>
+            </tr>
+            <tr>
+                <td><label for="maa">Maa</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="maa" placeholder="syötä tähän maasi" required></td>
+            </tr>
+            <tr>
+                <td><label for="puhelinnumero">Puhelinnumero</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="puhelinnumero" placeholder="syötä tähän puhelinnumerosi" required></td>
+            </tr>
+            <tr>
+                <td><label for="sahkoposti">Sähköposti</label></td>
+                <!-- get-komento hakee name-parametrit -->
+                <td><input type="text" name="sahkoposti" placeholder="syötä tähän sahkopostisi" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Lähetä"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
