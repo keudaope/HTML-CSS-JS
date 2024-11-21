@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Tehtävä 10</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#lisaaKentta").click(function(){
+        var uusiKentta = $("<input type='text' name='uusiKentta'>");
+        $("#lomake").append(uusiKentta);
+      });
+    });
+  </script>
+</head>
+<body>
+
+    <div class=”card-deck”>  <div class=”card”>    <div class=”card-body”>      <h4 class=”card-title”>Some  title</h4>      <p class=”card-text”>Your texts </p>    </div>  </div>  <div class=”card”>    <div class=”card-body”>      <h4 class=”card-title”>Another card</h4>      <p class=”card-text”>Even more texts that someone will need to write.</p>    </div>  </div>  <div class=”card”>    <div class=”card-body”>      <h4 class=”card-title”>I’m a card too!</h4>      <p class=”card-text”>Some words to add and arrange</p>    </div>  </div> </div>
+
+</body>
+</html>

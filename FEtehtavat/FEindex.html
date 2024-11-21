@@ -1,0 +1,1566 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <script type="text/javascript" href="script.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <menu>
+          <p class="s1">SISÄLTÄÄ MM.:</p>
+          <p class="s2">❱<span class="s3">Perusharjoituksia</span></p>
+          <p class="s2">❱<span class="s3">Ehtolauseita</span></p>
+          <p class="s2">❱<span class="s3">Silmukoita</span></p>
+          <p class="s2">❱<span class="s3">Taulukoita</span></p>
+          <p class="s2">❱<span class="s3">Objekteja ... ja paljon muuta</span></p>
+        </menu>
+        <h1 style="">Ohjelmointi <span style=" color: #B30838;">tehtäviä</span></h1>
+        <nav>
+            <a href="index.html" class="btn Active" onclick="nykyinenPainike(0)">Sivu 1</a>
+            <a href="sivu2.html" class="btn Active" onclick="nykyinenPainike(1)">Sivu 2</a>
+            <a href="sivu3.html" class="btn Active" onclick="nykyinenPainike(2)">Sivu 3</a>
+            <a href="sivu4.html" class="btn Active" onclick="nykyinenPainike(3)">Sivu 4</a>
+        </nav>
+        <p class="s5">Kerätty internetin sivustoilta</p>
+      </header>
+      <article class="grid-container">
+        <section class="sec1">
+          <p class="s6">BOOTSTRAP HARJOITUKSIA</p>
+          <details closed>
+<summary>B01. Kirjoita koodi, jossa p-tägin sisällä lukee "Bootstrap on mahtava" ja jonka luokka on "lead"</summary>
+<p class="lihava">Bootstrap</p>
+<pre class = "koodi">
+  &lt;!DOCTYPE html>
+  &lt;html lang="en">
+  &lt;head>
+      &lt;meta charset="UTF-8">
+      &lt;meta name="viewport" 
+      content="width=device-width, initial-scale=1.0">
+      &lt;link rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+      &lt;title>Document&lt;/title>
+  &lt;/head>
+  &lt;body>
+      <!-- B01 -->&lt;p class="lead">Bootstrap on mahtava&lt;/p>
+      
+  &lt;/body>
+  &lt;/html>
+</pre>
+          </details>
+          <details closed>
+<summary>B02. Rakenna Bootstrapin avulla taulukko kahdella yhtä leveällä sarakkeella (col-sm-6). Ensimmäisessä sarakkeessa on teksti "Vasen sarake", ja toisessa sarakkeessa on teksti "Oikea sarake". Jos haluat, voit nähdä paremmin, kun annat kummallekin oman background-värin</summary>
+<p class="lihava">Bootstrap</p>
+<pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;div class="container">
+        &lt;table>
+        &lt;div class="row table-primary">
+          &lt;div class="col-sm-6" style="background:red">Vasen sarake&lt;/div>
+          &lt;div class="col-sm-6" style="background: green">Oikea sarake&lt;/div>
+        &lt;/div>
+    &lt;/table>
+      &lt;/div>
+&lt;/body>
+&lt;/html>
+</pre>
+          </details>
+          <details closed>
+            <summary>B03. Luo Bootstrap-otsikko luokalla text-center ja tekstillä "Responsiivinen suuntaus".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;p class="text-center">Responsiivinen suuntaus&lt;/p>
+&lt;/body>
+&lt;/html>
+
+            </pre>
+          </details>
+          <details closed>
+            <summary>B04. Suunnittele Bootstrap-hälytysviesti luokalla alert-info, joka näyttää viestin "Tämä on informatiivinen hälytys".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;div class="alert alert-info" role="alert">
+        Tämä on informatiivinen hälytys.
+      &lt;/div>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B05. Lisää responsiivinen Bootstrap-kuva luokalla img-fluid ja lähteellä "kuva.jpeg".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;img src="kuva.jpeg" class="img-fluid" alt="Responsiivinen kuva">
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B06. Luo Bootstrap-painike luokalla btn-primary ja tekstillä "Klikkaa minua".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;button type="button" class="btn btn-primary">Klikkaa minua&lt;/button>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B07. Rakenna Bootstrap-navigointipalkki linkeillä "Koti", "Tietoa" ja "Yhteystiedot".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light">
+        &lt;a class="navbar-brand" href="#">Koti&lt;/a>
+        &lt;ul class="navbar-nav mr-auto">
+          &lt;li class="nav-item">&lt;a class="nav-link" href="#">Tietoa&lt;/a>&lt;/li>
+          &lt;li class="nav-item">&lt;a class="nav-link" href="#">Yhteystiedot&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/nav>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B08. Luo Bootstrap-kortti otsikolla "Kortin otsikko" ja hieman esimerkkitekstiä kortin sisällä.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light">
+        &lt;div class="card">
+            &lt;div class="card-body">
+              &lt;h5 class="card-title">Kortin otsikko&lt;/h5>
+              &lt;p class="card-text">Tämä on esimerkkiteksti kortin sisällä.&lt;/p>
+            &lt;/div>
+          &lt;/div>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B09. Rakenna Bootstrap-listaryhmä kolmella kohteella: "Kohde 1", "Kohde 2" ja "Kohde 3".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;ul class="list-group">
+        &lt;li class="list-group-item">Kohde 1&lt;/li>
+        &lt;li class="list-group-item">Kohde 2&lt;/li>
+        &lt;li class="list-group-item">Kohde 3&lt;/li>
+      &lt;/ul>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B10. Luo Bootstrap-jumbotron otsikolla "Tervetuloa verkkosivuillemme" ja joitakin esittelytekstejä.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;div class="jumbotron">
+        &lt;h1 class="display-4">Tervetuloa verkkosivuillemme&lt;/h1>
+        &lt;p class="lead">Tämä on yksinkertainen ja kutsuva esittely verkkosivuillemme.&lt;/p>
+      &lt;/div>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B11. Lisää Bootstrap-työkaluvihje painikkeeseen tekstillä "Leijuta minut" ja otsikolla "Klikkaa nähdäksesi yksityiskohdat".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;button type="button" class="btn btn-secondary" 
+    data-toggle="tooltip" data-placement="top" 
+    title="Klikkaa nähdäksesi yksityiskohdat">
+        Leijuta minut
+      &lt;/button>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B12.  Rakenna Bootstrap-lomake kentillä nimi, sähköposti ja lähetä-painike.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;form>
+        &lt;div class="form-group">
+          &lt;label for="name">Nimi:&lt;/label>
+          &lt;input type="text" class="form-control" id="name" placeholder="Syötä nimesi">
+        &lt;/div>
+        &lt;div class="form-group">
+          &lt;label for="email">Sähköposti:&lt;/label>
+          &lt;input type="email" class="form-control" id="email" placeholder="Syötä sähköpostisi">
+        &lt;/div>
+        &lt;button type="submit" class="btn btn-primary">Lähetä&lt;/button>
+      &lt;/form>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B13. Luo Bootstrap-painike luokalla btn-lg ja tekstillä "Suuri painike".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;button type="button" class="btn btn-primary btn-lg">Suuri painike&lt;/button>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B14. Rakenna Bootstrap-divi, joka sisältää kuvan ja siihen liittyvän kuvatekstin.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;div class="media">
+        &lt;img src="kuva.jpeg" class="mr-3" alt="Kuva">
+        &lt;div class="media-body">
+          &lt;h5 class="mt-0">Kuvatekstin otsikko&lt;/h5>
+          Kuvatekstin kuvaus tähän.
+        &lt;/div>
+      &lt;/div>
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B15. Suunnittele Bootstrap-varoitusviesti (alert-warning) tekstillä "Varoitus: Tämä on tärkeää!"
+            </summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;div class="alert alert-warning" role="alert">
+        Varoitus: Tämä on tärkeää!
+      &lt;/div>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B16.isää Bootstrap-kehys (border) ympärille tekstikappale.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;p class="border p-3">Teksti kehyksessä.&lt;/p>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B17. Rakenna Bootstrap-sivunavigointi, jossa on edellinen ja seuraava linkki.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;nav aria-label="Page navigation example">
+        &lt;ul class="pagination">
+          &lt;li class="page-item">&lt;a class="page-link" href="#">Edellinen&lt;/a>&lt;/li>
+          &lt;li class="page-item">&lt;a class="page-link" href="#">Seuraava&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/nav>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B18. Rakenna Bootstrap-nappiryhmä (btn-group), joka sisältää kolme nappia: "Ensimmäinen", "Toinen" ja "Kolmas".</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;div class="btn-group" role="group">
+        &lt;button type="button" class="btn btn-secondary">Ensimmäinen&lt;/button>
+        &lt;button type="button" class="btn btn-secondary">Toinen&lt;/button>
+        &lt;button type="button" class="btn btn-secondary">Kolmas&lt;/button>
+      &lt;/div>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B19. Luo Bootstrap-pylväskaavio kolmella pylväällä, joilla on eri värejä ja korkeuksia. Käytä progress-elementtiä ja progress-bar-elementtejä.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;div class="progress">
+        &lt;div class="progress-bar bg-success" style="width: 40%;">Pylväs 1&lt;/div>
+        &lt;div class="progress-bar bg-warning" style="width: 30%;">Pylväs 2&lt;/div>
+        &lt;div class="progress-bar bg-danger" style="width: 20%;">Pylväs 3&lt;/div>
+      &lt;/div>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>B20. Toteuta yksinkertaisen Bootstrap-kuvakarusellin, jossa käyttäjä voi manuaalisesti siirtyä diakuvien välillä painikkeiden avulla.</summary>
+            <p class="lihava">Bootstrap</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;meta name="viewport" 
+  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  &lt;link rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  &lt;title>Bootstrap Carousel Without JavaScript&lt;/title>
+&lt;/head>
+&lt;body>
+
+&lt;div id="imageCarousel" class="carousel slide" data-ride="false">
+  &lt;div class="carousel-inner">
+    &lt;div class="carousel-item active">
+      &lt;img src="kuva.jpeg" class="d-block w-100" alt="Kuva 1">
+    &lt;/div>
+    &lt;div class="carousel-item">
+      &lt;img src="kuva2.jpeg" class="d-block w-100" alt="Kuva 2">
+    &lt;/div>
+    &lt;div class="carousel-item">
+      &lt;img src="kuva3.jpeg" class="d-block w-100" alt="Kuva 3">
+    &lt;/div>
+  &lt;/div>
+  &lt;a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+    &lt;span class="carousel-control-prev-icon" aria-hidden="true">&lt;/span>
+    &lt;span class="sr-only">Edellinen&lt;/span>
+  &lt;/a>
+  &lt;a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+    &lt;span class="carousel-control-next-icon" aria-hidden="true">&lt;/span>
+    &lt;span class="sr-only">Seuraava&lt;/span>
+  &lt;/a>
+&lt;/div>
+
+&lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">&lt;/script>
+&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">&lt;/script>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          
+          <p class="s6">JQUERYHARJOITUKSIA</p>
+<details closed>
+            <summary>JQ01. Tee ohjelma, joka hitaasti (3,5 sek.) kadottaa (fadeout) tekstin näkyvistä</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 1&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      $("#katoavaElementti").fadeOut(3500);
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="katoavaElementti">
+  Tämä elementti katoaa jQuerylla.
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ02. Tee ohjelma, joka hitaasti piilottaa (hide) tekstin näkyvistä</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 2&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      $("#piilotettavaElementti").hide(3500);
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="piilotettavaElementti">
+  Tämä elementti piilotetaan jQuerylla.
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ03. Tee ohjelma, joka hitaasti tuo tekstin näkyville (show)</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 2&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      $("#piilotettavaElementti").show(3500);
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="piilotettavaElementti" style="display: none;">
+  Tämä elementti näytetään jQuerylla.
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ04. Tee ohjelma, joka hitaasti tuo tekstin näkyville (fadein)</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 4&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      $("#katoavaElementti").fadeIn(3500);
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="katoavaElementti" style="display: none;">
+  Tämä elementti ilmestyy jQuerylla.
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ05. Tee JQueryohjelma, jossa teksti korvataan toisella 3,5 sekunnin päästä</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 5&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      setTimeout(function(){
+        $("#muuttuvaTeksti").text("Uusi teksti jQuerylla!");
+      }, 3500);
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="muuttuvaTeksti">
+  Alkuperäinen teksti.
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ06. Lisää teksti HTML-elementtiin jQuerylla ilman, että se korvaa olemassa olevaa tekstiä 3,5 sekunnin kuluttua.</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 6&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      setTimeout(function(){
+        $("#muuttuvaTeksti").append("Uusi teksti jQuerylla!");
+      }, 3500);
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="muuttuvaTeksti">
+  Alkuperäinen teksti.
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ07. Poista HTML-elementti jQuerylla 3,5 sekunnin kuluttua.</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 11&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      setTimeout(function(){
+        $("#muuttuvaTeksti").remove();
+      }, 3500);
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="muuttuvaTeksti">
+  Alkuperäinen teksti.
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ08. Liitä tapahtumankäsittelijä, joka reagoi klikkaukseen HTML-elementissä jQuerylla.</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 8&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      $("#klikattavaElementti").click(function(){
+        alert("Elementtiä klikattiin!");
+      });
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div id="klikattavaElementti" style="cursor: pointer;">
+  Klikkaa minua!
+&lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ09. Hae lomakkeen tiedot ja tulosta ne konsoliin jQuerylla.</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>jQuery Tehtävä 9&lt;/title>
+  &lt;script src="https://code.jquery.com/jquery-3.6.4.min.js">&lt;/script>
+  &lt;script>
+    $(document).ready(function(){
+      $("#lomake").submit(function(event){
+        event.preventDefault();
+        var nimi = $("#nimi").val();
+        var email = $("#email").val();
+        console.log("Nimi: " + nimi + ", Sähköposti: " + email);
+      });
+    });
+  &lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;form id="lomake">
+  &lt;label for="nimi">Nimi:&lt;/label>
+  &lt;input type="text" id="nimi" name="nimi">&lt;br>
+
+  &lt;label for="email">Sähköposti:&lt;/label>
+  &lt;input type="email" id="email" name="email">&lt;br>
+
+  &lt;input type="submit" value="Lähetä">
+&lt;/form>
+
+&lt;/body>
+&lt;/html>
+            </pre>
+          </details>
+          <details closed>
+            <summary>JQ10. Lisää uusi kenttä lomakkeelle jQuerylla, kun käyttäjä klikkaa painiketta.</summary>
+            <p class = "lihava">JQuery / HTML</p>
+            <pre class = "koodi">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Tehtävä 10</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#lisaaKentta").click(function(){
+        var uusiKentta = $("<input type='text' name='uusiKentta'>");
+        $("#lomake").append(uusiKentta);
+      });
+    });
+  </script>
+</head>
+<body>
+
+<form id="lomake">
+  <label for="nimi">Nimi:</label>
+  <input type="text" id="nimi" name="nimi"><br>
+
+  <label for="email">Sähköposti:</label>
+  <input type="email" id="email" name="email"><br>
+
+  <input type="button" id="lisaaKentta" value="Lisää kenttä">
+  <input type="submit" value="Lähetä">
+</form>
+
+</body>
+</html>
+            </pre>
+          </details>
+        </section>
+        <section class="sec2">
+          <p class="s6">SILMUKKAHARJOITUKSIA</p>
+          <details closed>
+            <summary>S01. Tee ohjelma, laskee, paljonko joudut maksamaan takaisin, kun lainasit     5000€ kahdeksi vuodeksi 2% korolla</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int laina = 5000;
+                    int lainaAika = 2;
+                    double korko = 0.02;
+                    double korkosumma = 0;
+                    double maksettava = 0;
+                    maksettava = laina;
+                    for(int i = 0; i < lainaAika; i++)
+                    {
+                      maksettava += maksettava * korko;
+                    }
+                    korkosumma = maksettava - laina;
+                    maksettava = laina + korkosumma;
+                    Console.WriteLine("Maksettavaa tulee {0} + {1} = {2}", laina, korkosumma, maksettava);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S02. Tee ohjelma, joka laskee annetun luvun kertoman</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int luku, kertoma = 1;
+                    Console.Write("Anna luku, josta lasketaan kertoma: ");
+                    luku = Console.ReadLine();
+                    for (int i = 1; + <= luku; i++)
+                    {
+                      kertoma *= 1;
+                    }
+                    Console.WriteLine("Luvun {0} kertoma on {1}", luku, kertoma);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S03. Tee ohjelma, joka etsii luvun 3 ensimmäisen esiintymän taulukosta [6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3]</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] taulukko = new int[] { 6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3 };
+                    int luku = 3;
+                    for(int i = 0; i < taulukko.Length; i++)
+                    {
+                      if (luku == taulukko[i])
+                      {
+                        Console.WriteLine("Ensimmäinen esiintymä luvulle {0} on kohdassa {1}.", luku, i);
+                        break;
+                      }
+                    }
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S04. Tee ohjelma, kääntää käyttäjän antaman sanan toisinpäin (Hevonen --> nenoveH)</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    string sana;
+                    Console.Write("Anna käännettävä sana: ");
+                    sana = Console.ReadLine();
+                    for(int i = sana.Length; i > 0; i--)
+                    {
+                      Console.Write(sana[i-1]);
+                    }
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S05. Tee ohjelma, joka etsii maksimiarvon taulukosta [6, 7, 2, 4, 3, 8, 1]</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] talukko = new int[] {6, 7, 2, 4, 3, 8, 1};
+                    int maksimi = 0;
+                    for (int i = 0; i < talukko.Length; i++)
+                    {
+                      if(talukko[i] > maksimi)
+                      {
+                        maksimi = talukko[i];
+                      }
+                    }
+                    Console.Write("Taulukon [ ");
+                    foreach(int arvo in talukko)
+                    {
+                      Console.Write("{0} ", arvo);
+                    }
+                    Console.WriteLine("] maksimiarvo on {0}", maksimi);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S06. Tee ohjelma, joka laskee keskiarvon taulukosta [6, 7, 2, 4, 3, 8, 1] ilman Math-luokan metodia</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] tallukko = new int[] {6, 7, 2, 4, 3, 8, 1};
+                    int yhteensa = 0;
+                    float keskiarvo;
+                    for (int i = 0; i < tallukko.Length; i++)
+                    {
+                      yhteensa += tallukko[i];
+                    }
+                    keskiarvo = (float)yhteensa / tallukko.Length;
+                    Console.Write("Taulukon [ ");
+                    foreach(int arvo in tallukko)
+                    {
+                      Console.Write("{0} ", arvo);
+                    }
+                    Console.WriteLine("] keskiarvo on {0}", keskiarvo);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S07. Tee ohjelma, joka tekee uuden taulukon taulukosta ["a", "b", "c", "d", "e", "f"] siten, että kaikki kirjaimet ovat isoja</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    string[] taulu = new string[] {"a", "b", "c", "d", "e", "f"};
+                    string[] isot = new string[6];
+                    for (int i = 0; i < taulu.Length; i++)
+                    {
+                      isot[i] = taulu[i].ToUpper();
+                    }
+                    Console.Write("Taulukon kirjaimet isoina: [ ");
+                    foreach(string arvo in isot)
+                    {
+                      Console.Write("{0} ", arvo);
+                    }
+                    Console.WriteLine("]");
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S08. Tee ohjelma, joka etsii seitsemännen parittoman esiintymän taulukosta [6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3]</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] taulukko = new int[] { 6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3 };
+                    int laskuri = 0;
+                    for(int i = 0; i < taulukko.Length; i++)
+                    {
+                        if(taulukko[i] % 2 == 0)
+                        {
+
+                        }
+                        else
+                        {
+                            laskuri++;
+
+                            if(laskuri == 7)
+                            {
+                                Console.WriteLine("Taulukon 7. pariton luku on: {0} ", taulukko[i]);
+                            }
+                        }
+                    }
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S09. Tee ohjelma, toiseksi suurimman luvun taulukosta [6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3]</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] taulukko = new int[] { 6, 7, 2, 4, 3, 8, 1, 9, 0, 3, 5, 7, 3, 6, 8, 2, 4, 3 };
+                    Array.Sort(taulukko);
+                    int pituus;
+                    pituus = taulukko.Length;
+                    Console.WriteLine("Toiseksi suurin arvo on {0}", taulukko[pituus-2]);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S10. Tee ohjelma, joka tulostaa sadasta luvusta kolme, kun luku on 3:lla jaollinen, 5, kun luku on 5:llä jaollinen ja 15, kun luku on sekä kolmella, että viidellä jaollinen</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    for(int i = 1; i <= 100; i++)
+                    {
+                      if(i % 3 == 0 && i % 5 == 0)
+                      {
+                        Console.Write("viisitoista ");
+                      }
+                      else if(i % 5 == 0)
+                      {
+                        Console.Write("viisi ");
+                      }
+                      else if(i % 3 == 0)
+                      {
+                        Console.Write("kolme ");
+                      }
+                      else
+                      {
+                        Console.Write("{0} ",i);
+                      }
+                    }
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S11. Tee ohjelma, joka tulostaa 10 ensimmäistä Fibonaccin numeroa (0, 1, 1, 2, 3, 5...), eli seuraava luku on kahden edellisen summa</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] fibo = new int[10];
+                    fibo[0] = 0;
+                    fibo[1] = 1;
+                    for(int i = 2; i < 10; i++)
+                    {
+                      fibo[i] = fibo[i-1] + fibo[i-2];
+                    }
+                    Console.Write("Fibonaccin numerot ovat: [");
+                    for(int j = 0; j < 10; j++)
+                    {
+                      if(j < 9)
+                      {
+                        Console.Write("{0}, ", fibo[j]);
+                      }
+                      else
+                      {
+                        Console.Write("{0}]", fibo[j]);
+                      }
+                    }
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S12. Tee ohjelma, joka tarkastaa, onko annettu sana / lause palidromi (esim. aaroporaa), eli luettavissa molemmin päin</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    Console.Write("Anna tarkastettava sana / lause: ");
+                    string tarkasta = Console.ReadLine();
+                    char[] kaannettava = tarkasta.ToCharArray();
+                    Array.Reverse(kaannettava);
+                    string kaannetty = new string(kaannettava);
+                    Console.WriteLine(kaannetty);
+                    if(tarkasta == kaannetty)
+                    {
+                        Console.Write("Sana / lause on palidromi");
+                    }
+                    else
+                    {
+                        Console.Write("Sana / lause ei ole palidromi");
+                    }
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S13. Muuta edellinen Fibonacci tehtävää siten, että lasket parillisten lukujen summan</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] fibo = new int[10];
+                    int summa = 0;
+                    fibo[0] = 0;
+                    fibo[1] = 1;
+                    for(int i = 2; i < 10; i++)
+                    {
+                      fibo[i] = fibo[i-1] + fibo[i-2];
+                    }
+                    Console.Write("Fibonaccin numerot ovat: [");
+                    for(int j = 0; j < 10; j++)
+                    {
+                      if(fibo[j] % 2)
+                      {
+                        summa += fibo[j];
+                      }
+                    }
+                    Console.WriteLine("Parillisten Fibonaccin lukujen summa on {0}", summa);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S14. Muuta edellistä tehtävää siten, että lasket parittomien lukujen summan</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    int[] fibo = new int[10];
+                    int summa = 0;
+                    fibo[0] = 0;
+                    fibo[1] = 1;
+                    for(int i = 2; i < 10; i++)
+                    {
+                      fibo[i] = fibo[i-1] + fibo[i-2];
+                    }
+                    Console.Write("Fibonaccin numerot ovat: [");
+                    for(int j = 0; j < 10; j++)
+                    {
+                      if(fibo[j] % 2 != 0)
+                      {
+                        summa += fibo[j];
+                      }
+                    }
+                    Console.WriteLine("Parittomien Fibonaccin lukujen summa on {0}", summa);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>S15. Tee ohjelma, joka etsii kahden annetun luvun suurimman yhteisen nimittäjän</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+              namespace MyApplication
+              {
+                class Program
+                {
+                  static void Main(string[] args)
+                  {
+                    Console.OutputEncoding = System.Text.Encoding.UTF8;
+                    int eka, toka, temp;
+                    Console.Write("Anna isompi muuttuja: ");
+                    eka = Int32.Parse(Console.ReadLine());
+                    Console.Write("Anna pienempi muuttuja: ");
+                    toka = Int32.Parse(Console.ReadLine());
+                    while(toka != 0)
+                    {
+                      Console.WriteLine(toka);
+                      temp = toka;
+                      toka = eka % toka;
+                      eka = temp;
+                    }
+                    Console.WriteLine("Muuttujien suurin yhteinen nimittäjä on {0}", eka);
+                  }
+                }
+              }
+            </pre>
+          </details>
+          <details closed>
+          <summary>S16. Tee ohjelma, joka pyytää käyttäjältä merkkijonoa pilkulla erotettuna ja tulostaa sen ilman pilkkua esim:
+            <b><pre class="tab">  Anna joukko numeroita pilkulla erotettuna: 7,3,9,2,44,99,123
+  7 3 9 2 44 99 123</pre></b></summary>
+          <p class = "lihava">C#</p>
+          <pre class = "koodi">
+            namespace MyApplication
+            {
+                using System;
+
+                class Program
+                {
+                    static void Main(string[] args)
+                    {
+                      Console.Write("Anna joukko numeroita pilkulla erotettuna: ");
+                      string joukko = Console.ReadLine();
+                      string[] taulu = joukko.Split(",");
+                      foreach(string x in taulu)
+                      {
+                          Console.Write(" {0}", x);
+                      }
+                    }
+                }
+            }
+          </pre>
+        </details>
+          <p class="s6">PELEJÄ</p>
+          <details closed>
+            <summary>G01. Tee Mastermind peli siten, että jos arvattava nro (4 lukua, esim. 1234) on oikein, tulostuu "oikein" yksi ja jos arvattava numero on oikein, mutta väärällä paikalla, tulostuu "väärällä paikalla" 1. Esim. luku = 1234 ja arvaus 1402, tulostuu (1 oikein, 2 väärällä paikalla). Käyttäjällä on 7 arvauskertaa</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+
+              namespace MyApplication
+              {
+                  class Program
+                  {
+                      static void Main(string[] args)
+                      {
+                          // Luodaan satunnaislukumuuttuja välillä 1000 - 9999 ja muutetaan se stringiksi
+                          Random rand = new Random();
+                          string salainenNumero = rand.Next(1000, 9999).ToString();
+                          // Pyydetään käyttäjältä numeroa
+                          Console.WriteLine("Arvaa numero, siinä on 4 merkkiä.");
+                          // Määritetään arvausten määrä
+                          int arvauksetJaljella = 7;
+                          // Käydään läpi niin kauan, kun arvauksia on jäljellä
+                          while (arvauksetJaljella > 0)
+                          {
+                              // Otetaan vastaan käyttäjän syöte
+                              string kayttajanArvaus = Console.ReadLine();
+                              // Tarkistetaan, osuiko oikeaan
+                              if (kayttajanArvaus == salainenNumero)
+                              {
+                                  Console.WriteLine("Mahtavaa, arvasit sen!");
+                                  Console.WriteLine("Voitit.");
+                                  // katkaistaan ohjelman looppi
+                                  break;
+                              }
+                              // Jos ei arvannut oikein, tehdään tämä
+                              else
+                              {
+                                  // Luodaan Tuple -muuttuja (kuin taulukko, mutta ei sittenkään)
+                                  Tuple<int, int> vastaukset = TarkistaArvaus(salainenNumero, kayttajanArvaus);
+                                  // Tulostetaan vastaus käyttäjälle
+                                  Console.WriteLine("Oikea numero oikealla paikalla: " + vastaukset.Item1);
+                                  Console.WriteLine("Oikea numero väärällä paikalla: " + vastaukset.Item2);
+                                  // Pienennetään arvausten määrää
+                                  arvauksetJaljella--;
+                                  // Mikäli arvaukset loppu, tulostetaan häviöviesti
+                                  if (arvauksetJaljella < 1)
+                                  {
+                                      Console.WriteLine("Voih, hävisit pelin.");
+                                      // Katkaistaan looppi
+                                      break;
+                                  }
+                              }
+                          }
+                      }
+
+                      // Luodaan Tuple -metodi, joka tarkastaa arvauksen
+                      static Tuple<int, int> TarkistaArvaus(string numero, string arvaus)
+                          {
+                              // Alustetaan tuple -muuttujat, jotka palautetaan
+                              int oikein = 0;
+                              int vaarallaPaikalla = 0;
+                              // Tarkistetaan kaikki numerot
+                              for (int i = 0; i < numero.Length; i++)
+                              {
+                                  // Mikäli oikealla paikalla
+                                  if (arvaus[i] == numero[i])
+                                  {
+                                      oikein++;
+                                  }
+                                  // Tähän mennään vain, jos if-lause ei toteudu - tarkistetaan väärällä paikalla olevat
+                                  else if (numero.Contains(arvaus[i]))
+                                  {
+                                      vaarallaPaikalla++;
+                                  }
+                              }
+                              // Palautetaan useampi arvo - Siksi Tuple -tyyppinen muuttuja
+                              return Tuple.Create(oikein, vaarallaPaikalla);
+                          }
+                  }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>G02. Tee kivi, paperi, sakset -peli</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+
+              namespace MyApplication
+                          {
+                              class Program
+                              {
+                                  static void Main(string[] args)
+                                  {
+                                      // Lista mahdollisista valinnoista
+                                      string[] vaihtoehdot = { "kivi", "paperi", "sakset" };
+
+                                      // satunnaislukugeneraattorin luonti
+                                      Random satunnaisLuku = new Random();
+
+                                      while (true)
+                                      {
+                                          // Get player choice
+                                          Console.Write("Anna kivi, paperi tai sakset): ");
+                                          string kayttajanValinta = Console.ReadLine().ToLower();
+                                          // Katsotaan, löytyykö valinta (0-2) tai jos ei löydy -1
+                                          int index = Array.IndexOf(vaihtoehdot, kayttajanValinta);
+                                          // Tarkistetaan, antoiko käyttäjä jonkin kolmesta vaihtoehdosta (-1 = ei antanut)
+                                          if (index == -1)
+                                          {
+                                              Console.WriteLine("Väärä valinta. Ole hyvä, ja kirjoita joko kivi, paperi tai sakset.");
+                                              continue;
+                                          }
+
+                                          // Luodaan tietokoneen valinta satunnaisluvun avulla
+                                          int tietokoneenValintaIndeksi = satunnaisLuku.Next(vaihtoehdot.Length);
+                                          // Valitaan taulukosta oikea valinta
+                                          string tietokoneenValinta = vaihtoehdot[tietokoneenValintaIndeksi];
+
+                                          // Määritetään voittaja
+                                          if (kayttajanValinta == tietokoneenValinta)
+                                          {
+                                              Console.WriteLine("Tasapeli!");
+                                          }
+                                          else if ((kayttajanValinta == "kivi" && tietokoneenValinta == "sakset") ||
+                                                   (kayttajanValinta == "paperi" && tietokoneenValinta == "kivi") ||
+                                                   (kayttajanValinta == "sakset" && tietokoneenValinta == "paperi"))
+                                          {
+                                              Console.WriteLine("Voitit!");
+                                          }
+                                          else
+                                          {
+                                              Console.WriteLine("Tietokone voitti!");
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+            </pre>
+          </details>
+          <details closed>
+            <summary>G03. Kirjoita ohjelma, joka antaa lauseen ja kysyy sitä vastaavaa käsitettä (hae <a href = "https://keudaope.github.io/Ohke/Projekti01/kasitteet.txt">täältä</a> tehtävässä tarvittava taulukko)</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              using System;
+
+              namespace MyApplication
+              {
+                  class Program
+                  {
+                      static void Main(string[] args)
+                      {
+                          string[,] sanaSelitykset = new string [,]
+                          {
+                              {"API (Application Programming Interface)","Ohjelmointirajapinta, jota käyttäen sovellukset kommunikoivat keskenään. Yleistäen sillä tarkoitetaan mitä tahansa ohjelmointirajapintaa. Se voi olla sovelluksen sisäiseen käyttöön tarkoitettu rajapinta tai muille sovelluksille tarkoitettu ulkoinen rajapinta. Ulkoiset rajapinnat julkaistaan käyttämällä SOAP- tai REST-tyylisiä web-palveluita."},
+                              {"SOAP (Simple Object Access Protocol)","Se on SOA:n (Service Oriented Architecture) eli palvelukeskeisen arkkitehtuurin yleisimmin käytetty protokolla. Se käyttää XML:ää tiedon esitysmuotona. Tiedonsiirtoprotokollana on yleensä http, mutta myös muut protokollat, kuten SMTP (Simple Mail Transfer Protocol) tai JMS (Java Message Service) ovat mahdollisia. SOAP:ssa tiedon esitysmuoto on sidottu (XML), mutta ei siirtotapa."},
+                              {"REST (Representational State Transfer)","Se on API:en julkaisun de facto arkkitehtuurityyli. Se hyödyntää http-protokollaa ja sen standardimetodeja. Se on saavuttanut kasvavaa suosiota, koska se on kevyempi ja helppokäyttöisempi kuin SOAP, erityisesti käytettäessä tiedon esitysmuotona JSON:a (JavaScript Object Notation). Sillä voi käyttää myös muita esitysmuotoja kuten XML tai HTML. Siinä tiedon siirtotapa on sidottu (http), mutta ei esitysmuoto. Viime vuosina paljon suosiota saavuttanut mikropalveluarkkitehtuuri käyttää JSON/REST:iä.Erityisesti mobiilisovelluksissa JSON/REST soveltuu paremmin kommunikointiin taustajärjestelmien kanssa kuin XML/SOAP helpomman toteutuksen ja ylläpidettävyyden sekä paremman suorituskyvyn vuoksi. JSON/REST onkin mobiilisovellusten toiminnan selkäranka."},
+                              {"JSON (JavaScript Object Notation)","Tiedon esitysmuoto, jota käytetään erityisesti REST-tyylisessä tiedonvälityksessä. Se käyttää nimi/arvo pareja sekä taulukoita tiedon esittämiseen."},
+                              {"API gateway","Se on komponentti, jossa tapahtuu API:en ajoaikainen suoritus. Sen kautta API:t voidaan julkaista tehokkaasti, turvallisesti ja hallitusti. Sen toiminnallisuuksiin kuuluu mm. orkesterointi, reititys sekä sanomien rakenteen ja sisällön muokkaus. Sen tietoturvaan liittyviin toiminnallisuuksiin kuuluvat esimerkiksi API:en suojaus luvattomalta käytöltä, tietoturvauhkien tunnistaminen ja torjunta sekä tietojen salaus ja allekirjoitus. Se tukee myös API:en käyttöön liittyviä ansaintamalleja (monetization)."},
+                              {"API manager","Sen avulla hallitaan API:en julkaisu, versiointi, poistaminen sekä tietoturva, käyttäjät ja käyttöoikeudet. Sen tai erillisen sellaiseen liittyvän työkalun avulla toteutetaan API:en käyttämät käsittelysäännöt (API policy) liittyen mm. tietoturvaan, sanomien muunnoksiin ja reititykseen. Lisäksi se voi sisältää monitorointiin ja analytiikkaan liittyviä toiminnallisuuksia."},
+                              {"API portaali","Se on itsepalveluportaali, jossa julkaistut API:t ovat sovelluskehittäjien selattavissa ja testattavissa käyttöoikeuksien puitteissa. Siitä löytyy API:en dokumentaatio, ja siinä sovelluskehittäjä voi koostaa haluamansa API:t oman sovelluksensa käyttöön. Portaali voi sisältää myös blogeja ja keskustelufoorumeita. Sen keskeinen hyöty on se, että sovelluskehittäjät voivat itsenäisesti hyödyntää sovelluksessaan yrityksen julkaisemia rajapintoja."},
+                              {"API analytiikka","Tietoa voidaan näyttää sekä API managerissa että portaalissa, mutta tätä varten voi olla myös erillinen komponentti. Sen avulla API:en käytöstä saadaan tietoa, joka auttaa niin liiketoiminnan, uusien API:en kuin kapasiteetinkin suunnittelussa."}
+                          };
+                          Random satLuku = new Random();
+                          int lause = satLuku.Next(1, sanaSelitykset.Length/2);
+                          Console.WriteLine(sanaSelitykset[lause, 1]);
+                          Console.WriteLine("\n\nMikä käsite yllä olevaa lausetta kuvaa?");
+                          Console.WriteLine("\nVaihtoehdot:");
+                          for(int i = 0; i < sanaSelitykset.Length/2; i++)
+                          {
+                              Console.WriteLine(sanaSelitykset[i, 0]);
+                          }
+                          hyppy:
+                          Console.Write("Kirjoita vastaus täsmälleen, kuten se on yllä:");
+                          string vastaus = Console.ReadLine();
+                          if(sanaSelitykset[lause,0] == vastaus)
+                          {
+                              Console.WriteLine("Oikein, sinulla on käsitteet hallussa!");
+                          }
+                          else
+                          {
+                              Console.WriteLine("Väärin, mietipä uudelleen:");
+                              goto hyppy;
+                          }
+                      }
+                  }
+              }
+            </pre>
+          </details>
+          <details closed>
+            <summary>G04. Tee hirsipuupeli (hae <a href = "https://keudaope.github.io/Ohke/Projekti01/sanalista.txt")>täältä</a> tehtävässä tarvittava sanalista)</summary>
+            <p class = "lihava">C#</p>
+            <pre class = "koodi">
+              namespace MyApplication
+              {
+                  using System;
+
+                  class Program
+                  {
+
+                      // Luodaaan sanalista, josta sana valitaan
+                      static string[] sanat = new string[] { "mielenkiintoinen", "neuvostoliitto", "kansainvälinen", "yksinkertainen", "amerikkalainen", "valtioneuvosto", "käytännöllinen", "luonnollinen", "taloudellinen", "puheenjohtaja" };
+                      // Luodaan satunnaislukumuuttuja
+                      static Random satunnaisluku = new Random();
+
+                      static void Main(string[] args)
+                      {
+                          Console.OutputEncoding = System.Text.Encoding.UTF8;
+                          // valitaan sana metodin avulla
+                          string sana = ValitseSana();
+                          // Luodaan pelialusta, eli tyhjien kirjaimien tilalle _
+                          string vihjesana = TeeTyhjaSana(sana);
+                          /* Varsinainen pelilogiikka, jolle annetaan
+                             - arvottu sana
+                             - vihjesana (tähän asti)
+                             - arvotun sanan ensimmäinen kirjain
+                             - arvausten lukumäärä */
+                          HirsipuuSana(sana, vihjesana, sana[0], 5);
+                      }
+                      // Metodi, joka arpoo peliin arvattavan sanan
+                      static string ValitseSana()
+                      {
+                          int index = satunnaisluku.Next(0, sanat.Length - 1);
+                          return sanat[index];
+                      }
+                      // Metodi, joka tekee hirsipuuvihjeen, eli esim. h_ _ _ _ _ _ _ (hirsipuu)
+                      static string TeeTyhjaSana(string sana)
+                      {
+                          return new string('_', sana.Length);
+                      }
+                      // Varsinainen pelilogiikkametodi
+                      static void HirsipuuSana(string sana, string vihjeTahanAsti, char kirjain, int arvauksiaJaljella)
+                      {
+                          bool vaaraArvaus = true; // Määritetään oletukseksi, että arvaus on väärä
+                          // Käydään läpi sana ja verrataan sitä annettuun kirjaimeen (kts. lopusta)
+                          for (int i = 0; i < sana.Length; i++)
+                          {
+                              // Jos annettu kirjain löydetään sanasta
+                              if (sana[i] == kirjain)
+                              {
+                                  // Luodaan taulukko, johon muutetaan tähän asti oleva vihje Chariksi
+                                  char[] taulukkoTahanAsti = vihjeTahanAsti.ToCharArray();
+                                  // Lisätään arvattu kirjain oikeaan paikkaan
+                                  taulukkoTahanAsti[i] = kirjain;
+                                  // Muunnetaan takaisin stringiksi
+                                  vihjeTahanAsti = new string(taulukkoTahanAsti);
+                                  // Määritetään oletukseksi, että arvaus oli oikein
+                                  vaaraArvaus = false;
+                              }
+                          }
+                          // Jos arvaus oli väärin
+                          if (vaaraArvaus)
+                          {
+                              arvauksiaJaljella--;
+                              Console.WriteLine("Väärin! Arvauksia jäljellä: " + arvauksiaJaljella);
+                          }
+                          Console.WriteLine("Tähän asti olet saanut selville: " + vihjeTahanAsti);
+                          // Jos arvattava sana on arvattu
+                          if (sana == vihjeTahanAsti)
+                          {
+                              Console.WriteLine("Mahtavaa! Löysit kaikki kirjaimet");
+                          }
+                          // Jos arvauksia ei ole enää jäljellä
+                          else if (arvauksiaJaljella == 0)
+                          {
+                              Console.WriteLine("Voi ei, hävisit ja jouduit hirteen");
+                          }
+                          // Muussa tapauksessa peli jatkuu
+                          else
+                          {
+                              Console.Write("Arvaa kirjain: ");
+                              // Luetaan char-muuttujaan käyttäjän arvaus
+                              char seuraavaKirjain = Console.ReadLine()[0];
+                              // Käynnistetään pelimoottori
+                              HirsipuuSana(sana, vihjeTahanAsti, seuraavaKirjain, arvauksiaJaljella);
+                          }
+                      }
+                  }
+              }
+            </pre>
+          </details>
+
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
