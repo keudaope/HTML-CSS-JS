@@ -1,0 +1,74 @@
+/*{
+    "haataja": [
+      {
+        "id": 1,
+        "sukupuoli": "Mies",
+        "nimi": "Kari"
+      },
+      {
+        "id": 2,
+        "sukupuoli": "Nainen",
+        "nimi": "Kirsi"
+      },
+      {
+        "id": 3,
+        "sukupuoli": "Mies",
+        "nimi": "Jarkko"
+      }
+    ],
+    "kaattari": [
+      {
+        "id": 1,
+        "sukupuoli": "Mies",
+        "nimi": "Krister"
+      },
+      {
+        "id": 2,
+        "sukupuoli": "Mies",
+        "nimi": "Olli"
+      },
+      {
+        "id": 3,
+        "sukupuoli": "Nainen",
+        "nimi": "Emma"
+      }
+    ]
+  }*/
+{
+  "dogs": [
+    {
+      "id": 1,
+      "breed": "pembroke-welsh-corgi",
+      "name": "Charles"
+    },
+    {
+      "id": 2,
+      "breed": "pug",
+      "name": "cheese"
+    },
+    {
+      "id": 3,
+      "breed": "dachshund",
+      "name": "ralph"
+    }
+  ],
+  "cats": [
+    {
+      "id": 1,
+      "breed": "ragdoll",
+      "name": "mimi"
+    },
+    {
+      "id": 2,
+      "breed": "siamese",
+      "name": "mocha"
+    },
+    {
+      "id": 3,
+      "breed": "russian-blue",
+      "name": "bean"
+    }
+  ]
+}
+
+
